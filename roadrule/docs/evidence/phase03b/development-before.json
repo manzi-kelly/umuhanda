@@ -1,0 +1,7 @@
+{
+  "database": "roadrules_dev",
+  "revision": "20261104_0001",
+  "tables": [
+    "alembic_version"
+  ]
+}

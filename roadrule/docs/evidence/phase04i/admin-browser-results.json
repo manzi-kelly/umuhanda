@@ -1,0 +1,641 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\Roadrules\\roadrule\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config",
+      "playwright.admin.config.ts",
+      "admin.spec.ts"
+    ],
+    "configFile": "D:\\Roadrules\\roadrule\\playwright.admin.config.ts",
+    "rootDir": "D:/Roadrules/roadrule/tests/admin-browser",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\teardown.ts",
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/Roadrules/roadrule/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "390px",
+        "name": "390px",
+        "testDir": "D:/Roadrules/roadrule/tests/admin-browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "D:/Roadrules/roadrule/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "834px",
+        "name": "834px",
+        "testDir": "D:/Roadrules/roadrule/tests/admin-browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "D:/Roadrules/roadrule/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "1440px",
+        "name": "1440px",
+        "testDir": "D:/Roadrules/roadrule/tests/admin-browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\Roadrules\\roadrule\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "390px",
+        "testDir": "D:\\Roadrules\\roadrule\\tests\\admin-browser",
+        "snapshotDir": "D:\\Roadrules\\roadrule\\tests\\admin-browser",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 120000,
+        "use": {
+          "baseURL": "http://127.0.0.1:3100",
+          "channel": "chrome",
+          "headless": true,
+          "trace": "off",
+          "screenshot": "off",
+          "video": "off",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "390px"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\Roadrules\\roadrule\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "834px",
+        "testDir": "D:\\Roadrules\\roadrule\\tests\\admin-browser",
+        "snapshotDir": "D:\\Roadrules\\roadrule\\tests\\admin-browser",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 120000,
+        "use": {
+          "baseURL": "http://127.0.0.1:3100",
+          "channel": "chrome",
+          "headless": true,
+          "trace": "off",
+          "screenshot": "off",
+          "video": "off",
+          "viewport": {
+            "width": 834,
+            "height": 1112
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "834px"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\Roadrules\\roadrule\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "1440px",
+        "testDir": "D:\\Roadrules\\roadrule\\tests\\admin-browser",
+        "snapshotDir": "D:\\Roadrules\\roadrule\\tests\\admin-browser",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 120000,
+        "use": {
+          "baseURL": "http://127.0.0.1:3100",
+          "channel": "chrome",
+          "headless": true,
+          "trace": "off",
+          "screenshot": "off",
+          "video": "off",
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "1440px"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "docs/evidence/phase04i/admin-browser-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "admin.spec.ts",
+      "file": "admin.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "unauthorized, forged-role and forged-cookie routes fail closed",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "390px",
+              "projectName": "390px",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 12892,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T20:54:57.401Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-8969d7042cb59fb35496",
+          "file": "admin.spec.ts",
+          "line": 48,
+          "column": 5
+        },
+        {
+          "title": "login validation, real dashboard, all navigation, unavailable states and logout",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "390px",
+              "projectName": "390px",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 15428,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T20:55:11.722Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-observations",
+                      "contentType": "application/json",
+                      "body": "eyJ3aWR0aCI6IjM5MHB4IiwiZXJyb3JzIjpbXSwicmVhbFN0dWRlbnRDb3VudCI6MSwidW5pbXBsZW1lbnRlZE1ldHJpY3MiOiJ1bmF2YWlsYWJsZSIsImNvb2tpZUh0dHBPbmx5Ijp0cnVlLCJsb2dvdXRWZXJpZmllZCI6dHJ1ZX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-581c7e2c1922fbb07366",
+          "file": "admin.spec.ts",
+          "line": 92,
+          "column": 5
+        },
+        {
+          "title": "server expiration overrides an existing browser cookie",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "390px",
+              "projectName": "390px",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 14646,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T20:55:27.288Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-eb0e8cea13892c0d7d81",
+          "file": "admin.spec.ts",
+          "line": 271,
+          "column": 5
+        },
+        {
+          "title": "private PDF upload, source-backed draft and duplicate recovery",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "390px",
+              "projectName": "390px",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 38201,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T20:55:42.018Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-c523b8e664c2aec208a5",
+          "file": "admin.spec.ts",
+          "line": 287,
+          "column": 5
+        },
+        {
+          "title": "unauthorized, forged-role and forged-cookie routes fail closed",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "834px",
+              "projectName": "834px",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 12514,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T20:56:24.846Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-34654495e96a46626c7b",
+          "file": "admin.spec.ts",
+          "line": 48,
+          "column": 5
+        },
+        {
+          "title": "login validation, real dashboard, all navigation, unavailable states and logout",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "834px",
+              "projectName": "834px",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 15574,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T20:56:38.972Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-observations",
+                      "contentType": "application/json",
+                      "body": "eyJ3aWR0aCI6IjgzNHB4IiwiZXJyb3JzIjpbXSwicmVhbFN0dWRlbnRDb3VudCI6MSwidW5pbXBsZW1lbnRlZE1ldHJpY3MiOiJ1bmF2YWlsYWJsZSIsImNvb2tpZUh0dHBPbmx5Ijp0cnVlLCJsb2dvdXRWZXJpZmllZCI6dHJ1ZX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-fad85d92b291295a7d72",
+          "file": "admin.spec.ts",
+          "line": 92,
+          "column": 5
+        },
+        {
+          "title": "server expiration overrides an existing browser cookie",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "834px",
+              "projectName": "834px",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 16162,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T20:56:54.680Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-d126fc11fd5b5985b9ab",
+          "file": "admin.spec.ts",
+          "line": 271,
+          "column": 5
+        },
+        {
+          "title": "private PDF upload, source-backed draft and duplicate recovery",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "834px",
+              "projectName": "834px",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 40683,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T20:57:10.941Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-182d3205ae0a7df86423",
+          "file": "admin.spec.ts",
+          "line": 287,
+          "column": 5
+        },
+        {
+          "title": "unauthorized, forged-role and forged-cookie routes fail closed",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "1440px",
+              "projectName": "1440px",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 12215,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T20:58:00.752Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-496d8b5a98644a201f0f",
+          "file": "admin.spec.ts",
+          "line": 48,
+          "column": 5
+        },
+        {
+          "title": "login validation, real dashboard, all navigation, unavailable states and logout",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "1440px",
+              "projectName": "1440px",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 14151,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T20:58:14.408Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-observations",
+                      "contentType": "application/json",
+                      "body": "eyJ3aWR0aCI6IjE0NDBweCIsImVycm9ycyI6W10sInJlYWxTdHVkZW50Q291bnQiOjEsInVuaW1wbGVtZW50ZWRNZXRyaWNzIjoidW5hdmFpbGFibGUiLCJjb29raWVIdHRwT25seSI6dHJ1ZSwibG9nb3V0VmVyaWZpZWQiOnRydWV9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-b4705843c326ae00ca29",
+          "file": "admin.spec.ts",
+          "line": 92,
+          "column": 5
+        },
+        {
+          "title": "server expiration overrides an existing browser cookie",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "1440px",
+              "projectName": "1440px",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 14497,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T20:58:28.731Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-03616466883d242f6826",
+          "file": "admin.spec.ts",
+          "line": 271,
+          "column": 5
+        },
+        {
+          "title": "private PDF upload, source-backed draft and duplicate recovery",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "1440px",
+              "projectName": "1440px",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 37881,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T20:58:43.310Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-27aa544ec426bdcf2004",
+          "file": "admin.spec.ts",
+          "line": 287,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-05T20:54:36.713Z",
+    "duration": 296258.892,
+    "expected": 12,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

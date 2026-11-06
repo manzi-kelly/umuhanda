@@ -1,0 +1,128 @@
+{
+  "python": "3.12.14",
+  "dependencies": {
+    "fastapi": "0.162.0",
+    "uvicorn": "0.54.0",
+    "sqlalchemy": "2.0.57",
+    "psycopg": "3.3.8",
+    "psycopg-binary": "3.3.8",
+    "alembic": "1.20.1",
+    "pydantic": "2.14.2",
+    "pydantic-settings": "2.16.2",
+    "pytest": "9.2.0",
+    "httpx": "0.28.1",
+    "ruff": "0.17.3"
+  },
+  "databases": {
+    "development": {
+      "database": "roadrules_dev",
+      "role": "roadrules_dev_app",
+      "encoding": "UTF8",
+      "server_version": "18.6",
+      "privileged_role_flags": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "can_connect_other_database": false,
+      "tables": [
+        "alembic_version",
+        "students",
+        "guest_sessions",
+        "student_activity_events",
+        "exam_operational_events",
+        "exam_bank_revisions",
+        "exam_attempts",
+        "exam_bank_questions",
+        "admin_audit_events",
+        "admin_users",
+        "admin_sessions",
+        "exam_attempt_items",
+        "pdf_documents",
+        "pdf_import_jobs",
+        "question_drafts",
+        "question_draft_assets",
+        "question_draft_options",
+        "question_draft_answers",
+        "promo_codes",
+        "payment_transactions",
+        "promo_attempts",
+        "exam_entitlements",
+        "exam_timing",
+        "exam_responses"
+      ],
+      "revision": "20261105_0007"
+    },
+    "testing": {
+      "database": "roadrules_test",
+      "role": "roadrules_test_app",
+      "encoding": "UTF8",
+      "server_version": "18.6",
+      "privileged_role_flags": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "can_connect_other_database": false,
+      "tables": [
+        "alembic_version",
+        "pdf_documents",
+        "promo_codes",
+        "question_draft_assets",
+        "question_draft_options",
+        "admin_sessions",
+        "admin_users",
+        "question_drafts",
+        "guest_sessions",
+        "exam_responses",
+        "exam_timing",
+        "admin_audit_events",
+        "exam_operational_events",
+        "pdf_import_jobs",
+        "question_draft_answers",
+        "students",
+        "exam_bank_questions",
+        "exam_bank_revisions",
+        "student_activity_events",
+        "exam_entitlements",
+        "payment_transactions",
+        "promo_attempts",
+        "exam_attempt_items",
+        "exam_attempts"
+      ],
+      "revision": "20261105_0007"
+    }
+  },
+  "live_available": {
+    "health": 200,
+    "health_body": {
+      "status": "ok"
+    },
+    "ready": 200,
+    "ready_body": {
+      "status": "ready"
+    },
+    "docs": 200,
+    "openapi": 200
+  },
+  "live_unavailable": {
+    "health": 200,
+    "health_body": {
+      "status": "ok"
+    },
+    "ready": 503,
+    "ready_body": {
+      "error": {
+        "code": "DATABASE_UNAVAILABLE",
+        "message": "Database service is unavailable."
+      }
+    },
+    "docs": 200,
+    "openapi": 200
+  },
+  "clean_shutdown": true
+}

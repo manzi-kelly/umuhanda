@@ -1,0 +1,214 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\Roadrules\\roadrule\\node_modules\\playwright\\cli.js",
+      "test",
+      "--config",
+      "playwright.config.ts",
+      "phase04l-real-pilot.spec.ts",
+      "--project=1440px",
+      "--reporter=list,json"
+    ],
+    "configFile": "D:\\Roadrules\\roadrule\\playwright.config.ts",
+    "rootDir": "D:/Roadrules/roadrule/tests/browser",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": "D:\\Roadrules\\roadrule\\tests\\browser\\teardown.ts",
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/Roadrules/roadrule/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "390px",
+        "name": "390px",
+        "testDir": "D:/Roadrules/roadrule/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      },
+      {
+        "outputDir": "D:/Roadrules/roadrule/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "834px",
+        "name": "834px",
+        "testDir": "D:/Roadrules/roadrule/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      },
+      {
+        "outputDir": "D:/Roadrules/roadrule/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "1440px",
+        "name": "1440px",
+        "testDir": "D:/Roadrules/roadrule/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\Roadrules\\roadrule\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "1440px",
+        "testDir": "D:\\Roadrules\\roadrule\\tests\\browser",
+        "snapshotDir": "D:\\Roadrules\\roadrule\\tests\\browser",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 90000,
+        "use": {
+          "baseURL": "http://127.0.0.1:3100",
+          "channel": "chrome",
+          "headless": true,
+          "trace": "off",
+          "screenshot": "off",
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "1440px"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "phase04l-real-pilot.spec.ts",
+      "file": "phase04l-real-pilot.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "real PDF activates and grades a 2-sign 18-general browser exam",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "1440px",
+              "projectName": "1440px",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 92358,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Ufite uruhushya rwemejwe na seriveri.')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Ufite uruhushya rwemejwe na seriveri.') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Ufite uruhushya rwemejwe na seriveri.')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Ufite uruhushya rwemejwe na seriveri.')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Ufite uruhushya rwemejwe na seriveri.') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Ufite uruhushya rwemejwe na seriveri.')\u001b[22m\n\n    at D:\\Roadrules\\roadrule\\tests\\browser\\phase04l-real-pilot.spec.ts:67:73",
+                    "location": {
+                      "file": "D:\\Roadrules\\roadrule\\tests\\browser\\phase04l-real-pilot.spec.ts",
+                      "column": 73,
+                      "line": 67
+                    },
+                    "snippet": "  65 |   await page.getByRole(\"textbox\", { name: \"Kode ya promo\" }).fill(code);\n  66 |   await page.getByRole(\"button\", { name: \"Koresha kode\" }).click();\n> 67 |   await expect(page.getByText(\"Ufite uruhushya rwemejwe na seriveri.\")).toBeVisible();\n     |                                                                         ^\n  68 |   await page.goto(\"/exam\");\n  69 |   const started = page.waitForResponse((response) => response.url().endsWith(\"/exams/start\"));\n  70 |   await page.getByRole(\"button\", { name: \"Tangira ikizamini\" }).click();"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\Roadrules\\roadrule\\tests\\browser\\phase04l-real-pilot.spec.ts",
+                        "column": 73,
+                        "line": 67
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Ufite uruhushya rwemejwe na seriveri.')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Ufite uruhushya rwemejwe na seriveri.') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Ufite uruhushya rwemejwe na seriveri.')\u001b[22m\n\n\n  65 |   await page.getByRole(\"textbox\", { name: \"Kode ya promo\" }).fill(code);\n  66 |   await page.getByRole(\"button\", { name: \"Koresha kode\" }).click();\n> 67 |   await expect(page.getByText(\"Ufite uruhushya rwemejwe na seriveri.\")).toBeVisible();\n     |                                                                         ^\n  68 |   await page.goto(\"/exam\");\n  69 |   const started = page.waitForResponse((response) => response.url().endsWith(\"/exams/start\"));\n  70 |   await page.getByRole(\"button\", { name: \"Tangira ikizamini\" }).click();\n    at D:\\Roadrules\\roadrule\\tests\\browser\\phase04l-real-pilot.spec.ts:67:73"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T18:19:20.641Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\Roadrules\\roadrule\\test-results\\phase04l-real-pilot-real-P-23a05-ign-18-general-browser-exam-1440px\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\Roadrules\\roadrule\\tests\\browser\\phase04l-real-pilot.spec.ts",
+                    "column": 73,
+                    "line": 67
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "b0f68397fb364bd548c9-079bcd21ab2c095deb23",
+          "file": "phase04l-real-pilot.spec.ts",
+          "line": 11,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-06T18:18:56.186Z",
+    "duration": 174892.404,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

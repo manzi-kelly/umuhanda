@@ -1,0 +1,9 @@
+{
+  "source_files_checked": 35,
+  "log_files_checked": 11,
+  "plaintext_credential_matches": [],
+  "excluded_secret_locations": [
+    "backend/.env",
+    "backend/.local/"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "beforeRevision": "20261104_0002",
+  "afterRevision": "20261105_0003",
+  "beforeCounts": {
+    "students": 0,
+    "guest_sessions": 0,
+    "student_activity_events": 0
+  },
+  "afterCounts": {
+    "students": 0,
+    "guest_sessions": 0,
+    "student_activity_events": 0
+  },
+  "adminAccounts": 0
+}

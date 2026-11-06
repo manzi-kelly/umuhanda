@@ -1,0 +1,214 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\Roadrules\\roadrule\\node_modules\\playwright\\cli.js",
+      "test",
+      "--config",
+      "playwright.config.ts",
+      "phase04l-real-pilot.spec.ts",
+      "--project=1440px",
+      "--reporter=list,json"
+    ],
+    "configFile": "D:\\Roadrules\\roadrule\\playwright.config.ts",
+    "rootDir": "D:/Roadrules/roadrule/tests/browser",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": "D:\\Roadrules\\roadrule\\tests\\browser\\teardown.ts",
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/Roadrules/roadrule/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "390px",
+        "name": "390px",
+        "testDir": "D:/Roadrules/roadrule/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      },
+      {
+        "outputDir": "D:/Roadrules/roadrule/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "834px",
+        "name": "834px",
+        "testDir": "D:/Roadrules/roadrule/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      },
+      {
+        "outputDir": "D:/Roadrules/roadrule/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "1440px",
+        "name": "1440px",
+        "testDir": "D:/Roadrules/roadrule/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\Roadrules\\roadrule\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "1440px",
+        "testDir": "D:\\Roadrules\\roadrule\\tests\\browser",
+        "snapshotDir": "D:\\Roadrules\\roadrule\\tests\\browser",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 90000,
+        "use": {
+          "baseURL": "http://127.0.0.1:3100",
+          "channel": "chrome",
+          "headless": true,
+          "trace": "off",
+          "screenshot": "off",
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "1440px"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "phase04l-real-pilot.spec.ts",
+      "file": "phase04l-real-pilot.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "real PDF activates and grades a 2-sign 18-general browser exam",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "1440px",
+              "projectName": "1440px",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 15296,
+                  "error": {
+                    "message": "Error: {\"error\":{\"code\":\"NOT_FOUND\"}}\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m202\u001b[39m\nReceived: \u001b[31m404\u001b[39m",
+                    "stack": "Error: {\"error\":{\"code\":\"NOT_FOUND\"}}\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m202\u001b[39m\nReceived: \u001b[31m404\u001b[39m\n    at D:\\Roadrules\\roadrule\\tests\\browser\\phase04l-real-pilot.spec.ts:33:80",
+                    "location": {
+                      "file": "D:\\Roadrules\\roadrule\\tests\\browser\\phase04l-real-pilot.spec.ts",
+                      "column": 80,
+                      "line": 33
+                    },
+                    "snippet": "  31 |   await page.getByRole(\"button\", { name: \"Ohereza PDF\", exact: true }).click();\n  32 |   const uploaded = await uploadReply;\n> 33 |   expect(uploaded.status(), uploaded.ok() ? undefined : await uploaded.text()).toBe(202);\n     |                                                                                ^\n  34 |   await expect(page.getByText(\"PDF yabitswe.\", { exact: true })).toBeVisible();\n  35 |   const workerStarted = performance.now();\n  36 |   execFileSync(python, [\"scripts/pdf_worker.py\", \"--once\"], {"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\Roadrules\\roadrule\\tests\\browser\\phase04l-real-pilot.spec.ts",
+                        "column": 80,
+                        "line": 33
+                      },
+                      "message": "Error: {\"error\":{\"code\":\"NOT_FOUND\"}}\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m202\u001b[39m\nReceived: \u001b[31m404\u001b[39m\n\n  31 |   await page.getByRole(\"button\", { name: \"Ohereza PDF\", exact: true }).click();\n  32 |   const uploaded = await uploadReply;\n> 33 |   expect(uploaded.status(), uploaded.ok() ? undefined : await uploaded.text()).toBe(202);\n     |                                                                                ^\n  34 |   await expect(page.getByText(\"PDF yabitswe.\", { exact: true })).toBeVisible();\n  35 |   const workerStarted = performance.now();\n  36 |   execFileSync(python, [\"scripts/pdf_worker.py\", \"--once\"], {\n    at D:\\Roadrules\\roadrule\\tests\\browser\\phase04l-real-pilot.spec.ts:33:80"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T18:03:14.327Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\Roadrules\\roadrule\\test-results\\phase04l-real-pilot-real-P-23a05-ign-18-general-browser-exam-1440px\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\Roadrules\\roadrule\\tests\\browser\\phase04l-real-pilot.spec.ts",
+                    "column": 80,
+                    "line": 33
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "b0f68397fb364bd548c9-079bcd21ab2c095deb23",
+          "file": "phase04l-real-pilot.spec.ts",
+          "line": 11,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-06T18:02:40.252Z",
+    "duration": 145175.309,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

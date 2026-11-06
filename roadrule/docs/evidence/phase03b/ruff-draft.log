@@ -1,0 +1,12 @@
+E501 Line too long (106 > 100)
+  --> scripts\audit_local_secrets.py:72:101
+   |
+70 |             with database.session_factory() as session:
+71 |                 if verifiers:
+72 |                     active_matches += session.scalar(select(func.count()).select_from(GuestSession).where(
+   |                                                                                                     ^^^^^^
+73 |                         GuestSession.token_hash.in_(verifiers), GuestSession.revoked_at.is_(None),
+74 |                         GuestSession.expires_at > func.clock_timestamp(),
+   |
+
+Found 2 errors (1 fixed, 1 remaining).

@@ -1,0 +1,518 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\Roadrules\\roadrule\\node_modules\\@playwright\\test\\cli.js",
+      "test"
+    ],
+    "configFile": "D:\\Roadrules\\roadrule\\playwright.config.ts",
+    "rootDir": "D:/Roadrules/roadrule/tests/browser",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": "D:\\Roadrules\\roadrule\\tests\\browser\\teardown.ts",
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/Roadrules/roadrule/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "390px",
+        "name": "390px",
+        "testDir": "D:/Roadrules/roadrule/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      },
+      {
+        "outputDir": "D:/Roadrules/roadrule/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "834px",
+        "name": "834px",
+        "testDir": "D:/Roadrules/roadrule/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      },
+      {
+        "outputDir": "D:/Roadrules/roadrule/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "1440px",
+        "name": "1440px",
+        "testDir": "D:/Roadrules/roadrule/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\Roadrules\\roadrule\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "390px",
+        "testDir": "D:\\Roadrules\\roadrule\\tests\\browser",
+        "snapshotDir": "D:\\Roadrules\\roadrule\\tests\\browser",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 90000,
+        "use": {
+          "baseURL": "http://127.0.0.1:3100",
+          "channel": "chrome",
+          "headless": true,
+          "trace": "off",
+          "screenshot": "off",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "390px"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\Roadrules\\roadrule\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "834px",
+        "testDir": "D:\\Roadrules\\roadrule\\tests\\browser",
+        "snapshotDir": "D:\\Roadrules\\roadrule\\tests\\browser",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 90000,
+        "use": {
+          "baseURL": "http://127.0.0.1:3100",
+          "channel": "chrome",
+          "headless": true,
+          "trace": "off",
+          "screenshot": "off",
+          "viewport": {
+            "width": 834,
+            "height": 1112
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "834px"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\Roadrules\\roadrule\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "1440px",
+        "testDir": "D:\\Roadrules\\roadrule\\tests\\browser",
+        "snapshotDir": "D:\\Roadrules\\roadrule\\tests\\browser",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 90000,
+        "use": {
+          "baseURL": "http://127.0.0.1:3100",
+          "channel": "chrome",
+          "headless": true,
+          "trace": "off",
+          "screenshot": "off",
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "1440px"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "docs/evidence/phase04d/public-browser-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "phase02.spec.ts",
+      "file": "phase02.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "student flow, navigation, responsive layout and locked exam",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "390px",
+              "projectName": "390px",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 9439,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('alert')\nExpected substring: \u001b[32m\"Kode ntiyemewe\"\u001b[39m\nError: strict mode violation: getByRole('alert') resolved to 2 elements:\n    1) <p role=\"alert\" class=\"text-red-800\">Kode ntiyemewe, yararangiye cyangwa yarakoreshejw…</p> aka getByText('Kode ntiyemewe, yararangiye')\n    2) <div role=\"alert\" aria-live=\"assertive\" id=\"__next-route-announcer__\">Amakuru y’umunyeshuri n’ubwishyu | Umuhanda</div> aka getByText('Amakuru y’umunyeshuri n’')\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('alert') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('alert')\u001b[22m\n\u001b[2m    2 × locator resolved to <div role=\"alert\" aria-live=\"assertive\" id=\"__next-route-announcer__\">Amakuru y’umunyeshuri n’ubwishyu | Umuhanda</div>\u001b[22m\n\u001b[2m      - unexpected value \"Amakuru y’umunyeshuri n’ubwishyu | Umuhanda\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('alert')\nExpected substring: \u001b[32m\"Kode ntiyemewe\"\u001b[39m\nError: strict mode violation: getByRole('alert') resolved to 2 elements:\n    1) <p role=\"alert\" class=\"text-red-800\">Kode ntiyemewe, yararangiye cyangwa yarakoreshejw…</p> aka getByText('Kode ntiyemewe, yararangiye')\n    2) <div role=\"alert\" aria-live=\"assertive\" id=\"__next-route-announcer__\">Amakuru y’umunyeshuri n’ubwishyu | Umuhanda</div> aka getByText('Amakuru y’umunyeshuri n’')\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('alert') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('alert')\u001b[22m\n\u001b[2m    2 × locator resolved to <div role=\"alert\" aria-live=\"assertive\" id=\"__next-route-announcer__\">Amakuru y’umunyeshuri n’ubwishyu | Umuhanda</div>\u001b[22m\n\u001b[2m      - unexpected value \"Amakuru y’umunyeshuri n’ubwishyu | Umuhanda\"\u001b[22m\n\n    at D:\\Roadrules\\roadrule\\tests\\browser\\phase02.spec.ts:164:43",
+                    "location": {
+                      "file": "D:\\Roadrules\\roadrule\\tests\\browser\\phase02.spec.ts",
+                      "column": 43,
+                      "line": 164
+                    },
+                    "snippet": "  162 |     await promo.fill(\"ARBITRARY-QA-CODE\");\n  163 |     await page.getByRole(\"button\", { name: \"Koresha kode\" }).click();\n> 164 |     await expect(page.getByRole(\"alert\")).toContainText(\"Kode ntiyemewe\");\n      |                                           ^\n  165 |     await expect(\n  166 |       page.locator('input[type=\"password\"], input[name*=\"pin\" i]'),\n  167 |     ).toHaveCount(0);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\Roadrules\\roadrule\\tests\\browser\\phase02.spec.ts",
+                        "column": 43,
+                        "line": 164
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('alert')\nExpected substring: \u001b[32m\"Kode ntiyemewe\"\u001b[39m\nError: strict mode violation: getByRole('alert') resolved to 2 elements:\n    1) <p role=\"alert\" class=\"text-red-800\">Kode ntiyemewe, yararangiye cyangwa yarakoreshejw…</p> aka getByText('Kode ntiyemewe, yararangiye')\n    2) <div role=\"alert\" aria-live=\"assertive\" id=\"__next-route-announcer__\">Amakuru y’umunyeshuri n’ubwishyu | Umuhanda</div> aka getByText('Amakuru y’umunyeshuri n’')\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('alert') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('alert')\u001b[22m\n\u001b[2m    2 × locator resolved to <div role=\"alert\" aria-live=\"assertive\" id=\"__next-route-announcer__\">Amakuru y’umunyeshuri n’ubwishyu | Umuhanda</div>\u001b[22m\n\u001b[2m      - unexpected value \"Amakuru y’umunyeshuri n’ubwishyu | Umuhanda\"\u001b[22m\n\n\n  162 |     await promo.fill(\"ARBITRARY-QA-CODE\");\n  163 |     await page.getByRole(\"button\", { name: \"Koresha kode\" }).click();\n> 164 |     await expect(page.getByRole(\"alert\")).toContainText(\"Kode ntiyemewe\");\n      |                                           ^\n  165 |     await expect(\n  166 |       page.locator('input[type=\"password\"], input[name*=\"pin\" i]'),\n  167 |     ).toHaveCount(0);\n    at D:\\Roadrules\\roadrule\\tests\\browser\\phase02.spec.ts:164:43"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T11:15:25.026Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-observations",
+                      "contentType": "application/json",
+                      "body": "ewogICJ3aWR0aCI6ICIzOTBweCIsCiAgImJyb3dzZXJWZXJzaW9uIjogIjE1Ny4wLjgxMDMuMzgiLAogICJjb25zb2xlRXJyb3JzIjogW10sCiAgInBhZ2VFcnJvcnMiOiBbXSwKICAiZmFpbGVkUmVxdWVzdHMiOiBbXSwKICAidW5leHBlY3RlZFJlc3BvbnNlcyI6IFtdLAogICJtdXRhdGlvbnMiOiBbCiAgICAiUE9TVCBodHRwOi8vMTI3LjAuMC4xOjMxMDAvc3R1ZGVudC1hcGkvc3R1ZGVudHMvc2Vzc2lvbnMiLAogICAgIlBPU1QgaHR0cDovLzEyNy4wLjAuMTozMTAwL3N0dWRlbnQtYXBpL3N0dWRlbnRzL3Nlc3Npb25zIiwKICAgICJQT1NUIGh0dHA6Ly8xMjcuMC4wLjE6MzEwMC9zdHVkZW50LWFwaS9wcm9tb3MvcmVkZWVtIgogIF0KfQ=="
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\Roadrules\\roadrule\\test-results\\phase02-student-flow-navig-0b1a0-sive-layout-and-locked-exam-390px\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\Roadrules\\roadrule\\tests\\browser\\phase02.spec.ts",
+                    "column": 43,
+                    "line": 164
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "3f76b986ba5de2a01e04-ff2ea0f5b28e34863aca",
+          "file": "phase02.spec.ts",
+          "line": 7,
+          "column": 5
+        },
+        {
+          "title": "direct exam entry stays locked without JavaScript",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "390px",
+              "projectName": "390px",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1942,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T11:15:38.871Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3f76b986ba5de2a01e04-a973f32931fcf17d68aa",
+          "file": "phase02.spec.ts",
+          "line": 308,
+          "column": 5
+        },
+        {
+          "title": "student flow, navigation, responsive layout and locked exam",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "834px",
+              "projectName": "834px",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 8496,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('alert')\nExpected substring: \u001b[32m\"Kode ntiyemewe\"\u001b[39m\nError: strict mode violation: getByRole('alert') resolved to 2 elements:\n    1) <p role=\"alert\" class=\"text-red-800\">Kode ntiyemewe, yararangiye cyangwa yarakoreshejw…</p> aka getByText('Kode ntiyemewe, yararangiye')\n    2) <div role=\"alert\" aria-live=\"assertive\" id=\"__next-route-announcer__\">Amakuru y’umunyeshuri n’ubwishyu | Umuhanda</div> aka getByText('Amakuru y’umunyeshuri n’')\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('alert') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('alert')\u001b[22m\n\u001b[2m    2 × locator resolved to <div role=\"alert\" aria-live=\"assertive\" id=\"__next-route-announcer__\">Amakuru y’umunyeshuri n’ubwishyu | Umuhanda</div>\u001b[22m\n\u001b[2m      - unexpected value \"Amakuru y’umunyeshuri n’ubwishyu | Umuhanda\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('alert')\nExpected substring: \u001b[32m\"Kode ntiyemewe\"\u001b[39m\nError: strict mode violation: getByRole('alert') resolved to 2 elements:\n    1) <p role=\"alert\" class=\"text-red-800\">Kode ntiyemewe, yararangiye cyangwa yarakoreshejw…</p> aka getByText('Kode ntiyemewe, yararangiye')\n    2) <div role=\"alert\" aria-live=\"assertive\" id=\"__next-route-announcer__\">Amakuru y’umunyeshuri n’ubwishyu | Umuhanda</div> aka getByText('Amakuru y’umunyeshuri n’')\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('alert') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('alert')\u001b[22m\n\u001b[2m    2 × locator resolved to <div role=\"alert\" aria-live=\"assertive\" id=\"__next-route-announcer__\">Amakuru y’umunyeshuri n’ubwishyu | Umuhanda</div>\u001b[22m\n\u001b[2m      - unexpected value \"Amakuru y’umunyeshuri n’ubwishyu | Umuhanda\"\u001b[22m\n\n    at D:\\Roadrules\\roadrule\\tests\\browser\\phase02.spec.ts:164:43",
+                    "location": {
+                      "file": "D:\\Roadrules\\roadrule\\tests\\browser\\phase02.spec.ts",
+                      "column": 43,
+                      "line": 164
+                    },
+                    "snippet": "  162 |     await promo.fill(\"ARBITRARY-QA-CODE\");\n  163 |     await page.getByRole(\"button\", { name: \"Koresha kode\" }).click();\n> 164 |     await expect(page.getByRole(\"alert\")).toContainText(\"Kode ntiyemewe\");\n      |                                           ^\n  165 |     await expect(\n  166 |       page.locator('input[type=\"password\"], input[name*=\"pin\" i]'),\n  167 |     ).toHaveCount(0);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\Roadrules\\roadrule\\tests\\browser\\phase02.spec.ts",
+                        "column": 43,
+                        "line": 164
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('alert')\nExpected substring: \u001b[32m\"Kode ntiyemewe\"\u001b[39m\nError: strict mode violation: getByRole('alert') resolved to 2 elements:\n    1) <p role=\"alert\" class=\"text-red-800\">Kode ntiyemewe, yararangiye cyangwa yarakoreshejw…</p> aka getByText('Kode ntiyemewe, yararangiye')\n    2) <div role=\"alert\" aria-live=\"assertive\" id=\"__next-route-announcer__\">Amakuru y’umunyeshuri n’ubwishyu | Umuhanda</div> aka getByText('Amakuru y’umunyeshuri n’')\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('alert') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('alert')\u001b[22m\n\u001b[2m    2 × locator resolved to <div role=\"alert\" aria-live=\"assertive\" id=\"__next-route-announcer__\">Amakuru y’umunyeshuri n’ubwishyu | Umuhanda</div>\u001b[22m\n\u001b[2m      - unexpected value \"Amakuru y’umunyeshuri n’ubwishyu | Umuhanda\"\u001b[22m\n\n\n  162 |     await promo.fill(\"ARBITRARY-QA-CODE\");\n  163 |     await page.getByRole(\"button\", { name: \"Koresha kode\" }).click();\n> 164 |     await expect(page.getByRole(\"alert\")).toContainText(\"Kode ntiyemewe\");\n      |                                           ^\n  165 |     await expect(\n  166 |       page.locator('input[type=\"password\"], input[name*=\"pin\" i]'),\n  167 |     ).toHaveCount(0);\n    at D:\\Roadrules\\roadrule\\tests\\browser\\phase02.spec.ts:164:43"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T11:15:44.400Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-observations",
+                      "contentType": "application/json",
+                      "body": "ewogICJ3aWR0aCI6ICI4MzRweCIsCiAgImJyb3dzZXJWZXJzaW9uIjogIjE1Ny4wLjgxMDMuMzgiLAogICJjb25zb2xlRXJyb3JzIjogW10sCiAgInBhZ2VFcnJvcnMiOiBbXSwKICAiZmFpbGVkUmVxdWVzdHMiOiBbXSwKICAidW5leHBlY3RlZFJlc3BvbnNlcyI6IFtdLAogICJtdXRhdGlvbnMiOiBbCiAgICAiUE9TVCBodHRwOi8vMTI3LjAuMC4xOjMxMDAvc3R1ZGVudC1hcGkvc3R1ZGVudHMvc2Vzc2lvbnMiLAogICAgIlBPU1QgaHR0cDovLzEyNy4wLjAuMTozMTAwL3N0dWRlbnQtYXBpL3N0dWRlbnRzL3Nlc3Npb25zIiwKICAgICJQT1NUIGh0dHA6Ly8xMjcuMC4wLjE6MzEwMC9zdHVkZW50LWFwaS9wcm9tb3MvcmVkZWVtIgogIF0KfQ=="
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\Roadrules\\roadrule\\test-results\\phase02-student-flow-navig-0b1a0-sive-layout-and-locked-exam-834px\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\Roadrules\\roadrule\\tests\\browser\\phase02.spec.ts",
+                    "column": 43,
+                    "line": 164
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "3f76b986ba5de2a01e04-8be98eecc6cef7eae63b",
+          "file": "phase02.spec.ts",
+          "line": 7,
+          "column": 5
+        },
+        {
+          "title": "direct exam entry stays locked without JavaScript",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "834px",
+              "projectName": "834px",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2398,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T11:16:06.231Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3f76b986ba5de2a01e04-8d2f0e492a30c8341809",
+          "file": "phase02.spec.ts",
+          "line": 308,
+          "column": 5
+        },
+        {
+          "title": "student flow, navigation, responsive layout and locked exam",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "1440px",
+              "projectName": "1440px",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 9488,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('alert')\nExpected substring: \u001b[32m\"Kode ntiyemewe\"\u001b[39m\nError: strict mode violation: getByRole('alert') resolved to 2 elements:\n    1) <p role=\"alert\" class=\"text-red-800\">Kode ntiyemewe, yararangiye cyangwa yarakoreshejw…</p> aka getByText('Kode ntiyemewe, yararangiye')\n    2) <div role=\"alert\" aria-live=\"assertive\" id=\"__next-route-announcer__\">Amakuru y’umunyeshuri n’ubwishyu | Umuhanda</div> aka getByText('Amakuru y’umunyeshuri n’')\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('alert') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('alert')\u001b[22m\n\u001b[2m    - locator resolved to <div role=\"alert\" aria-live=\"assertive\" id=\"__next-route-announcer__\">Amakuru y’umunyeshuri n’ubwishyu | Umuhanda</div>\u001b[22m\n\u001b[2m    - unexpected value \"Amakuru y’umunyeshuri n’ubwishyu | Umuhanda\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('alert')\nExpected substring: \u001b[32m\"Kode ntiyemewe\"\u001b[39m\nError: strict mode violation: getByRole('alert') resolved to 2 elements:\n    1) <p role=\"alert\" class=\"text-red-800\">Kode ntiyemewe, yararangiye cyangwa yarakoreshejw…</p> aka getByText('Kode ntiyemewe, yararangiye')\n    2) <div role=\"alert\" aria-live=\"assertive\" id=\"__next-route-announcer__\">Amakuru y’umunyeshuri n’ubwishyu | Umuhanda</div> aka getByText('Amakuru y’umunyeshuri n’')\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('alert') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('alert')\u001b[22m\n\u001b[2m    - locator resolved to <div role=\"alert\" aria-live=\"assertive\" id=\"__next-route-announcer__\">Amakuru y’umunyeshuri n’ubwishyu | Umuhanda</div>\u001b[22m\n\u001b[2m    - unexpected value \"Amakuru y’umunyeshuri n’ubwishyu | Umuhanda\"\u001b[22m\n\n    at D:\\Roadrules\\roadrule\\tests\\browser\\phase02.spec.ts:164:43",
+                    "location": {
+                      "file": "D:\\Roadrules\\roadrule\\tests\\browser\\phase02.spec.ts",
+                      "column": 43,
+                      "line": 164
+                    },
+                    "snippet": "  162 |     await promo.fill(\"ARBITRARY-QA-CODE\");\n  163 |     await page.getByRole(\"button\", { name: \"Koresha kode\" }).click();\n> 164 |     await expect(page.locator(\"main\").getByRole(\"alert\")).toContainText(\"Kode ntiyemewe\");\n      |                                           ^\n  165 |     await expect(\n  166 |       page.locator('input[type=\"password\"], input[name*=\"pin\" i]'),\n  167 |     ).toHaveCount(0);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\Roadrules\\roadrule\\tests\\browser\\phase02.spec.ts",
+                        "column": 43,
+                        "line": 164
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('alert')\nExpected substring: \u001b[32m\"Kode ntiyemewe\"\u001b[39m\nError: strict mode violation: getByRole('alert') resolved to 2 elements:\n    1) <p role=\"alert\" class=\"text-red-800\">Kode ntiyemewe, yararangiye cyangwa yarakoreshejw…</p> aka getByText('Kode ntiyemewe, yararangiye')\n    2) <div role=\"alert\" aria-live=\"assertive\" id=\"__next-route-announcer__\">Amakuru y’umunyeshuri n’ubwishyu | Umuhanda</div> aka getByText('Amakuru y’umunyeshuri n’')\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('alert') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('alert')\u001b[22m\n\u001b[2m    - locator resolved to <div role=\"alert\" aria-live=\"assertive\" id=\"__next-route-announcer__\">Amakuru y’umunyeshuri n’ubwishyu | Umuhanda</div>\u001b[22m\n\u001b[2m    - unexpected value \"Amakuru y’umunyeshuri n’ubwishyu | Umuhanda\"\u001b[22m\n\n\n  162 |     await promo.fill(\"ARBITRARY-QA-CODE\");\n  163 |     await page.getByRole(\"button\", { name: \"Koresha kode\" }).click();\n> 164 |     await expect(page.locator(\"main\").getByRole(\"alert\")).toContainText(\"Kode ntiyemewe\");\n      |                                           ^\n  165 |     await expect(\n  166 |       page.locator('input[type=\"password\"], input[name*=\"pin\" i]'),\n  167 |     ).toHaveCount(0);\n    at D:\\Roadrules\\roadrule\\tests\\browser\\phase02.spec.ts:164:43"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T11:16:14.355Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-observations",
+                      "contentType": "application/json",
+                      "body": "ewogICJ3aWR0aCI6ICIxNDQwcHgiLAogICJicm93c2VyVmVyc2lvbiI6ICIxNTcuMC44MTAzLjM4IiwKICAiY29uc29sZUVycm9ycyI6IFtdLAogICJwYWdlRXJyb3JzIjogW10sCiAgImZhaWxlZFJlcXVlc3RzIjogW10sCiAgInVuZXhwZWN0ZWRSZXNwb25zZXMiOiBbXSwKICAibXV0YXRpb25zIjogWwogICAgIlBPU1QgaHR0cDovLzEyNy4wLjAuMTozMTAwL3N0dWRlbnQtYXBpL3N0dWRlbnRzL3Nlc3Npb25zIiwKICAgICJQT1NUIGh0dHA6Ly8xMjcuMC4wLjE6MzEwMC9zdHVkZW50LWFwaS9zdHVkZW50cy9zZXNzaW9ucyIsCiAgICAiUE9TVCBodHRwOi8vMTI3LjAuMC4xOjMxMDAvc3R1ZGVudC1hcGkvcHJvbW9zL3JlZGVlbSIKICBdCn0="
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\Roadrules\\roadrule\\test-results\\phase02-student-flow-navig-0b1a0-sive-layout-and-locked-exam-1440px\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\Roadrules\\roadrule\\tests\\browser\\phase02.spec.ts",
+                    "column": 43,
+                    "line": 164
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "3f76b986ba5de2a01e04-95e18294ee3ec20b44f6",
+          "file": "phase02.spec.ts",
+          "line": 7,
+          "column": 5
+        },
+        {
+          "title": "direct exam entry stays locked without JavaScript",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "1440px",
+              "projectName": "1440px",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1738,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T11:16:27.791Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3f76b986ba5de2a01e04-4a4f547ab759d89c0411",
+          "file": "phase02.spec.ts",
+          "line": 308,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-05T11:15:10.919Z",
+    "duration": 88504.22200000001,
+    "expected": 3,
+    "skipped": 0,
+    "unexpected": 3,
+    "flaky": 0
+  }
+}

@@ -1,0 +1,27 @@
+
+> roadrule@0.1.0 test:browser
+> playwright test --project=390px
+
+[WebServer] D:\Roadrules\roadrule\backend\.venv\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+[WebServer]   from starlette.testclient import TestClient as TestClient  # noqa
+[WebServer] 
+[WebServer] > roadrule@0.1.0 start
+[WebServer] > next start --hostname 127.0.0.1 --port 3100
+[WebServer] 
+[WebServer] (node:10036) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] ▲ Next.js 16.4.5
+[WebServer] - Local:         http://127.0.0.1:3100
+[WebServer] - Network:       http://127.0.0.1:3100
+[WebServer] ✓ Ready in 397ms
+[WebServer] ✓ Running next.config.ts took 115ms
+
+Running 2 tests using 1 worker
+
+(node:16912) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+  ok 1 [390px] › tests\browser\phase02.spec.ts:7:5 › student flow, navigation, responsive layout and locked exam (26.7s)
+  ok 2 [390px] › tests\browser\phase02.spec.ts:389:5 › direct exam entry stays locked without JavaScript (1.3s)
+
+  2 passed (49.2s)

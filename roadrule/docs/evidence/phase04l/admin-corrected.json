@@ -1,0 +1,662 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\Roadrules\\roadrule\\node_modules\\playwright\\cli.js",
+      "test",
+      "--config",
+      "playwright.admin.config.ts",
+      "admin.spec.ts",
+      "--reporter=list,json"
+    ],
+    "configFile": "D:\\Roadrules\\roadrule\\playwright.admin.config.ts",
+    "rootDir": "D:/Roadrules/roadrule/tests/admin-browser",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\teardown.ts",
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/Roadrules/roadrule/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "390px",
+        "name": "390px",
+        "testDir": "D:/Roadrules/roadrule/tests/admin-browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "D:/Roadrules/roadrule/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "834px",
+        "name": "834px",
+        "testDir": "D:/Roadrules/roadrule/tests/admin-browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "D:/Roadrules/roadrule/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "1440px",
+        "name": "1440px",
+        "testDir": "D:/Roadrules/roadrule/tests/admin-browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\Roadrules\\roadrule\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "390px",
+        "testDir": "D:\\Roadrules\\roadrule\\tests\\admin-browser",
+        "snapshotDir": "D:\\Roadrules\\roadrule\\tests\\admin-browser",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 120000,
+        "use": {
+          "baseURL": "http://127.0.0.1:3100",
+          "channel": "chrome",
+          "headless": true,
+          "trace": "off",
+          "screenshot": "off",
+          "video": "off",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "390px"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\Roadrules\\roadrule\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "834px",
+        "testDir": "D:\\Roadrules\\roadrule\\tests\\admin-browser",
+        "snapshotDir": "D:\\Roadrules\\roadrule\\tests\\admin-browser",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 120000,
+        "use": {
+          "baseURL": "http://127.0.0.1:3100",
+          "channel": "chrome",
+          "headless": true,
+          "trace": "off",
+          "screenshot": "off",
+          "video": "off",
+          "viewport": {
+            "width": 834,
+            "height": 1112
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "834px"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\Roadrules\\roadrule\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "1440px",
+        "testDir": "D:\\Roadrules\\roadrule\\tests\\admin-browser",
+        "snapshotDir": "D:\\Roadrules\\roadrule\\tests\\admin-browser",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 120000,
+        "use": {
+          "baseURL": "http://127.0.0.1:3100",
+          "channel": "chrome",
+          "headless": true,
+          "trace": "off",
+          "screenshot": "off",
+          "video": "off",
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "1440px"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "admin.spec.ts",
+      "file": "admin.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "unauthorized, forged-role and forged-cookie routes fail closed",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "390px",
+              "projectName": "390px",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 21220,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T18:22:38.400Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-8969d7042cb59fb35496",
+          "file": "admin.spec.ts",
+          "line": 57,
+          "column": 5
+        },
+        {
+          "title": "login validation, real dashboard, all navigation, unavailable states and logout",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "390px",
+              "projectName": "390px",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 32483,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T18:23:01.492Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-observations",
+                      "contentType": "application/json",
+                      "body": "eyJ3aWR0aCI6IjM5MHB4IiwiZXJyb3JzIjpbXSwicmVhbFN0dWRlbnRDb3VudCI6MSwidW5pbXBsZW1lbnRlZE1ldHJpY3MiOiJ1bmF2YWlsYWJsZSIsImNvb2tpZUh0dHBPbmx5Ijp0cnVlLCJsb2dvdXRWZXJpZmllZCI6dHJ1ZX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-581c7e2c1922fbb07366",
+          "file": "admin.spec.ts",
+          "line": 101,
+          "column": 5
+        },
+        {
+          "title": "server expiration overrides an existing browser cookie",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "390px",
+              "projectName": "390px",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 22833,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T18:23:34.161Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-eb0e8cea13892c0d7d81",
+          "file": "admin.spec.ts",
+          "line": 285,
+          "column": 5
+        },
+        {
+          "title": "private PDF upload, source-backed draft and duplicate recovery",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "390px",
+              "projectName": "390px",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 47652,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T18:23:57.082Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-c523b8e664c2aec208a5",
+          "file": "admin.spec.ts",
+          "line": 301,
+          "column": 5
+        },
+        {
+          "title": "unauthorized, forged-role and forged-cookie routes fail closed",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "834px",
+              "projectName": "834px",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 15768,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T18:26:13.749Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-34654495e96a46626c7b",
+          "file": "admin.spec.ts",
+          "line": 57,
+          "column": 5
+        },
+        {
+          "title": "login validation, real dashboard, all navigation, unavailable states and logout",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "834px",
+              "projectName": "834px",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 14951,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('ROAD-UI-1793989605145', { exact: true })\nExpected: visible\nError: strict mode violation: getByText('ROAD-UI-1793989605145', { exact: true }) resolved to 2 elements:\n    1) <code class=\"break-all font-bold\">ROAD-UI-1793989605145</code> aka getByRole('code')\n    2) <p class=\"break-all font-semibold\">ROAD-UI-1793989605145</p> aka getByRole('list').getByText('ROAD-UI-1793989605145')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('ROAD-UI-1793989605145', { exact: true }) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText('ROAD-UI-1793989605145', { exact: true })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('ROAD-UI-1793989605145', { exact: true })\nExpected: visible\nError: strict mode violation: getByText('ROAD-UI-1793989605145', { exact: true }) resolved to 2 elements:\n    1) <code class=\"break-all font-bold\">ROAD-UI-1793989605145</code> aka getByRole('code')\n    2) <p class=\"break-all font-semibold\">ROAD-UI-1793989605145</p> aka getByRole('list').getByText('ROAD-UI-1793989605145')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('ROAD-UI-1793989605145', { exact: true }) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText('ROAD-UI-1793989605145', { exact: true })\u001b[22m\n\n    at D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts:231:64",
+                    "location": {
+                      "file": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts",
+                      "column": 64,
+                      "line": 231
+                    },
+                    "snippet": "  229 |         page.getByText(\"Published promo code\", { exact: true }),\n  230 |       ).toBeVisible();\n> 231 |       await expect(page.getByText(promoCode, { exact: true })).toBeVisible();\n      |                                                                ^\n  232 |       await page.getByRole(\"button\", { name: \"Hide code\" }).click();\n  233 |       const latest = page\n  234 |         .getByRole(\"listitem\")"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts",
+                        "column": 64,
+                        "line": 231
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('ROAD-UI-1793989605145', { exact: true })\nExpected: visible\nError: strict mode violation: getByText('ROAD-UI-1793989605145', { exact: true }) resolved to 2 elements:\n    1) <code class=\"break-all font-bold\">ROAD-UI-1793989605145</code> aka getByRole('code')\n    2) <p class=\"break-all font-semibold\">ROAD-UI-1793989605145</p> aka getByRole('list').getByText('ROAD-UI-1793989605145')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('ROAD-UI-1793989605145', { exact: true }) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText('ROAD-UI-1793989605145', { exact: true })\u001b[22m\n\n\n  229 |         page.getByText(\"Published promo code\", { exact: true }),\n  230 |       ).toBeVisible();\n> 231 |       await expect(page.getByText(promoCode, { exact: true })).toBeVisible();\n      |                                                                ^\n  232 |       await page.getByRole(\"button\", { name: \"Hide code\" }).click();\n  233 |       const latest = page\n  234 |         .getByRole(\"listitem\")\n    at D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts:231:64"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T18:26:31.315Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\Roadrules\\roadrule\\test-results\\admin-login-validation-rea-66226-available-states-and-logout-834px\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts",
+                    "column": 64,
+                    "line": 231
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-fad85d92b291295a7d72",
+          "file": "admin.spec.ts",
+          "line": 101,
+          "column": 5
+        },
+        {
+          "title": "server expiration overrides an existing browser cookie",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "834px",
+              "projectName": "834px",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 23273,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T18:27:21.273Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-d126fc11fd5b5985b9ab",
+          "file": "admin.spec.ts",
+          "line": 285,
+          "column": 5
+        },
+        {
+          "title": "private PDF upload, source-backed draft and duplicate recovery",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "834px",
+              "projectName": "834px",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 60229,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T18:27:46.298Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-182d3205ae0a7df86423",
+          "file": "admin.spec.ts",
+          "line": 301,
+          "column": 5
+        },
+        {
+          "title": "unauthorized, forged-role and forged-cookie routes fail closed",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "1440px",
+              "projectName": "1440px",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 17047,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T18:29:18.124Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-496d8b5a98644a201f0f",
+          "file": "admin.spec.ts",
+          "line": 57,
+          "column": 5
+        },
+        {
+          "title": "login validation, real dashboard, all navigation, unavailable states and logout",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "1440px",
+              "projectName": "1440px",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 34640,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T18:29:37.052Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-observations",
+                      "contentType": "application/json",
+                      "body": "eyJ3aWR0aCI6IjE0NDBweCIsImVycm9ycyI6W10sInJlYWxTdHVkZW50Q291bnQiOjEsInVuaW1wbGVtZW50ZWRNZXRyaWNzIjoidW5hdmFpbGFibGUiLCJjb29raWVIdHRwT25seSI6dHJ1ZSwibG9nb3V0VmVyaWZpZWQiOnRydWV9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-b4705843c326ae00ca29",
+          "file": "admin.spec.ts",
+          "line": 101,
+          "column": 5
+        },
+        {
+          "title": "server expiration overrides an existing browser cookie",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "1440px",
+              "projectName": "1440px",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 32915,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T18:30:11.860Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-03616466883d242f6826",
+          "file": "admin.spec.ts",
+          "line": 285,
+          "column": 5
+        },
+        {
+          "title": "private PDF upload, source-backed draft and duplicate recovery",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "1440px",
+              "projectName": "1440px",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 60001,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T18:30:44.924Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-27aa544ec426bdcf2004",
+          "file": "admin.spec.ts",
+          "line": 301,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-06T18:21:57.555Z",
+    "duration": 666444.1780000001,
+    "expected": 11,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

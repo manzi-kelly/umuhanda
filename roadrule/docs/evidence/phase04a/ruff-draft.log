@@ -1,0 +1,272 @@
+E501 Line too long (112 > 100)
+  --> tests\integration\test_admin.py:45:101
+   |
+43 | @pytest.fixture
+44 | def admin_settings(integration_settings):
+45 |     return Settings(_env_file=None, app_env="testing", test_database_url=integration_settings.test_database_url,
+   |                                                                                                     ^^^^^^^^^^^^
+46 |                     cors_allowed_origins=["http://localhost:3000"])
+   |
+
+E501 Line too long (128 > 100)
+  --> tests\integration\test_admin.py:53:101
+   |
+51 |     password = secrets.token_urlsafe(24)
+52 |     with admin_database.session_factory() as session:
+53 |         identifier = AdminAuthService(session, admin_settings).bootstrap("Test Administrator", "operator@example.com", password)
+   |                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+54 |     return {"id": identifier, "email": "operator@example.com", "password": password}
+   |
+
+E501 Line too long (118 > 100)
+  --> tests\integration\test_admin.py:59:101
+   |
+57 | @pytest.fixture
+58 | def admin_client(account, admin_settings):
+59 |     with TestClient(create_app(admin_settings), base_url="http://localhost", raise_server_exceptions=False) as client:
+   |                                                                                                     ^^^^^^^^^^^^^^^^^^
+60 |         yield client
+   |
+
+E501 Line too long (117 > 100)
+  --> tests\integration\test_admin.py:64:101
+   |
+63 | def login(client, account):
+64 |     response = client.post(LOGIN, headers=HEADERS, json={"email": account["email"], "password": account["password"]})
+   |                                                                                                     ^^^^^^^^^^^^^^^^^
+65 |     assert response.status_code == 200
+66 |     return response, client.cookies.get("roadrules_admin")
+   |
+
+E501 Line too long (110 > 100)
+  --> tests\integration\test_admin.py:72:101
+   |
+70 |     with admin_database.session_factory() as session:
+71 |         admin = session.get(AdminUser, account["id"])
+72 |         assert admin.password_hash.startswith("$argon2id$") and account["password"] not in admin.password_hash
+   |                                                                                                     ^^^^^^^^^^
+73 |         with pytest.raises(BootstrapRefused):
+74 |             session.rollback()
+   |
+
+E501 Line too long (136 > 100)
+  --> tests\integration\test_admin.py:75:101
+   |
+73 | …
+74 | …
+75 | …).bootstrap("Another Administrator", "other@example.com", secrets.token_urlsafe(24))
+   |                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+76 | …:
+77 | …elect_from(AdminUser)) == 1
+   |
+
+E501 Line too long (132 > 100)
+  --> tests\integration\test_admin.py:84:101
+   |
+82 |         connection.execute(delete(AdminUser).where(AdminUser.id == account["id"]))
+83 |     with admin_database.session_factory() as session, pytest.raises(BootstrapRefused):
+84 |         AdminAuthService(session, admin_settings).bootstrap("Another Administrator", "other@example.com", secrets.token_urlsafe(24))
+   |                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+E501 Line too long (155 > 100)
+  --> tests\integration\test_admin.py:91:101
+   |
+89 | …
+90 | …
+91 | …tstrap("Concurrent Administrator", f"operator{number}@example.com", secrets.token_urlsafe(24))
+   |                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+92 | …
+93 | …
+   |
+
+E701 Multiple statements on one line (colon)
+   --> tests\integration\test_admin.py:118:23
+    |
+116 | def test_generic_login_failure(admin_client, account, admin_database, case):
+117 |     payload = {"email": account["email"], "password": account["password"]}
+118 |     if case == "wrong": payload["password"] = "incorrect"
+    |                       ^
+119 |     if case == "unknown": payload["email"] = "missing@example.com"
+120 |     if case == "inactive":
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests\integration\test_admin.py:119:25
+    |
+117 |     payload = {"email": account["email"], "password": account["password"]}
+118 |     if case == "wrong": payload["password"] = "incorrect"
+119 |     if case == "unknown": payload["email"] = "missing@example.com"
+    |                         ^
+120 |     if case == "inactive":
+121 |         with admin_database.engine.begin() as connection:
+    |
+
+E501 Line too long (123 > 100)
+   --> tests\integration\test_admin.py:125:101
+    |
+123 |     response = admin_client.post(LOGIN, json=payload, headers=HEADERS)
+124 |     assert response.status_code == 401
+125 |     assert response.json() == {"error": {"code": "ADMIN_AUTH_REQUIRED", "message": "Administrator authentication failed."}}
+    |                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^
+126 |     assert "operator@example.com" not in response.text
+127 |     with admin_database.session_factory() as session:
+    |
+
+E501 Line too long (144 > 100)
+   --> tests\integration\test_admin.py:129:101
+    |
+127 | …
+128 | …t_from(AdminSession)) == 0
+129 | …t_from(AdminAuditEvent).where(AdminAuditEvent.event_type == "ADMIN_LOGIN_ATTEMPT")) == 1
+    |                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+E501 Line too long (140 > 100)
+   --> tests\integration\test_admin.py:135:101
+    |
+133 | …
+134 | …== 401
+135 | …ns", json={"fullName": "Student Guest", "phoneNumber": "0781234567"}, headers=HEADERS)
+    |                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+136 | …
+137 | …guest")
+    |
+
+E501 Line too long (105 > 100)
+   --> tests\integration\test_admin.py:145:101
+    |
+145 | def test_dashboard_uses_real_count_and_null_unimplemented_metrics(admin_client, account, admin_database):
+    |                                                                                                     ^^^^^
+146 |     login(admin_client, account)
+147 |     with admin_database.session_factory.begin() as session:
+    |
+
+E501 Line too long (102 > 100)
+   --> tests\integration\test_admin.py:148:101
+    |
+146 |     login(admin_client, account)
+147 |     with admin_database.session_factory.begin() as session:
+148 |         session.add(Student(id=uuid4(), full_name="Count Verification", phone_number="+250781234567"))
+    |                                                                                                     ^^
+149 |     response = admin_client.get(SUMMARY)
+150 |     assert response.status_code == 200
+    |
+
+E501 Line too long (105 > 100)
+   --> tests\integration\test_admin.py:152:101
+    |
+150 |     assert response.status_code == 200
+151 |     assert response.json() == {"totalStudents": 1, "totalExamAttempts": None,
+152 |         "passedExams": None, "failedExams": None, "totalVerifiedRevenue": None, "activePromoCodes": None}
+    |                                                                                                     ^^^^^
+153 |     assert "phone" not in response.text and "Verification" not in response.text
+    |
+
+E501 Line too long (114 > 100)
+   --> tests\integration\test_admin.py:161:101
+    |
+159 |     with admin_database.engine.begin() as connection:
+160 |         if kind == "absolute":
+161 |             connection.execute(text("UPDATE admin_sessions SET created_at=clock_timestamp()-interval '10 hours', "
+    |                                                                                                     ^^^^^^^^^^^^^^
+162 |                 "expires_at=clock_timestamp()-interval '1 minute', last_activity_at=clock_timestamp()-interval '2 minutes'"))
+163 |         elif kind == "inactivity":
+    |
+
+E501 Line too long (125 > 100)
+   --> tests\integration\test_admin.py:162:101
+    |
+160 |         if kind == "absolute":
+161 |             connection.execute(text("UPDATE admin_sessions SET created_at=clock_timestamp()-interval '10 hours', "
+162 |                 "expires_at=clock_timestamp()-interval '1 minute', last_activity_at=clock_timestamp()-interval '2 minutes'"))
+    |                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+163 |         elif kind == "inactivity":
+164 |             connection.execute(text("UPDATE admin_sessions SET created_at=clock_timestamp()-interval '2 hours', "
+    |
+
+E501 Line too long (113 > 100)
+   --> tests\integration\test_admin.py:164:101
+    |
+162 |                 "expires_at=clock_timestamp()-interval '1 minute', last_activity_at=clock_timestamp()-interval '2 minutes'"))
+163 |         elif kind == "inactivity":
+164 |             connection.execute(text("UPDATE admin_sessions SET created_at=clock_timestamp()-interval '2 hours', "
+    |                                                                                                     ^^^^^^^^^^^^^
+165 |                 "last_activity_at=clock_timestamp()-interval '31 minutes'"))
+166 |         else:
+    |
+
+E501 Line too long (130 > 100)
+   --> tests\integration\test_admin.py:181:101
+    |
+179 |     assert current != old
+180 |     with admin_database.session_factory() as session:
+181 |         assert session.scalar(select(AdminSession.revoked_at).where(AdminSession.token_hash == hash_admin_token(old))) is not None
+    |                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+182 |     response = admin_client.post(LOGOUT, headers=HEADERS)
+183 |     assert response.status_code == 204 and response.content == b"" and "Max-Age=0" in response.headers["set-cookie"]
+    |
+
+E501 Line too long (116 > 100)
+   --> tests\integration\test_admin.py:183:101
+    |
+181 |         assert session.scalar(select(AdminSession.revoked_at).where(AdminSession.token_hash == hash_admin_token(old))) is not None
+182 |     response = admin_client.post(LOGOUT, headers=HEADERS)
+183 |     assert response.status_code == 204 and response.content == b"" and "Max-Age=0" in response.headers["set-cookie"]
+    |                                                                                                     ^^^^^^^^^^^^^^^^
+184 |     assert admin_client.post(LOGOUT, headers=HEADERS).status_code == 204
+185 |     admin_client.cookies.clear()
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests\integration\test_admin.py:191:42
+    |
+190 | def test_login_limits_persist_across_instances(admin_database, admin_settings, account):
+191 |     options = admin_settings.model_dump(); options["admin_login_limit"] = 1
+    |                                          ^
+192 |     settings = Settings(_env_file=None, **options)
+193 |     with TestClient(create_app(settings), base_url="http://localhost") as first:
+    |
+
+E501 Line too long (123 > 100)
+   --> tests\integration\test_admin.py:194:101
+    |
+192 |     settings = Settings(_env_file=None, **options)
+193 |     with TestClient(create_app(settings), base_url="http://localhost") as first:
+194 |         assert first.post(LOGIN, headers=HEADERS, json={"email": account["email"], "password": "wrong"}).status_code == 401
+    |                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^
+195 |     with TestClient(create_app(settings), base_url="http://localhost") as second:
+196 |         response = second.post(LOGIN, headers={**HEADERS, "X-Forwarded-For": "203.0.113.10"}, json={"email": account["email"], "passw…
+    |
+
+E501 Line too long (160 > 100)
+   --> tests\integration\test_admin.py:196:101
+    |
+194 | … account["email"], "password": "wrong"}).status_code == 401
+195 | …host") as second:
+196 | …warded-For": "203.0.113.10"}, json={"email": account["email"], "password": account["password"]})
+    |                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+197 | …"retry-after"] == "60"
+    |
+
+E501 Line too long (138 > 100)
+   --> tests\integration\test_admin.py:203:101
+    |
+201 | …tion": "1"}])
+202 | …ent, account, headers):
+203 | …count["email"], "password": account["password"]}, headers=headers).status_code == 403
+    |                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+204 | …
+205 | ….status_code == 403
+    |
+
+E501 Line too long (102 > 100)
+  --> tests\unit\test_admin_security.py:70:101
+   |
+68 |     set_admin_cookie(response, new_admin_token(), datetime.now(UTC)+timedelta(hours=8), settings)
+69 |     cookie = SimpleCookie(response.headers["set-cookie"])[settings.admin_cookie_name]
+70 |     assert cookie["httponly"] and cookie["samesite"] == "strict" and cookie["path"] == "/api/v1/admin"
+   |                                                                                                     ^^
+71 |     assert bool(cookie["secure"]) == production and not cookie["domain"]
+72 |     cleared = Response()
+   |
+
+Found 28 errors (2 fixed, 26 remaining).

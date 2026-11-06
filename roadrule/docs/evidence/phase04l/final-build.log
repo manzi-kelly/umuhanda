@@ -1,0 +1,51 @@
+
+> roadrule@0.1.0 build
+> next build
+
+▲ Next.js 16.4.5 (Turbopack)
+✓ Running next.config.ts took 330ms
+- Cache Components enabled
+- Partial Prefetching enabled
+- Experiments (use with caution):
+  ✓ agentFeedback
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 6.9s
+  Running TypeScript ...
+  Finished TypeScript in 18.4s ...
+  Collecting page data using 3 workers ...
+  Generating static pages using 3 workers (0/19) ...
+  Generating static pages using 3 workers (4/19) 
+  Generating static pages using 3 workers (9/19) 
+  Generating static pages using 3 workers (14/19) 
+✓ Generating static pages using 3 workers (19/19) in 4.5s
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ƒ /admin/analytics-api
+├ ◐ /admin/dashboard
+├ ◐ /admin/exams
+├ ○ /admin/login
+├ ◐ /admin/payments
+├ ƒ /admin/pdf-api/[...path]
+├ ◐ /admin/pdf-uploads
+├ ◐ /admin/promo-codes
+├ ◐ /admin/questions
+├ ◐ /admin/refunds
+├ ◐ /admin/settings
+├ ◐ /admin/students
+├ ◐ /admin/system
+├ ○ /exam
+├ ○ /icon.svg
+├   /results/[attemptId]
+│ └ ◐ /results/[attemptId]
+├ ƒ /student-api/[...path]
+└ ○ /tangira
+
+
+○  (Static)             prerendered as static content
+◐  (Partial Prerender)  prerendered as static HTML with dynamic server-streamed content
+ƒ  (Dynamic)            server-rendered on demand
+

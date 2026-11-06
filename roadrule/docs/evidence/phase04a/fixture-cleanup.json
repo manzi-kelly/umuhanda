@@ -1,0 +1,21 @@
+{
+  "counts": {
+    "development": {
+      "students": 0,
+      "guest_sessions": 0,
+      "student_activity_events": 0,
+      "admin_users": 0,
+      "admin_sessions": 0,
+      "admin_audit_events": 0
+    },
+    "testing": {
+      "students": 0,
+      "guest_sessions": 0,
+      "student_activity_events": 0,
+      "admin_users": 0,
+      "admin_sessions": 0,
+      "admin_audit_events": 0
+    }
+  },
+  "temporaryCredentialFileRemoved": true
+}

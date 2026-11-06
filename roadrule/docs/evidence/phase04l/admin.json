@@ -1,0 +1,751 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\Roadrules\\roadrule\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config",
+      "playwright.admin.config.ts",
+      "admin.spec.ts",
+      "--reporter=list,json"
+    ],
+    "configFile": "D:\\Roadrules\\roadrule\\playwright.admin.config.ts",
+    "rootDir": "D:/Roadrules/roadrule/tests/admin-browser",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\teardown.ts",
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/Roadrules/roadrule/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "390px",
+        "name": "390px",
+        "testDir": "D:/Roadrules/roadrule/tests/admin-browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "D:/Roadrules/roadrule/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "834px",
+        "name": "834px",
+        "testDir": "D:/Roadrules/roadrule/tests/admin-browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "D:/Roadrules/roadrule/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "1440px",
+        "name": "1440px",
+        "testDir": "D:/Roadrules/roadrule/tests/admin-browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\Roadrules\\roadrule\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "390px",
+        "testDir": "D:\\Roadrules\\roadrule\\tests\\admin-browser",
+        "snapshotDir": "D:\\Roadrules\\roadrule\\tests\\admin-browser",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 120000,
+        "use": {
+          "baseURL": "http://127.0.0.1:3100",
+          "channel": "chrome",
+          "headless": true,
+          "trace": "off",
+          "screenshot": "off",
+          "video": "off",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "390px"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\Roadrules\\roadrule\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "834px",
+        "testDir": "D:\\Roadrules\\roadrule\\tests\\admin-browser",
+        "snapshotDir": "D:\\Roadrules\\roadrule\\tests\\admin-browser",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 120000,
+        "use": {
+          "baseURL": "http://127.0.0.1:3100",
+          "channel": "chrome",
+          "headless": true,
+          "trace": "off",
+          "screenshot": "off",
+          "video": "off",
+          "viewport": {
+            "width": 834,
+            "height": 1112
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "834px"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\Roadrules\\roadrule\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "1440px",
+        "testDir": "D:\\Roadrules\\roadrule\\tests\\admin-browser",
+        "snapshotDir": "D:\\Roadrules\\roadrule\\tests\\admin-browser",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 120000,
+        "use": {
+          "baseURL": "http://127.0.0.1:3100",
+          "channel": "chrome",
+          "headless": true,
+          "trace": "off",
+          "screenshot": "off",
+          "video": "off",
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "1440px"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "admin.spec.ts",
+      "file": "admin.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "unauthorized, forged-role and forged-cookie routes fail closed",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "390px",
+              "projectName": "390px",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 13003,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T17:27:54.230Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-8969d7042cb59fb35496",
+          "file": "admin.spec.ts",
+          "line": 52,
+          "column": 5
+        },
+        {
+          "title": "login validation, real dashboard, all navigation, unavailable states and logout",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "390px",
+              "projectName": "390px",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 30897,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Copy this code now. It is shown once.')\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Copy this code now. It is shown once.') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Copy this code now. It is shown once.')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Copy this code now. It is shown once.')\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Copy this code now. It is shown once.') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Copy this code now. It is shown once.')\u001b[22m\n\n    at D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts:221:9",
+                    "location": {
+                      "file": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts",
+                      "column": 9,
+                      "line": 221
+                    },
+                    "snippet": "  219 |       await expect(\n  220 |         page.getByText(\"Copy this code now. It is shown once.\"),\n> 221 |       ).toBeVisible();\n      |         ^\n  222 |       await page.getByRole(\"button\", { name: \"Hide code\" }).click();\n  223 |       const latest = page\n  224 |         .getByRole(\"listitem\")"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts",
+                        "column": 9,
+                        "line": 221
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Copy this code now. It is shown once.')\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Copy this code now. It is shown once.') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Copy this code now. It is shown once.')\u001b[22m\n\n\n  219 |       await expect(\n  220 |         page.getByText(\"Copy this code now. It is shown once.\"),\n> 221 |       ).toBeVisible();\n      |         ^\n  222 |       await page.getByRole(\"button\", { name: \"Hide code\" }).click();\n  223 |       const latest = page\n  224 |         .getByRole(\"listitem\")\n    at D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts:221:9"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T17:28:08.672Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\Roadrules\\roadrule\\test-results\\admin-login-validation-rea-66226-available-states-and-logout-390px\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts",
+                    "column": 9,
+                    "line": 221
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-581c7e2c1922fbb07366",
+          "file": "admin.spec.ts",
+          "line": 96,
+          "column": 5
+        },
+        {
+          "title": "server expiration overrides an existing browser cookie",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "390px",
+              "projectName": "390px",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 13840,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T17:28:59.489Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-eb0e8cea13892c0d7d81",
+          "file": "admin.spec.ts",
+          "line": 275,
+          "column": 5
+        },
+        {
+          "title": "private PDF upload, source-backed draft and duplicate recovery",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "390px",
+              "projectName": "390px",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 36002,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T17:29:14.529Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-c523b8e664c2aec208a5",
+          "file": "admin.spec.ts",
+          "line": 291,
+          "column": 5
+        },
+        {
+          "title": "unauthorized, forged-role and forged-cookie routes fail closed",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "834px",
+              "projectName": "834px",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 16542,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T17:29:59.672Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-34654495e96a46626c7b",
+          "file": "admin.spec.ts",
+          "line": 52,
+          "column": 5
+        },
+        {
+          "title": "login validation, real dashboard, all navigation, unavailable states and logout",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "834px",
+              "projectName": "834px",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 31789,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Copy this code now. It is shown once.')\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Copy this code now. It is shown once.') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Copy this code now. It is shown once.')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Copy this code now. It is shown once.')\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Copy this code now. It is shown once.') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Copy this code now. It is shown once.')\u001b[22m\n\n    at D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts:221:9",
+                    "location": {
+                      "file": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts",
+                      "column": 9,
+                      "line": 221
+                    },
+                    "snippet": "  219 |       await expect(\n  220 |         page.getByText(\"Copy this code now. It is shown once.\"),\n> 221 |       ).toBeVisible();\n      |         ^\n  222 |       await page.getByRole(\"button\", { name: \"Hide code\" }).click();\n  223 |       const latest = page\n  224 |         .getByRole(\"listitem\")"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts",
+                        "column": 9,
+                        "line": 221
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Copy this code now. It is shown once.')\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Copy this code now. It is shown once.') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Copy this code now. It is shown once.')\u001b[22m\n\n\n  219 |       await expect(\n  220 |         page.getByText(\"Copy this code now. It is shown once.\"),\n> 221 |       ).toBeVisible();\n      |         ^\n  222 |       await page.getByRole(\"button\", { name: \"Hide code\" }).click();\n  223 |       const latest = page\n  224 |         .getByRole(\"listitem\")\n    at D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts:221:9"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T17:30:17.637Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\Roadrules\\roadrule\\test-results\\admin-login-validation-rea-66226-available-states-and-logout-834px\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts",
+                    "column": 9,
+                    "line": 221
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-fad85d92b291295a7d72",
+          "file": "admin.spec.ts",
+          "line": 96,
+          "column": 5
+        },
+        {
+          "title": "server expiration overrides an existing browser cookie",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "834px",
+              "projectName": "834px",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 19540,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T17:31:13.720Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-d126fc11fd5b5985b9ab",
+          "file": "admin.spec.ts",
+          "line": 275,
+          "column": 5
+        },
+        {
+          "title": "private PDF upload, source-backed draft and duplicate recovery",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "834px",
+              "projectName": "834px",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 54136,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T17:31:34.767Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-182d3205ae0a7df86423",
+          "file": "admin.spec.ts",
+          "line": 291,
+          "column": 5
+        },
+        {
+          "title": "unauthorized, forged-role and forged-cookie routes fail closed",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "1440px",
+              "projectName": "1440px",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 26449,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T17:33:31.342Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-496d8b5a98644a201f0f",
+          "file": "admin.spec.ts",
+          "line": 52,
+          "column": 5
+        },
+        {
+          "title": "login validation, real dashboard, all navigation, unavailable states and logout",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "1440px",
+              "projectName": "1440px",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 33451,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Copy this code now. It is shown once.')\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Copy this code now. It is shown once.') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Copy this code now. It is shown once.')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Copy this code now. It is shown once.')\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Copy this code now. It is shown once.') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Copy this code now. It is shown once.')\u001b[22m\n\n    at D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts:221:9",
+                    "location": {
+                      "file": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts",
+                      "column": 9,
+                      "line": 221
+                    },
+                    "snippet": "  219 |       await page.getByLabel(\"Promo code\", { exact: true }).fill(promoCode);\n  220 |       await page\n> 221 |         .getByRole(\"button\", { name: \"Generate / Publish code\" })\n      |         ^\n  222 |         .click();\n  223 |       await expect(\n  224 |         page.getByText(\"Published promo code\", { exact: true }),"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts",
+                        "column": 9,
+                        "line": 221
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Copy this code now. It is shown once.')\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Copy this code now. It is shown once.') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Copy this code now. It is shown once.')\u001b[22m\n\n\n  219 |       await page.getByLabel(\"Promo code\", { exact: true }).fill(promoCode);\n  220 |       await page\n> 221 |         .getByRole(\"button\", { name: \"Generate / Publish code\" })\n      |         ^\n  222 |         .click();\n  223 |       await expect(\n  224 |         page.getByText(\"Published promo code\", { exact: true }),\n    at D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts:221:9"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T17:33:59.167Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\Roadrules\\roadrule\\test-results\\admin-login-validation-rea-66226-available-states-and-logout-1440px\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts",
+                    "column": 9,
+                    "line": 221
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-b4705843c326ae00ca29",
+          "file": "admin.spec.ts",
+          "line": 96,
+          "column": 5
+        },
+        {
+          "title": "server expiration overrides an existing browser cookie",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "1440px",
+              "projectName": "1440px",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 18877,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T17:35:28.913Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-03616466883d242f6826",
+          "file": "admin.spec.ts",
+          "line": 275,
+          "column": 5
+        },
+        {
+          "title": "private PDF upload, source-backed draft and duplicate recovery",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "1440px",
+              "projectName": "1440px",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 23755,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Itegereje umukozi wo gutunganya PDF.')\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Itegereje umukozi wo gutunganya PDF.') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Itegereje umukozi wo gutunganya PDF.')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Itegereje umukozi wo gutunganya PDF.')\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Itegereje umukozi wo gutunganya PDF.') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Itegereje umukozi wo gutunganya PDF.')\u001b[22m\n\n    at D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts:334:5",
+                    "location": {
+                      "file": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts",
+                      "column": 5,
+                      "line": 334
+                    },
+                    "snippet": "  332 |   await expect(\n  333 |     page.getByText(\"PDF yabitswe.\", {\n> 334 |       exact: true,\n      |     ^\n  335 |     }),\n  336 |   ).toBeVisible();\n  337 |   await expect("
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts",
+                        "column": 5,
+                        "line": 334
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Itegereje umukozi wo gutunganya PDF.')\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Itegereje umukozi wo gutunganya PDF.') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Itegereje umukozi wo gutunganya PDF.')\u001b[22m\n\n\n  332 |   await expect(\n  333 |     page.getByText(\"PDF yabitswe.\", {\n> 334 |       exact: true,\n      |     ^\n  335 |     }),\n  336 |   ).toBeVisible();\n  337 |   await expect(\n    at D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts:334:5"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T17:35:49.233Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\Roadrules\\roadrule\\test-results\\admin-private-PDF-upload-s-11d0b-raft-and-duplicate-recovery-1440px\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts",
+                    "column": 5,
+                    "line": 334
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-27aa544ec426bdcf2004",
+          "file": "admin.spec.ts",
+          "line": 291,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "message": "Error: Command failed: D:\\Roadrules\\roadrule\\backend\\.venv\\Scripts\\python.exe -m scripts.admin_browser_fixture cleanup\nTraceback (most recent call last):\r\n  File \"D:\\Roadrules\\roadrule\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 2000, in _exec_single_context\r\n    self.dialect.do_execute(\r\n  File \"D:\\Roadrules\\roadrule\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\default.py\", line 964, in do_execute\r\n    cursor.execute(statement, parameters)\r\n  File \"D:\\Roadrules\\roadrule\\backend\\.venv\\Lib\\site-packages\\psycopg\\cursor.py\", line 117, in execute\r\n    raise ex.with_traceback(None)\r\npsycopg.errors.UndefinedTable: relation \"pdf_documents\" does not exist\r\nLINE 2: FROM pdf_documents\r\n             ^\r\n\r\nThe above exception was the direct cause of the following exception:\r\n\r\nTraceback (most recent call last):\r\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\r\n  File \"<frozen runpy>\", line 88, in _run_code\r\n  File \"D:\\Roadrules\\roadrule\\backend\\scripts\\admin_browser_fixture.py\", line 246, in <module>\r\n    main()\r\n  File \"D:\\Roadrules\\roadrule\\backend\\scripts\\admin_browser_fixture.py\", line 171, in main\r\n    documents = session.scalars(select(PdfDocument)).all()\r\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"D:\\Roadrules\\roadrule\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\orm\\session.py\", line 2481, in scalars\r\n    return self._execute_internal(\r\n           ^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"D:\\Roadrules\\roadrule\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\orm\\session.py\", line 2271, in _execute_internal\r\n    result: Result[Any] = compile_state_cls.orm_execute_statement(\r\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"D:\\Roadrules\\roadrule\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\orm\\context.py\", line 306, in orm_execute_statement\r\n    result = conn.execute(\r\n             ^^^^^^^^^^^^^\r\n  File \"D:\\Roadrules\\roadrule\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 1464, in execute\r\n    return meth(\r\n           ^^^^^\r\n  File \"D:\\Roadrules\\roadrule\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\sql\\elements.py\", line 526, in _execute_on_connection\r\n    return connection._execute_clauseelement(\r\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"D:\\Roadrules\\roadrule\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 1686, in _execute_clauseelement\r\n    ret = self._execute_context(\r\n          ^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"D:\\Roadrules\\roadrule\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 1891, in _execute_context\r\n    return self._exec_single_context(\r\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"D:\\Roadrules\\roadrule\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 2019, in _exec_single_context\r\n    self._handle_dbapi_exception(\r\n  File \"D:\\Roadrules\\roadrule\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 2381, in _handle_dbapi_exception\r\n    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e\r\n  File \"D:\\Roadrules\\roadrule\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 2000, in _exec_single_context\r\n    self.dialect.do_execute(\r\n  File \"D:\\Roadrules\\roadrule\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\default.py\", line 964, in do_execute\r\n    cursor.execute(statement, parameters)\r\n  File \"D:\\Roadrules\\roadrule\\backend\\.venv\\Lib\\site-packages\\psycopg\\cursor.py\", line 117, in execute\r\n    raise ex.with_traceback(None)\r\nsqlalchemy.exc.ProgrammingError: (psycopg.errors.UndefinedTable) relation \"pdf_documents\" does not exist\r\nLINE 2: FROM pdf_documents\r\n             ^\r\n[SQL: SELECT pdf_documents.id, pdf_documents.original_filename, pdf_documents.storage_key, pdf_documents.sha256_hash, pdf_documents.file_size_bytes, pdf_documents.page_count, pdf_documents.uploaded_by_admin_id, pdf_documents.import_status, pdf_documents.created_at, pdf_documents.processed_at, pdf_documents.error_summary \r\nFROM pdf_documents]\r\n(Background on this error at: https://sqlalche.me/e/20/f405)\r\n",
+      "stack": "Error: Command failed: D:\\Roadrules\\roadrule\\backend\\.venv\\Scripts\\python.exe -m scripts.admin_browser_fixture cleanup\nTraceback (most recent call last):\r\n  File \"D:\\Roadrules\\roadrule\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 2000, in _exec_single_context\r\n    self.dialect.do_execute(\r\n  File \"D:\\Roadrules\\roadrule\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\default.py\", line 964, in do_execute\r\n    cursor.execute(statement, parameters)\r\n  File \"D:\\Roadrules\\roadrule\\backend\\.venv\\Lib\\site-packages\\psycopg\\cursor.py\", line 117, in execute\r\n    raise ex.with_traceback(None)\r\npsycopg.errors.UndefinedTable: relation \"pdf_documents\" does not exist\r\nLINE 2: FROM pdf_documents\r\n             ^\r\n\r\nThe above exception was the direct cause of the following exception:\r\n\r\nTraceback (most recent call last):\r\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\r\n  File \"<frozen runpy>\", line 88, in _run_code\r\n  File \"D:\\Roadrules\\roadrule\\backend\\scripts\\admin_browser_fixture.py\", line 246, in <module>\r\n    main()\r\n  File \"D:\\Roadrules\\roadrule\\backend\\scripts\\admin_browser_fixture.py\", line 171, in main\r\n    documents = session.scalars(select(PdfDocument)).all()\r\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"D:\\Roadrules\\roadrule\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\orm\\session.py\", line 2481, in scalars\r\n    return self._execute_internal(\r\n           ^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"D:\\Roadrules\\roadrule\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\orm\\session.py\", line 2271, in _execute_internal\r\n    result: Result[Any] = compile_state_cls.orm_execute_statement(\r\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"D:\\Roadrules\\roadrule\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\orm\\context.py\", line 306, in orm_execute_statement\r\n    result = conn.execute(\r\n             ^^^^^^^^^^^^^\r\n  File \"D:\\Roadrules\\roadrule\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 1464, in execute\r\n    return meth(\r\n           ^^^^^\r\n  File \"D:\\Roadrules\\roadrule\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\sql\\elements.py\", line 526, in _execute_on_connection\r\n    return connection._execute_clauseelement(\r\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"D:\\Roadrules\\roadrule\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 1686, in _execute_clauseelement\r\n    ret = self._execute_context(\r\n          ^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"D:\\Roadrules\\roadrule\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 1891, in _execute_context\r\n    return self._exec_single_context(\r\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"D:\\Roadrules\\roadrule\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 2019, in _exec_single_context\r\n    self._handle_dbapi_exception(\r\n  File \"D:\\Roadrules\\roadrule\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 2381, in _handle_dbapi_exception\r\n    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e\r\n  File \"D:\\Roadrules\\roadrule\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 2000, in _exec_single_context\r\n    self.dialect.do_execute(\r\n  File \"D:\\Roadrules\\roadrule\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\default.py\", line 964, in do_execute\r\n    cursor.execute(statement, parameters)\r\n  File \"D:\\Roadrules\\roadrule\\backend\\.venv\\Lib\\site-packages\\psycopg\\cursor.py\", line 117, in execute\r\n    raise ex.with_traceback(None)\r\nsqlalchemy.exc.ProgrammingError: (psycopg.errors.UndefinedTable) relation \"pdf_documents\" does not exist\r\nLINE 2: FROM pdf_documents\r\n             ^\r\n[SQL: SELECT pdf_documents.id, pdf_documents.original_filename, pdf_documents.storage_key, pdf_documents.sha256_hash, pdf_documents.file_size_bytes, pdf_documents.page_count, pdf_documents.uploaded_by_admin_id, pdf_documents.import_status, pdf_documents.created_at, pdf_documents.processed_at, pdf_documents.error_summary \r\nFROM pdf_documents]\r\n(Background on this error at: https://sqlalche.me/e/20/f405)\r\n\n    at teardown (D:\\Roadrules\\roadrule\\tests\\admin-browser\\teardown.ts:5:15)",
+      "location": {
+        "file": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\teardown.ts",
+        "column": 15,
+        "line": 5
+      },
+      "snippet": "\u001b[90m   at \u001b[39mteardown.ts:5\n\n  3 |\n  4 | export default function teardown() {\n> 5 |   execFileSync(resolve(\"backend/.venv/Scripts/python.exe\"), [\"-m\", \"scripts.admin_browser_fixture\", \"cleanup\"], {\n    |               ^\n  6 |     cwd: resolve(\"backend\"), stdio: \"pipe\", windowsHide: true,\n  7 |   });\n  8 | }"
+    }
+  ],
+  "stats": {
+    "startTime": "2026-11-06T17:27:39.386Z",
+    "duration": 565425.4489999999,
+    "expected": 8,
+    "skipped": 0,
+    "unexpected": 4,
+    "flaky": 0
+  }
+}

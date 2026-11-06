@@ -1,0 +1,157 @@
+{
+  "generatedAt": "2026-11-05T21:03:42.463Z",
+  "method": "Playwright request API through the Next.js production bridge on 127.0.0.1:3100 to FastAPI on 127.0.0.1:8310 and PostgreSQL on 127.0.0.1:55432. Warm session; no concurrent load; loopback only.",
+  "httpStatuses": "Every measured request returned 200 except the three guest sessions and three promo codes, which returned 201 as specified.",
+  "timings": {
+    "guestSession": {
+      "samples": 3,
+      "minMs": 41.3,
+      "medianMs": 43,
+      "p95Ms": 188,
+      "maxMs": 204.45,
+      "allMs": [
+        204.45,
+        42.72,
+        41.3
+      ]
+    },
+    "promoRedeem": {
+      "samples": 3,
+      "minMs": 52.76,
+      "medianMs": 53,
+      "p95Ms": 98,
+      "maxMs": 103.27,
+      "allMs": [
+        103.27,
+        52.76,
+        53.43
+      ]
+    },
+    "entitlementLookup": {
+      "samples": 5,
+      "minMs": 32.99,
+      "medianMs": 35,
+      "p95Ms": 41,
+      "maxMs": 42.87,
+      "allMs": [
+        42.87,
+        35.14,
+        35.31,
+        33.28,
+        32.99
+      ]
+    },
+    "examStart": {
+      "samples": 2,
+      "minMs": 75.96,
+      "medianMs": 106,
+      "p95Ms": 133,
+      "maxMs": 135.82,
+      "allMs": [
+        135.82,
+        75.96
+      ]
+    },
+    "current": {
+      "samples": 20,
+      "minMs": 27.64,
+      "medianMs": 32,
+      "p95Ms": 39,
+      "maxMs": 51.47,
+      "allMs": [
+        38.33,
+        36.67,
+        33.22,
+        31.6,
+        30.26,
+        31.77,
+        30.26,
+        31.32,
+        30.42,
+        27.64,
+        29.87,
+        34.3,
+        32.14,
+        51.47,
+        36.34,
+        34.14,
+        34.14,
+        33.79,
+        30.59,
+        29.68
+      ]
+    },
+    "answer": {
+      "samples": 20,
+      "minMs": 33.47,
+      "medianMs": 39,
+      "p95Ms": 44,
+      "maxMs": 75.7,
+      "allMs": [
+        42.77,
+        42.52,
+        41.32,
+        40.77,
+        37.27,
+        37.01,
+        39.39,
+        37.74,
+        36.99,
+        38.19,
+        36.82,
+        40.15,
+        38.68,
+        42.55,
+        75.7,
+        33.47,
+        38.96,
+        38.25,
+        42.84,
+        41.22
+      ]
+    },
+    "next": {
+      "samples": 20,
+      "minMs": 35.75,
+      "medianMs": 39,
+      "p95Ms": 70,
+      "maxMs": 149.03,
+      "allMs": [
+        40.09,
+        40.07,
+        38.74,
+        47.19,
+        38.54,
+        149.03,
+        36.16,
+        35.75,
+        36.4,
+        36.93,
+        37.78,
+        37.91,
+        35.93,
+        53.44,
+        46.22,
+        42.86,
+        37.64,
+        39.12,
+        39.28,
+        66.05
+      ]
+    },
+    "results": {
+      "samples": 5,
+      "minMs": 24.89,
+      "medianMs": 26,
+      "p95Ms": 41,
+      "maxMs": 44.97,
+      "allMs": [
+        44.97,
+        27.24,
+        26.49,
+        26.04,
+        24.89
+      ]
+    }
+  }
+}

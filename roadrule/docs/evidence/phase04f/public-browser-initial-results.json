@@ -1,0 +1,530 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\Roadrules\\roadrule\\node_modules\\@playwright\\test\\cli.js",
+      "test"
+    ],
+    "configFile": "D:\\Roadrules\\roadrule\\playwright.config.ts",
+    "rootDir": "D:/Roadrules/roadrule/tests/browser",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": "D:\\Roadrules\\roadrule\\tests\\browser\\teardown.ts",
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/Roadrules/roadrule/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "390px",
+        "name": "390px",
+        "testDir": "D:/Roadrules/roadrule/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      },
+      {
+        "outputDir": "D:/Roadrules/roadrule/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "834px",
+        "name": "834px",
+        "testDir": "D:/Roadrules/roadrule/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      },
+      {
+        "outputDir": "D:/Roadrules/roadrule/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "1440px",
+        "name": "1440px",
+        "testDir": "D:/Roadrules/roadrule/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\Roadrules\\roadrule\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "390px",
+        "testDir": "D:\\Roadrules\\roadrule\\tests\\browser",
+        "snapshotDir": "D:\\Roadrules\\roadrule\\tests\\browser",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 90000,
+        "use": {
+          "baseURL": "http://127.0.0.1:3100",
+          "channel": "chrome",
+          "headless": true,
+          "trace": "off",
+          "screenshot": "off",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "390px"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\Roadrules\\roadrule\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "834px",
+        "testDir": "D:\\Roadrules\\roadrule\\tests\\browser",
+        "snapshotDir": "D:\\Roadrules\\roadrule\\tests\\browser",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 90000,
+        "use": {
+          "baseURL": "http://127.0.0.1:3100",
+          "channel": "chrome",
+          "headless": true,
+          "trace": "off",
+          "screenshot": "off",
+          "viewport": {
+            "width": 834,
+            "height": 1112
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "834px"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\Roadrules\\roadrule\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "1440px",
+        "testDir": "D:\\Roadrules\\roadrule\\tests\\browser",
+        "snapshotDir": "D:\\Roadrules\\roadrule\\tests\\browser",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 90000,
+        "use": {
+          "baseURL": "http://127.0.0.1:3100",
+          "channel": "chrome",
+          "headless": true,
+          "trace": "off",
+          "screenshot": "off",
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "1440px"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "docs/evidence/phase04f/public-browser-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "phase02.spec.ts",
+      "file": "phase02.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "student flow, navigation, responsive layout and locked exam",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "390px",
+              "projectName": "390px",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 15623,
+                  "error": {
+                    "message": "Error: browser console errors\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Failed to load resource: the server responded with a status of 404 (Not Found)\",\u001b[39m\n\u001b[31m+ ]\u001b[39m",
+                    "stack": "Error: browser console errors\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Failed to load resource: the server responded with a status of 404 (Not Found)\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at D:\\Roadrules\\roadrule\\tests\\browser\\phase02.spec.ts:425:53",
+                    "location": {
+                      "file": "D:\\Roadrules\\roadrule\\tests\\browser\\phase02.spec.ts",
+                      "column": 53,
+                      "line": 425
+                    },
+                    "snippet": "  423 |       contentType: \"application/json\",\n  424 |     });\n> 425 |     expect(consoleErrors, \"browser console errors\").toEqual([]);\n      |                                                     ^\n  426 |     expect(pageErrors, \"uncaught application errors\").toEqual([]);\n  427 |     expect(failedRequests, \"failed requests\").toEqual([]);\n  428 |     expect(unexpectedResponses, \"HTTP errors\").toEqual([]);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\Roadrules\\roadrule\\tests\\browser\\phase02.spec.ts",
+                        "column": 53,
+                        "line": 425
+                      },
+                      "message": "Error: browser console errors\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Failed to load resource: the server responded with a status of 404 (Not Found)\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n  423 |       contentType: \"application/json\",\n  424 |     });\n> 425 |     expect(consoleErrors, \"browser console errors\").toEqual([]);\n      |                                                     ^\n  426 |     expect(pageErrors, \"uncaught application errors\").toEqual([]);\n  427 |     expect(failedRequests, \"failed requests\").toEqual([]);\n  428 |     expect(unexpectedResponses, \"HTTP errors\").toEqual([]);\n    at D:\\Roadrules\\roadrule\\tests\\browser\\phase02.spec.ts:425:53"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [
+                    {
+                      "buffer": ""
+                    }
+                  ],
+                  "retry": 0,
+                  "startTime": "2026-11-05T17:26:07.920Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-observations",
+                      "contentType": "application/json",
+                      "body": "ewogICJ3aWR0aCI6ICIzOTBweCIsCiAgImJyb3dzZXJWZXJzaW9uIjogIjE1Ny4wLjgxMDMuMzgiLAogICJjb25zb2xlRXJyb3JzIjogWwogICAgIkZhaWxlZCB0byBsb2FkIHJlc291cmNlOiB0aGUgc2VydmVyIHJlc3BvbmRlZCB3aXRoIGEgc3RhdHVzIG9mIDQwNCAoTm90IEZvdW5kKSIKICBdLAogICJwYWdlRXJyb3JzIjogW10sCiAgImZhaWxlZFJlcXVlc3RzIjogW10sCiAgInVuZXhwZWN0ZWRSZXNwb25zZXMiOiBbCiAgICAiNDA0IGh0dHA6Ly8xMjcuMC4wLjE6MzEwMC9zdHVkZW50LWFwaS9leGFtcy81ZDEzZmJhOC1jNzJlLTRiOWEtOTU2ZC1lOWJkYjlkN2YzN2YvbWVkaWEvNC8wIgogIF0sCiAgIm11dGF0aW9ucyI6IFsKICAgICJQT1NUIGh0dHA6Ly8xMjcuMC4wLjE6MzEwMC9zdHVkZW50LWFwaS9zdHVkZW50cy9zZXNzaW9ucyIsCiAgICAiUE9TVCBodHRwOi8vMTI3LjAuMC4xOjMxMDAvc3R1ZGVudC1hcGkvc3R1ZGVudHMvc2Vzc2lvbnMiLAogICAgIlBPU1QgaHR0cDovLzEyNy4wLjAuMTozMTAwL3N0dWRlbnQtYXBpL3Byb21vcy9yZWRlZW0iLAogICAgIlBPU1QgaHR0cDovLzEyNy4wLjAuMTozMTAwL3N0dWRlbnQtYXBpL3BheW1lbnRzL21vY2svaW5pdGlhdGUiLAogICAgIlBPU1QgaHR0cDovLzEyNy4wLjAuMTozMTAwL3N0dWRlbnQtYXBpL3BheW1lbnRzL21vY2svaW5pdGlhdGUiLAogICAgIlBPU1QgaHR0cDovLzEyNy4wLjAuMTozMTAwL3N0dWRlbnQtYXBpL3Byb21vcy9yZWRlZW0iLAogICAgIlBPU1QgaHR0cDovLzEyNy4wLjAuMTozMTAwL3N0dWRlbnQtYXBpL2V4YW1zL3N0YXJ0IiwKICAgICJQVVQgaHR0cDovLzEyNy4wLjAuMTozMTAwL3N0dWRlbnQtYXBpL2V4YW1zLzVkMTNmYmE4LWM3MmUtNGI5YS05NTZkLWU5YmRiOWQ3ZjM3Zi9hbnN3ZXIiLAogICAgIlBVVCBodHRwOi8vMTI3LjAuMC4xOjMxMDAvc3R1ZGVudC1hcGkvZXhhbXMvNWQxM2ZiYTgtYzcyZS00YjlhLTk1NmQtZTliZGI5ZDdmMzdmL2Fuc3dlciIsCiAgICAiUE9TVCBodHRwOi8vMTI3LjAuMC4xOjMxMDAvc3R1ZGVudC1hcGkvZXhhbXMvNWQxM2ZiYTgtYzcyZS00YjlhLTk1NmQtZTliZGI5ZDdmMzdmL25leHQiCiAgXQp9"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\Roadrules\\roadrule\\test-results\\phase02-student-flow-navig-0b1a0-sive-layout-and-locked-exam-390px\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\Roadrules\\roadrule\\tests\\browser\\phase02.spec.ts",
+                    "column": 53,
+                    "line": 425
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "3f76b986ba5de2a01e04-ff2ea0f5b28e34863aca",
+          "file": "phase02.spec.ts",
+          "line": 7,
+          "column": 5
+        },
+        {
+          "title": "direct exam entry stays locked without JavaScript",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "390px",
+              "projectName": "390px",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3296,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T17:26:32.016Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3f76b986ba5de2a01e04-a973f32931fcf17d68aa",
+          "file": "phase02.spec.ts",
+          "line": 432,
+          "column": 5
+        },
+        {
+          "title": "student flow, navigation, responsive layout and locked exam",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "834px",
+              "projectName": "834px",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 21536,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('QA Student', { exact: true })\nExpected: visible\nError: strict mode violation: getByText('QA Student', { exact: true }) resolved to 2 elements:\n    1) <p class=\"font-semibold\">QA Student</p> aka getByRole('paragraph').filter({ hasText: 'QA Student' })\n    2) <p class=\"font-semibold\">QA Student</p> aka getByText('QA Student').nth(1)\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('QA Student', { exact: true }) with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText('QA Student', { exact: true })\u001b[22m\n\u001b[2m    - locator resolved to <p class=\"font-semibold\">QA Student</p>\u001b[22m\n\u001b[2m    - unexpected value \"hidden\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('QA Student', { exact: true })\nExpected: visible\nError: strict mode violation: getByText('QA Student', { exact: true }) resolved to 2 elements:\n    1) <p class=\"font-semibold\">QA Student</p> aka getByRole('paragraph').filter({ hasText: 'QA Student' })\n    2) <p class=\"font-semibold\">QA Student</p> aka getByText('QA Student').nth(1)\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('QA Student', { exact: true }) with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText('QA Student', { exact: true })\u001b[22m\n\u001b[2m    - locator resolved to <p class=\"font-semibold\">QA Student</p>\u001b[22m\n\u001b[2m    - unexpected value \"hidden\"\u001b[22m\n\n    at D:\\Roadrules\\roadrule\\tests\\browser\\phase02.spec.ts:375:65",
+                    "location": {
+                      "file": "D:\\Roadrules\\roadrule\\tests\\browser\\phase02.spec.ts",
+                      "column": 65,
+                      "line": 375
+                    },
+                    "snippet": "  373 |\n  374 |     await page.getByRole(\"link\", { name: \"Pay to Try Again\" }).click();\n> 375 |     await expect(page.getByText(\"QA Student\", { exact: true })).toBeVisible();\n      |                                                                 ^\n  376 |     await page.getByRole(\"link\", { name: \"Reba uko ikizamini gihagaze\" }).click();\n  377 |     await expect(page).toHaveURL(/retake=1$/);\n  378 |     rmSync(clockFile, { force: true });"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\Roadrules\\roadrule\\tests\\browser\\phase02.spec.ts",
+                        "column": 65,
+                        "line": 375
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('QA Student', { exact: true })\nExpected: visible\nError: strict mode violation: getByText('QA Student', { exact: true }) resolved to 2 elements:\n    1) <p class=\"font-semibold\">QA Student</p> aka getByRole('paragraph').filter({ hasText: 'QA Student' })\n    2) <p class=\"font-semibold\">QA Student</p> aka getByText('QA Student').nth(1)\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('QA Student', { exact: true }) with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText('QA Student', { exact: true })\u001b[22m\n\u001b[2m    - locator resolved to <p class=\"font-semibold\">QA Student</p>\u001b[22m\n\u001b[2m    - unexpected value \"hidden\"\u001b[22m\n\n\n  373 |\n  374 |     await page.getByRole(\"link\", { name: \"Pay to Try Again\" }).click();\n> 375 |     await expect(page.getByText(\"QA Student\", { exact: true })).toBeVisible();\n      |                                                                 ^\n  376 |     await page.getByRole(\"link\", { name: \"Reba uko ikizamini gihagaze\" }).click();\n  377 |     await expect(page).toHaveURL(/retake=1$/);\n  378 |     rmSync(clockFile, { force: true });\n    at D:\\Roadrules\\roadrule\\tests\\browser\\phase02.spec.ts:375:65"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [
+                    {
+                      "buffer": ""
+                    }
+                  ],
+                  "retry": 0,
+                  "startTime": "2026-11-05T17:26:38.731Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-observations",
+                      "contentType": "application/json",
+                      "body": "ewogICJ3aWR0aCI6ICI4MzRweCIsCiAgImJyb3dzZXJWZXJzaW9uIjogIjE1Ny4wLjgxMDMuMzgiLAogICJjb25zb2xlRXJyb3JzIjogW10sCiAgInBhZ2VFcnJvcnMiOiBbXSwKICAiZmFpbGVkUmVxdWVzdHMiOiBbXSwKICAidW5leHBlY3RlZFJlc3BvbnNlcyI6IFtdLAogICJtdXRhdGlvbnMiOiBbCiAgICAiUE9TVCBodHRwOi8vMTI3LjAuMC4xOjMxMDAvc3R1ZGVudC1hcGkvc3R1ZGVudHMvc2Vzc2lvbnMiLAogICAgIlBPU1QgaHR0cDovLzEyNy4wLjAuMTozMTAwL3N0dWRlbnQtYXBpL3N0dWRlbnRzL3Nlc3Npb25zIiwKICAgICJQT1NUIGh0dHA6Ly8xMjcuMC4wLjE6MzEwMC9zdHVkZW50LWFwaS9wcm9tb3MvcmVkZWVtIiwKICAgICJQT1NUIGh0dHA6Ly8xMjcuMC4wLjE6MzEwMC9zdHVkZW50LWFwaS9wYXltZW50cy9tb2NrL2luaXRpYXRlIiwKICAgICJQT1NUIGh0dHA6Ly8xMjcuMC4wLjE6MzEwMC9zdHVkZW50LWFwaS9wYXltZW50cy9tb2NrL2luaXRpYXRlIiwKICAgICJQT1NUIGh0dHA6Ly8xMjcuMC4wLjE6MzEwMC9zdHVkZW50LWFwaS9wcm9tb3MvcmVkZWVtIiwKICAgICJQT1NUIGh0dHA6Ly8xMjcuMC4wLjE6MzEwMC9zdHVkZW50LWFwaS9leGFtcy9zdGFydCIsCiAgICAiUFVUIGh0dHA6Ly8xMjcuMC4wLjE6MzEwMC9zdHVkZW50LWFwaS9leGFtcy9kNGE2N2EzMC0yMWNlLTQ3NmEtOGFhOC0wY2NhODgyNDhlOWMvYW5zd2VyIiwKICAgICJQVVQgaHR0cDovLzEyNy4wLjAuMTozMTAwL3N0dWRlbnQtYXBpL2V4YW1zL2Q0YTY3YTMwLTIxY2UtNDc2YS04YWE4LTBjY2E4ODI0OGU5Yy9hbnN3ZXIiLAogICAgIlBPU1QgaHR0cDovLzEyNy4wLjAuMTozMTAwL3N0dWRlbnQtYXBpL2V4YW1zL2Q0YTY3YTMwLTIxY2UtNDc2YS04YWE4LTBjY2E4ODI0OGU5Yy9uZXh0IgogIF0KfQ=="
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\Roadrules\\roadrule\\test-results\\phase02-student-flow-navig-0b1a0-sive-layout-and-locked-exam-834px\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\Roadrules\\roadrule\\tests\\browser\\phase02.spec.ts",
+                    "column": 65,
+                    "line": 375
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "3f76b986ba5de2a01e04-8be98eecc6cef7eae63b",
+          "file": "phase02.spec.ts",
+          "line": 7,
+          "column": 5
+        },
+        {
+          "title": "direct exam entry stays locked without JavaScript",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "834px",
+              "projectName": "834px",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1340,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T17:27:06.393Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3f76b986ba5de2a01e04-8d2f0e492a30c8341809",
+          "file": "phase02.spec.ts",
+          "line": 432,
+          "column": 5
+        },
+        {
+          "title": "student flow, navigation, responsive layout and locked exam",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "1440px",
+              "projectName": "1440px",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 20221,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('QA Student', { exact: true })\nExpected: visible\nError: strict mode violation: getByText('QA Student', { exact: true }) resolved to 2 elements:\n    1) <p class=\"font-semibold\">QA Student</p> aka getByRole('paragraph').filter({ hasText: 'QA Student' })\n    2) <p class=\"font-semibold\">QA Student</p> aka getByText('QA Student').nth(1)\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('QA Student', { exact: true }) with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText('QA Student', { exact: true })\u001b[22m\n\u001b[2m    2 × locator resolved to <p class=\"font-semibold\">QA Student</p>\u001b[22m\n\u001b[2m      - unexpected value \"hidden\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('QA Student', { exact: true })\nExpected: visible\nError: strict mode violation: getByText('QA Student', { exact: true }) resolved to 2 elements:\n    1) <p class=\"font-semibold\">QA Student</p> aka getByRole('paragraph').filter({ hasText: 'QA Student' })\n    2) <p class=\"font-semibold\">QA Student</p> aka getByText('QA Student').nth(1)\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('QA Student', { exact: true }) with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText('QA Student', { exact: true })\u001b[22m\n\u001b[2m    2 × locator resolved to <p class=\"font-semibold\">QA Student</p>\u001b[22m\n\u001b[2m      - unexpected value \"hidden\"\u001b[22m\n\n    at D:\\Roadrules\\roadrule\\tests\\browser\\phase02.spec.ts:375:65",
+                    "location": {
+                      "file": "D:\\Roadrules\\roadrule\\tests\\browser\\phase02.spec.ts",
+                      "column": 65,
+                      "line": 375
+                    },
+                    "snippet": "  373 |\n  374 |     await page.getByRole(\"link\", { name: \"Pay to Try Again\" }).click();\n> 375 |     await expect(page.getByText(\"QA Student\", { exact: true })).toBeVisible();\n      |                                                                 ^\n  376 |     await page.getByRole(\"link\", { name: \"Reba uko ikizamini gihagaze\" }).click();\n  377 |     await expect(page).toHaveURL(/retake=1$/);\n  378 |     rmSync(clockFile, { force: true });"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\Roadrules\\roadrule\\tests\\browser\\phase02.spec.ts",
+                        "column": 65,
+                        "line": 375
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('QA Student', { exact: true })\nExpected: visible\nError: strict mode violation: getByText('QA Student', { exact: true }) resolved to 2 elements:\n    1) <p class=\"font-semibold\">QA Student</p> aka getByRole('paragraph').filter({ hasText: 'QA Student' })\n    2) <p class=\"font-semibold\">QA Student</p> aka getByText('QA Student').nth(1)\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('QA Student', { exact: true }) with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText('QA Student', { exact: true })\u001b[22m\n\u001b[2m    2 × locator resolved to <p class=\"font-semibold\">QA Student</p>\u001b[22m\n\u001b[2m      - unexpected value \"hidden\"\u001b[22m\n\n\n  373 |\n  374 |     await page.getByRole(\"link\", { name: \"Pay to Try Again\" }).click();\n> 375 |     await expect(page.getByText(\"QA Student\", { exact: true })).toBeVisible();\n      |                                                                 ^\n  376 |     await page.getByRole(\"link\", { name: \"Reba uko ikizamini gihagaze\" }).click();\n  377 |     await expect(page).toHaveURL(/retake=1$/);\n  378 |     rmSync(clockFile, { force: true });\n    at D:\\Roadrules\\roadrule\\tests\\browser\\phase02.spec.ts:375:65"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [
+                    {
+                      "buffer": ""
+                    }
+                  ],
+                  "retry": 0,
+                  "startTime": "2026-11-05T17:27:15.593Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-observations",
+                      "contentType": "application/json",
+                      "body": "ewogICJ3aWR0aCI6ICIxNDQwcHgiLAogICJicm93c2VyVmVyc2lvbiI6ICIxNTcuMC44MTAzLjM4IiwKICAiY29uc29sZUVycm9ycyI6IFtdLAogICJwYWdlRXJyb3JzIjogW10sCiAgImZhaWxlZFJlcXVlc3RzIjogW10sCiAgInVuZXhwZWN0ZWRSZXNwb25zZXMiOiBbXSwKICAibXV0YXRpb25zIjogWwogICAgIlBPU1QgaHR0cDovLzEyNy4wLjAuMTozMTAwL3N0dWRlbnQtYXBpL3N0dWRlbnRzL3Nlc3Npb25zIiwKICAgICJQT1NUIGh0dHA6Ly8xMjcuMC4wLjE6MzEwMC9zdHVkZW50LWFwaS9zdHVkZW50cy9zZXNzaW9ucyIsCiAgICAiUE9TVCBodHRwOi8vMTI3LjAuMC4xOjMxMDAvc3R1ZGVudC1hcGkvcHJvbW9zL3JlZGVlbSIsCiAgICAiUE9TVCBodHRwOi8vMTI3LjAuMC4xOjMxMDAvc3R1ZGVudC1hcGkvcGF5bWVudHMvbW9jay9pbml0aWF0ZSIsCiAgICAiUE9TVCBodHRwOi8vMTI3LjAuMC4xOjMxMDAvc3R1ZGVudC1hcGkvcGF5bWVudHMvbW9jay9pbml0aWF0ZSIsCiAgICAiUE9TVCBodHRwOi8vMTI3LjAuMC4xOjMxMDAvc3R1ZGVudC1hcGkvcHJvbW9zL3JlZGVlbSIsCiAgICAiUE9TVCBodHRwOi8vMTI3LjAuMC4xOjMxMDAvc3R1ZGVudC1hcGkvZXhhbXMvc3RhcnQiLAogICAgIlBVVCBodHRwOi8vMTI3LjAuMC4xOjMxMDAvc3R1ZGVudC1hcGkvZXhhbXMvMTQ1NzNjZGMtNDAwZS00YmIyLWExNjAtNjc5MzBkOTdjYTBjL2Fuc3dlciIsCiAgICAiUFVUIGh0dHA6Ly8xMjcuMC4wLjE6MzEwMC9zdHVkZW50LWFwaS9leGFtcy8xNDU3M2NkYy00MDBlLTRiYjItYTE2MC02NzkzMGQ5N2NhMGMvYW5zd2VyIiwKICAgICJQT1NUIGh0dHA6Ly8xMjcuMC4wLjE6MzEwMC9zdHVkZW50LWFwaS9leGFtcy8xNDU3M2NkYy00MDBlLTRiYjItYTE2MC02NzkzMGQ5N2NhMGMvbmV4dCIKICBdCn0="
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\Roadrules\\roadrule\\test-results\\phase02-student-flow-navig-0b1a0-sive-layout-and-locked-exam-1440px\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\Roadrules\\roadrule\\tests\\browser\\phase02.spec.ts",
+                    "column": 65,
+                    "line": 375
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "3f76b986ba5de2a01e04-95e18294ee3ec20b44f6",
+          "file": "phase02.spec.ts",
+          "line": 7,
+          "column": 5
+        },
+        {
+          "title": "direct exam entry stays locked without JavaScript",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "1440px",
+              "projectName": "1440px",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1250,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T17:27:40.236Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3f76b986ba5de2a01e04-4a4f547ab759d89c0411",
+          "file": "phase02.spec.ts",
+          "line": 432,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-05T17:25:51.825Z",
+    "duration": 115365.838,
+    "expected": 3,
+    "skipped": 0,
+    "unexpected": 3,
+    "flaky": 0
+  }
+}

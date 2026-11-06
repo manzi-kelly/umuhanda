@@ -1,0 +1,129 @@
+
+> roadrule@0.1.0 test:browser
+> playwright test
+
+[WebServer] D:\Roadrules\roadrule\backend\.venv\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+[WebServer]   from starlette.testclient import TestClient as TestClient  # noqa
+[WebServer] 
+[WebServer] > roadrule@0.1.0 start
+[WebServer] > next start --hostname 127.0.0.1 --port 3100
+[WebServer] 
+[WebServer] (node:16556) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] ▲ Next.js 16.4.5
+[WebServer] - Local:         http://127.0.0.1:3100
+[WebServer] - Network:       http://127.0.0.1:3100
+[WebServer] ✓ Ready in 379ms
+[WebServer] ✓ Running next.config.ts took 103ms
+
+Running 6 tests using 1 worker
+
+(node:9408) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  1 [390px] › tests\browser\phase02.spec.ts:7:5 › student flow, navigation, responsive layout and locked exam (9.4s)
+(node:14904) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 2 [390px] › tests\browser\phase02.spec.ts:308:5 › direct exam entry stays locked without JavaScript (1.9s)
+(node:2896) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  3 [834px] › tests\browser\phase02.spec.ts:7:5 › student flow, navigation, responsive layout and locked exam (8.5s)
+(node:10804) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 4 [834px] › tests\browser\phase02.spec.ts:308:5 › direct exam entry stays locked without JavaScript (2.4s)
+(node:12028) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  5 [1440px] › tests\browser\phase02.spec.ts:7:5 › student flow, navigation, responsive layout and locked exam (9.5s)
+(node:20304) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 6 [1440px] › tests\browser\phase02.spec.ts:308:5 › direct exam entry stays locked without JavaScript (1.7s)
+
+
+  1) [390px] › tests\browser\phase02.spec.ts:7:5 › student flow, navigation, responsive layout and locked exam 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('alert')
+    Expected substring: "Kode ntiyemewe"
+    Error: strict mode violation: getByRole('alert') resolved to 2 elements:
+        1) <p role="alert" class="text-red-800">Kode ntiyemewe, yararangiye cyangwa yarakoreshejw…</p> aka getByText('Kode ntiyemewe, yararangiye')
+        2) <div role="alert" aria-live="assertive" id="__next-route-announcer__">Amakuru y’umunyeshuri n’ubwishyu | Umuhanda</div> aka getByText('Amakuru y’umunyeshuri n’')
+
+    Call log:
+      - Expect "toContainText" getByRole('alert') with timeout 10000ms
+      - waiting for getByRole('alert')
+        2 × locator resolved to <div role="alert" aria-live="assertive" id="__next-route-announcer__">Amakuru y’umunyeshuri n’ubwishyu | Umuhanda</div>
+          - unexpected value "Amakuru y’umunyeshuri n’ubwishyu | Umuhanda"
+
+
+      162 |     await promo.fill("ARBITRARY-QA-CODE");
+      163 |     await page.getByRole("button", { name: "Koresha kode" }).click();
+    > 164 |     await expect(page.getByRole("alert")).toContainText("Kode ntiyemewe");
+          |                                           ^
+      165 |     await expect(
+      166 |       page.locator('input[type="password"], input[name*="pin" i]'),
+      167 |     ).toHaveCount(0);
+        at D:\Roadrules\roadrule\tests\browser\phase02.spec.ts:164:43
+
+    Error Context: test-results\phase02-student-flow-navig-0b1a0-sive-layout-and-locked-exam-390px\error-context.md
+
+  2) [834px] › tests\browser\phase02.spec.ts:7:5 › student flow, navigation, responsive layout and locked exam 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('alert')
+    Expected substring: "Kode ntiyemewe"
+    Error: strict mode violation: getByRole('alert') resolved to 2 elements:
+        1) <p role="alert" class="text-red-800">Kode ntiyemewe, yararangiye cyangwa yarakoreshejw…</p> aka getByText('Kode ntiyemewe, yararangiye')
+        2) <div role="alert" aria-live="assertive" id="__next-route-announcer__">Amakuru y’umunyeshuri n’ubwishyu | Umuhanda</div> aka getByText('Amakuru y’umunyeshuri n’')
+
+    Call log:
+      - Expect "toContainText" getByRole('alert') with timeout 10000ms
+      - waiting for getByRole('alert')
+        2 × locator resolved to <div role="alert" aria-live="assertive" id="__next-route-announcer__">Amakuru y’umunyeshuri n’ubwishyu | Umuhanda</div>
+          - unexpected value "Amakuru y’umunyeshuri n’ubwishyu | Umuhanda"
+
+
+      162 |     await promo.fill("ARBITRARY-QA-CODE");
+      163 |     await page.getByRole("button", { name: "Koresha kode" }).click();
+    > 164 |     await expect(page.getByRole("alert")).toContainText("Kode ntiyemewe");
+          |                                           ^
+      165 |     await expect(
+      166 |       page.locator('input[type="password"], input[name*="pin" i]'),
+      167 |     ).toHaveCount(0);
+        at D:\Roadrules\roadrule\tests\browser\phase02.spec.ts:164:43
+
+    Error Context: test-results\phase02-student-flow-navig-0b1a0-sive-layout-and-locked-exam-834px\error-context.md
+
+  3) [1440px] › tests\browser\phase02.spec.ts:7:5 › student flow, navigation, responsive layout and locked exam 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('alert')
+    Expected substring: "Kode ntiyemewe"
+    Error: strict mode violation: getByRole('alert') resolved to 2 elements:
+        1) <p role="alert" class="text-red-800">Kode ntiyemewe, yararangiye cyangwa yarakoreshejw…</p> aka getByText('Kode ntiyemewe, yararangiye')
+        2) <div role="alert" aria-live="assertive" id="__next-route-announcer__">Amakuru y’umunyeshuri n’ubwishyu | Umuhanda</div> aka getByText('Amakuru y’umunyeshuri n’')
+
+    Call log:
+      - Expect "toContainText" getByRole('alert') with timeout 10000ms
+      - waiting for getByRole('alert')
+        - locator resolved to <div role="alert" aria-live="assertive" id="__next-route-announcer__">Amakuru y’umunyeshuri n’ubwishyu | Umuhanda</div>
+        - unexpected value "Amakuru y’umunyeshuri n’ubwishyu | Umuhanda"
+
+
+      162 |     await promo.fill("ARBITRARY-QA-CODE");
+      163 |     await page.getByRole("button", { name: "Koresha kode" }).click();
+    > 164 |     await expect(page.locator("main").getByRole("alert")).toContainText("Kode ntiyemewe");
+          |                                           ^
+      165 |     await expect(
+      166 |       page.locator('input[type="password"], input[name*="pin" i]'),
+      167 |     ).toHaveCount(0);
+        at D:\Roadrules\roadrule\tests\browser\phase02.spec.ts:164:43
+
+    Error Context: test-results\phase02-student-flow-navig-0b1a0-sive-layout-and-locked-exam-1440px\error-context.md
+
+  3 failed
+    [390px] › tests\browser\phase02.spec.ts:7:5 › student flow, navigation, responsive layout and locked exam 
+    [834px] › tests\browser\phase02.spec.ts:7:5 › student flow, navigation, responsive layout and locked exam 
+    [1440px] › tests\browser\phase02.spec.ts:7:5 › student flow, navigation, responsive layout and locked exam 
+  3 passed (1.5m)

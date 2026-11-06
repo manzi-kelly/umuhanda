@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Umuhanda">
+  <rect width="64" height="64" rx="16" fill="#06251f" />
+  <path
+    d="M17 47c9-2 11-12 15-20s8-9 15-9"
+    fill="none"
+    stroke="#fbbf24"
+    stroke-linecap="round"
+    stroke-width="4"
+  />
+  <circle cx="17" cy="47" r="4.5" fill="#fffdf8" />
+  <circle cx="47" cy="18" r="4.5" fill="#fffdf8" />
+</svg>

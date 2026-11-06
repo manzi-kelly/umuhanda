@@ -1,0 +1,800 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\Roadrules\\roadrule\\node_modules\\playwright\\cli.js",
+      "test",
+      "--config",
+      "playwright.admin.config.ts",
+      "admin.spec.ts",
+      "--reporter=list,json"
+    ],
+    "configFile": "D:\\Roadrules\\roadrule\\playwright.admin.config.ts",
+    "rootDir": "D:/Roadrules/roadrule/tests/admin-browser",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\teardown.ts",
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/Roadrules/roadrule/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "390px",
+        "name": "390px",
+        "testDir": "D:/Roadrules/roadrule/tests/admin-browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "D:/Roadrules/roadrule/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "834px",
+        "name": "834px",
+        "testDir": "D:/Roadrules/roadrule/tests/admin-browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "D:/Roadrules/roadrule/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "1440px",
+        "name": "1440px",
+        "testDir": "D:/Roadrules/roadrule/tests/admin-browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\Roadrules\\roadrule\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "390px",
+        "testDir": "D:\\Roadrules\\roadrule\\tests\\admin-browser",
+        "snapshotDir": "D:\\Roadrules\\roadrule\\tests\\admin-browser",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 120000,
+        "use": {
+          "baseURL": "http://127.0.0.1:3100",
+          "channel": "chrome",
+          "headless": true,
+          "trace": "off",
+          "screenshot": "off",
+          "video": "off",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "390px"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\Roadrules\\roadrule\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "834px",
+        "testDir": "D:\\Roadrules\\roadrule\\tests\\admin-browser",
+        "snapshotDir": "D:\\Roadrules\\roadrule\\tests\\admin-browser",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 120000,
+        "use": {
+          "baseURL": "http://127.0.0.1:3100",
+          "channel": "chrome",
+          "headless": true,
+          "trace": "off",
+          "screenshot": "off",
+          "video": "off",
+          "viewport": {
+            "width": 834,
+            "height": 1112
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "834px"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\Roadrules\\roadrule\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "1440px",
+        "testDir": "D:\\Roadrules\\roadrule\\tests\\admin-browser",
+        "snapshotDir": "D:\\Roadrules\\roadrule\\tests\\admin-browser",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 120000,
+        "use": {
+          "baseURL": "http://127.0.0.1:3100",
+          "channel": "chrome",
+          "headless": true,
+          "trace": "off",
+          "screenshot": "off",
+          "video": "off",
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "1440px"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "admin.spec.ts",
+      "file": "admin.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "unauthorized, forged-role and forged-cookie routes fail closed",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "390px",
+              "projectName": "390px",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 32470,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T18:05:38.676Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-8969d7042cb59fb35496",
+          "file": "admin.spec.ts",
+          "line": 57,
+          "column": 5
+        },
+        {
+          "title": "login validation, real dashboard, all navigation, unavailable states and logout",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "390px",
+              "projectName": "390px",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 35593,
+                  "error": {
+                    "message": "Error: unexpected browser application errors\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Pattern attribute value [A-Za-z0-9][A-Za-z0-9._-]{0,79} is not a valid regular expression: Uncaught SyntaxError: Invalid regular expression: /[A-Za-z0-9][A-Za-z0-9._-]{0,79}/v: Invalid character in character class\",\u001b[39m\n\u001b[31m+ ]\u001b[39m",
+                    "stack": "Error: unexpected browser application errors\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Pattern attribute value [A-Za-z0-9][A-Za-z0-9._-]{0,79} is not a valid regular expression: Uncaught SyntaxError: Invalid regular expression: /[A-Za-z0-9][A-Za-z0-9._-]{0,79}/v: Invalid character in character class\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts:271:59",
+                    "location": {
+                      "file": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts",
+                      "column": 59,
+                      "line": 271
+                    },
+                    "snippet": "  269 |   await page.goto(\"/admin/dashboard\");\n  270 |   await expect(page).toHaveURL(/\\/admin\\/login/);\n> 271 |   expect(errors, \"unexpected browser application errors\").toEqual([]);\n      |                                                           ^\n  272 |   await info.attach(\"browser-observations\", {\n  273 |     body: JSON.stringify({\n  274 |       width: info.project.name,"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts",
+                        "column": 59,
+                        "line": 271
+                      },
+                      "message": "Error: unexpected browser application errors\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Pattern attribute value [A-Za-z0-9][A-Za-z0-9._-]{0,79} is not a valid regular expression: Uncaught SyntaxError: Invalid regular expression: /[A-Za-z0-9][A-Za-z0-9._-]{0,79}/v: Invalid character in character class\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n  269 |   await page.goto(\"/admin/dashboard\");\n  270 |   await expect(page).toHaveURL(/\\/admin\\/login/);\n> 271 |   expect(errors, \"unexpected browser application errors\").toEqual([]);\n      |                                                           ^\n  272 |   await info.attach(\"browser-observations\", {\n  273 |     body: JSON.stringify({\n  274 |       width: info.project.name,\n    at D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts:271:59"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T18:06:13.105Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\Roadrules\\roadrule\\test-results\\admin-login-validation-rea-66226-available-states-and-logout-390px\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts",
+                    "column": 59,
+                    "line": 271
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-581c7e2c1922fbb07366",
+          "file": "admin.spec.ts",
+          "line": 101,
+          "column": 5
+        },
+        {
+          "title": "server expiration overrides an existing browser cookie",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "390px",
+              "projectName": "390px",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 30055,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T18:07:21.369Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-eb0e8cea13892c0d7d81",
+          "file": "admin.spec.ts",
+          "line": 285,
+          "column": 5
+        },
+        {
+          "title": "private PDF upload, source-backed draft and duplicate recovery",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "390px",
+              "projectName": "390px",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 20810,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('alert').filter({ hasText: 'Iyi dosiye si PDF nzima.' })\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('alert').filter({ hasText: 'Iyi dosiye si PDF nzima.' }) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('alert').filter({ hasText: 'Iyi dosiye si PDF nzima.' })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('alert').filter({ hasText: 'Iyi dosiye si PDF nzima.' })\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('alert').filter({ hasText: 'Iyi dosiye si PDF nzima.' }) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('alert').filter({ hasText: 'Iyi dosiye si PDF nzima.' })\u001b[22m\n\n    at D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts:326:5",
+                    "location": {
+                      "file": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts",
+                      "column": 5,
+                      "line": 326
+                    },
+                    "snippet": "  324 |   await expect(\n  325 |     page.getByRole(\"alert\").filter({ hasText: \"Iyi dosiye si PDF nzima.\" }),\n> 326 |   ).toBeVisible();\n      |     ^\n  327 |   const fixtureFile = {\n  328 |     name: `synthetic-${info.project.name}.pdf`,\n  329 |     mimeType: \"application/pdf\","
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts",
+                        "column": 5,
+                        "line": 326
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('alert').filter({ hasText: 'Iyi dosiye si PDF nzima.' })\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('alert').filter({ hasText: 'Iyi dosiye si PDF nzima.' }) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('alert').filter({ hasText: 'Iyi dosiye si PDF nzima.' })\u001b[22m\n\n\n  324 |   await expect(\n  325 |     page.getByRole(\"alert\").filter({ hasText: \"Iyi dosiye si PDF nzima.\" }),\n> 326 |   ).toBeVisible();\n      |     ^\n  327 |   const fixtureFile = {\n  328 |     name: `synthetic-${info.project.name}.pdf`,\n  329 |     mimeType: \"application/pdf\",\n    at D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts:326:5"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T18:07:52.872Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\Roadrules\\roadrule\\test-results\\admin-private-PDF-upload-s-11d0b-raft-and-duplicate-recovery-390px\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts",
+                    "column": 5,
+                    "line": 326
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-c523b8e664c2aec208a5",
+          "file": "admin.spec.ts",
+          "line": 301,
+          "column": 5
+        },
+        {
+          "title": "unauthorized, forged-role and forged-cookie routes fail closed",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "834px",
+              "projectName": "834px",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 14300,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T18:09:15.347Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-34654495e96a46626c7b",
+          "file": "admin.spec.ts",
+          "line": 57,
+          "column": 5
+        },
+        {
+          "title": "login validation, real dashboard, all navigation, unavailable states and logout",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "834px",
+              "projectName": "834px",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 21297,
+                  "error": {
+                    "message": "Error: unexpected browser application errors\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Pattern attribute value [A-Za-z0-9][A-Za-z0-9._-]{0,79} is not a valid regular expression: Uncaught SyntaxError: Invalid regular expression: /[A-Za-z0-9][A-Za-z0-9._-]{0,79}/v: Invalid character in character class\",\u001b[39m\n\u001b[31m+ ]\u001b[39m",
+                    "stack": "Error: unexpected browser application errors\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Pattern attribute value [A-Za-z0-9][A-Za-z0-9._-]{0,79} is not a valid regular expression: Uncaught SyntaxError: Invalid regular expression: /[A-Za-z0-9][A-Za-z0-9._-]{0,79}/v: Invalid character in character class\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts:271:59",
+                    "location": {
+                      "file": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts",
+                      "column": 59,
+                      "line": 271
+                    },
+                    "snippet": "  269 |   await page.goto(\"/admin/dashboard\");\n  270 |   await expect(page).toHaveURL(/\\/admin\\/login/);\n> 271 |   expect(errors, \"unexpected browser application errors\").toEqual([]);\n      |                                                           ^\n  272 |   await info.attach(\"browser-observations\", {\n  273 |     body: JSON.stringify({\n  274 |       width: info.project.name,"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts",
+                        "column": 59,
+                        "line": 271
+                      },
+                      "message": "Error: unexpected browser application errors\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Pattern attribute value [A-Za-z0-9][A-Za-z0-9._-]{0,79} is not a valid regular expression: Uncaught SyntaxError: Invalid regular expression: /[A-Za-z0-9][A-Za-z0-9._-]{0,79}/v: Invalid character in character class\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n  269 |   await page.goto(\"/admin/dashboard\");\n  270 |   await expect(page).toHaveURL(/\\/admin\\/login/);\n> 271 |   expect(errors, \"unexpected browser application errors\").toEqual([]);\n      |                                                           ^\n  272 |   await info.attach(\"browser-observations\", {\n  273 |     body: JSON.stringify({\n  274 |       width: info.project.name,\n    at D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts:271:59"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T18:09:32.154Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\Roadrules\\roadrule\\test-results\\admin-login-validation-rea-66226-available-states-and-logout-834px\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts",
+                    "column": 59,
+                    "line": 271
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-fad85d92b291295a7d72",
+          "file": "admin.spec.ts",
+          "line": 101,
+          "column": 5
+        },
+        {
+          "title": "server expiration overrides an existing browser cookie",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "834px",
+              "projectName": "834px",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 25263,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T18:11:23.442Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-d126fc11fd5b5985b9ab",
+          "file": "admin.spec.ts",
+          "line": 285,
+          "column": 5
+        },
+        {
+          "title": "private PDF upload, source-backed draft and duplicate recovery",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "834px",
+              "projectName": "834px",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 20595,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('alert').filter({ hasText: 'Iyi dosiye si PDF nzima.' })\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('alert').filter({ hasText: 'Iyi dosiye si PDF nzima.' }) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('alert').filter({ hasText: 'Iyi dosiye si PDF nzima.' })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('alert').filter({ hasText: 'Iyi dosiye si PDF nzima.' })\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('alert').filter({ hasText: 'Iyi dosiye si PDF nzima.' }) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('alert').filter({ hasText: 'Iyi dosiye si PDF nzima.' })\u001b[22m\n\n    at D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts:326:5",
+                    "location": {
+                      "file": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts",
+                      "column": 5,
+                      "line": 326
+                    },
+                    "snippet": "  324 |   await expect(\n  325 |     page.getByRole(\"alert\").filter({ hasText: \"Iyi dosiye si PDF nzima.\" }),\n> 326 |   ).toBeVisible();\n      |     ^\n  327 |   const fixtureFile = {\n  328 |     name: `synthetic-${info.project.name}.pdf`,\n  329 |     mimeType: \"application/pdf\","
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts",
+                        "column": 5,
+                        "line": 326
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('alert').filter({ hasText: 'Iyi dosiye si PDF nzima.' })\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('alert').filter({ hasText: 'Iyi dosiye si PDF nzima.' }) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('alert').filter({ hasText: 'Iyi dosiye si PDF nzima.' })\u001b[22m\n\n\n  324 |   await expect(\n  325 |     page.getByRole(\"alert\").filter({ hasText: \"Iyi dosiye si PDF nzima.\" }),\n> 326 |   ).toBeVisible();\n      |     ^\n  327 |   const fixtureFile = {\n  328 |     name: `synthetic-${info.project.name}.pdf`,\n  329 |     mimeType: \"application/pdf\",\n    at D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts:326:5"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T18:11:51.124Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\Roadrules\\roadrule\\test-results\\admin-private-PDF-upload-s-11d0b-raft-and-duplicate-recovery-834px\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts",
+                    "column": 5,
+                    "line": 326
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-182d3205ae0a7df86423",
+          "file": "admin.spec.ts",
+          "line": 301,
+          "column": 5
+        },
+        {
+          "title": "unauthorized, forged-role and forged-cookie routes fail closed",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "1440px",
+              "projectName": "1440px",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 14189,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T18:13:18.762Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-496d8b5a98644a201f0f",
+          "file": "admin.spec.ts",
+          "line": 57,
+          "column": 5
+        },
+        {
+          "title": "login validation, real dashboard, all navigation, unavailable states and logout",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "1440px",
+              "projectName": "1440px",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 14833,
+                  "error": {
+                    "message": "Error: unexpected browser application errors\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Pattern attribute value [A-Za-z0-9][A-Za-z0-9._-]{0,79} is not a valid regular expression: Uncaught SyntaxError: Invalid regular expression: /[A-Za-z0-9][A-Za-z0-9._-]{0,79}/v: Invalid character in character class\",\u001b[39m\n\u001b[31m+ ]\u001b[39m",
+                    "stack": "Error: unexpected browser application errors\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Pattern attribute value [A-Za-z0-9][A-Za-z0-9._-]{0,79} is not a valid regular expression: Uncaught SyntaxError: Invalid regular expression: /[A-Za-z0-9][A-Za-z0-9._-]{0,79}/v: Invalid character in character class\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts:271:59",
+                    "location": {
+                      "file": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts",
+                      "column": 59,
+                      "line": 271
+                    },
+                    "snippet": "  269 |   await page.goto(\"/admin/dashboard\");\n  270 |   await expect(page).toHaveURL(/\\/admin\\/login/);\n> 271 |   expect(errors, \"unexpected browser application errors\").toEqual([]);\n      |                                                           ^\n  272 |   await info.attach(\"browser-observations\", {\n  273 |     body: JSON.stringify({\n  274 |       width: info.project.name,"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts",
+                        "column": 59,
+                        "line": 271
+                      },
+                      "message": "Error: unexpected browser application errors\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Pattern attribute value [A-Za-z0-9][A-Za-z0-9._-]{0,79} is not a valid regular expression: Uncaught SyntaxError: Invalid regular expression: /[A-Za-z0-9][A-Za-z0-9._-]{0,79}/v: Invalid character in character class\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n  269 |   await page.goto(\"/admin/dashboard\");\n  270 |   await expect(page).toHaveURL(/\\/admin\\/login/);\n> 271 |   expect(errors, \"unexpected browser application errors\").toEqual([]);\n      |                                                           ^\n  272 |   await info.attach(\"browser-observations\", {\n  273 |     body: JSON.stringify({\n  274 |       width: info.project.name,\n    at D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts:271:59"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T18:13:34.487Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\Roadrules\\roadrule\\test-results\\admin-login-validation-rea-66226-available-states-and-logout-1440px\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts",
+                    "column": 59,
+                    "line": 271
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-b4705843c326ae00ca29",
+          "file": "admin.spec.ts",
+          "line": 101,
+          "column": 5
+        },
+        {
+          "title": "server expiration overrides an existing browser cookie",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "1440px",
+              "projectName": "1440px",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 16605,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T18:15:04.327Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-03616466883d242f6826",
+          "file": "admin.spec.ts",
+          "line": 285,
+          "column": 5
+        },
+        {
+          "title": "private PDF upload, source-backed draft and duplicate recovery",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "1440px",
+              "projectName": "1440px",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 18932,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('alert').filter({ hasText: 'Iyi dosiye si PDF nzima.' })\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('alert').filter({ hasText: 'Iyi dosiye si PDF nzima.' }) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('alert').filter({ hasText: 'Iyi dosiye si PDF nzima.' })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('alert').filter({ hasText: 'Iyi dosiye si PDF nzima.' })\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('alert').filter({ hasText: 'Iyi dosiye si PDF nzima.' }) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('alert').filter({ hasText: 'Iyi dosiye si PDF nzima.' })\u001b[22m\n\n    at D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts:326:5",
+                    "location": {
+                      "file": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts",
+                      "column": 5,
+                      "line": 326
+                    },
+                    "snippet": "  324 |   await expect(\n  325 |     page.getByRole(\"alert\").filter({ hasText: \"Iyi dosiye si PDF nzima.\" }),\n> 326 |   ).toBeVisible();\n      |     ^\n  327 |   const fixtureFile = {\n  328 |     name: `synthetic-${info.project.name}.pdf`,\n  329 |     mimeType: \"application/pdf\","
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts",
+                        "column": 5,
+                        "line": 326
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('alert').filter({ hasText: 'Iyi dosiye si PDF nzima.' })\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('alert').filter({ hasText: 'Iyi dosiye si PDF nzima.' }) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('alert').filter({ hasText: 'Iyi dosiye si PDF nzima.' })\u001b[22m\n\n\n  324 |   await expect(\n  325 |     page.getByRole(\"alert\").filter({ hasText: \"Iyi dosiye si PDF nzima.\" }),\n> 326 |   ).toBeVisible();\n      |     ^\n  327 |   const fixtureFile = {\n  328 |     name: `synthetic-${info.project.name}.pdf`,\n  329 |     mimeType: \"application/pdf\",\n    at D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts:326:5"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T18:15:22.415Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\Roadrules\\roadrule\\test-results\\admin-private-PDF-upload-s-11d0b-raft-and-duplicate-recovery-1440px\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts",
+                    "column": 5,
+                    "line": 326
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-27aa544ec426bdcf2004",
+          "file": "admin.spec.ts",
+          "line": 301,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-06T18:05:09.605Z",
+    "duration": 676016.066,
+    "expected": 6,
+    "skipped": 0,
+    "unexpected": 6,
+    "flaky": 0
+  }
+}

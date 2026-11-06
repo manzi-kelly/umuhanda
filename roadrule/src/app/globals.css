@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@layer components {
+  .form-label { @apply mb-2 block text-sm font-semibold text-ink; }
+  .form-input { @apply block min-h-12 w-full rounded-xl border border-ink/20 bg-white px-4 py-3 text-base text-ink disabled:opacity-60; }
+  .form-input[aria-invalid="true"] { @apply border-red-600; }
+  .form-error { @apply mt-2 text-sm leading-6 text-red-700; }
+  .form-button { @apply inline-flex min-h-12 items-center justify-center rounded-full bg-brand-950 px-6 py-3 text-sm font-semibold text-white hover:bg-brand-900 disabled:cursor-not-allowed disabled:opacity-50; }
+}
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", sans-serif;
+  --font-display: var(--font-jakarta), var(--font-inter), ui-sans-serif,
+    system-ui, sans-serif;
+
+  --color-canvas: #f6f4ed;
+  --color-surface: #fffdf8;
+  --color-ink: #0a211b;
+  --color-ink-soft: #40564e;
+  --color-ink-muted: #5b6e66;
+
+  --color-brand-50: #eefaf5;
+  --color-brand-100: #d6f2e5;
+  --color-brand-200: #b0e6d1;
+  --color-brand-300: #7bd3b7;
+  --color-brand-400: #46b898;
+  --color-brand-500: #229b7e;
+  --color-brand-600: #157d66;
+  --color-brand-700: #126453;
+  --color-brand-800: #115244;
+  --color-brand-900: #0f4439;
+  --color-brand-950: #06251f;
+
+  --color-accent-50: #fffbeb;
+  --color-accent-100: #fef3c7;
+  --color-accent-200: #fde68a;
+  --color-accent-300: #fcd34d;
+  --color-accent-400: #fbbf24;
+  --color-accent-500: #f59e0b;
+  --color-accent-600: #d97706;
+  --color-accent-700: #b45309;
+
+  --shadow-soft: 0 1px 2px rgb(10 33 27 / 0.04),
+    0 8px 24px -16px rgb(10 33 27 / 0.18);
+  --shadow-card: 0 24px 60px -32px rgb(6 37 31 / 0.35);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6.5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-canvas);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background-color: var(--color-accent-300);
+    color: var(--color-ink);
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-brand-600);
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer utilities {
+  .pattern-grid {
+    background-image:
+      linear-gradient(to right, rgb(10 33 27 / 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(10 33 27 / 0.05) 1px, transparent 1px);
+    background-size: 44px 44px;
+  }
+
+  .pattern-grid-light {
+    background-image:
+      linear-gradient(to right, rgb(255 255 255 / 0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(255 255 255 / 0.06) 1px, transparent 1px);
+    background-size: 44px 44px;
+  }
+}

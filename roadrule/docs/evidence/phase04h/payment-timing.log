@@ -1,0 +1,42 @@
+
+> roadrule@0.1.0 test:browser
+> playwright test phase04h-diagnostic --project=390px --reporter=list
+
+[WebServer] 
+[WebServer] > roadrule@0.1.0 start
+[WebServer] > next start --hostname 127.0.0.1 --port 3100
+[WebServer] 
+[WebServer] ▲ Next.js 16.4.5
+[WebServer] - Local:         http://127.0.0.1:3100
+[WebServer] - Network:       http://127.0.0.1:3100
+[WebServer] ✓ Ready in 515ms
+[WebServer] ✓ Running next.config.ts took 126ms
+
+Running 1 test using 1 worker
+
+{"i":0,"path":"students/sessions","status":201,"ms":300,"timing":"api;dur=45.94, upstream;dur=146.05, bridge;dur=159.14"}
+{"i":0,"path":"exam-access/me","status":200,"ms":116,"timing":"api;dur=61.96, upstream;dur=71.79, bridge;dur=73.11"}
+{"i":0,"path":"promos/redeem","status":422,"ms":80,"timing":"api;dur=36.92, upstream;dur=48.97, bridge;dur=50.63","body":{"error":{"code":"PROMO_INVALID","message":"Access request could not be completed."}}}
+{"i":0,"path":"promos/redeem","status":422,"ms":57,"timing":"api;dur=5.56, upstream;dur=16.18, bridge;dur=18.48","body":{"error":{"code":"VALIDATION_ERROR","message":"Request validation failed."}}}
+{"i":0,"path":"promos/redeem","status":200,"ms":105,"timing":"api;dur=59.57, upstream;dur=72.15, bridge;dur=74.17"}
+{"i":0,"path":"exam-access/me","status":200,"ms":64,"timing":"api;dur=27.77, upstream;dur=35.82, bridge;dur=36.90"}
+{"i":0,"path":"exam-ready","ms":1184}
+{"i":1,"path":"students/sessions","status":201,"ms":68,"timing":"api;dur=22.68, upstream;dur=34.52, bridge;dur=36.07"}
+{"i":1,"path":"exam-access/me","status":200,"ms":57,"timing":"api;dur=25.72, upstream;dur=33.83, bridge;dur=34.25"}
+{"i":1,"path":"promos/redeem","status":422,"ms":41,"timing":"api;dur=16.80, upstream;dur=23.15, bridge;dur=23.86","body":{"error":{"code":"PROMO_INVALID","message":"Access request could not be completed."}}}
+{"i":1,"path":"promos/redeem","status":422,"ms":40,"timing":"api;dur=5.51, upstream;dur=15.60, bridge;dur=16.49","body":{"error":{"code":"VALIDATION_ERROR","message":"Request validation failed."}}}
+{"i":1,"path":"promos/redeem","status":200,"ms":82,"timing":"api;dur=47.34, upstream;dur=57.59, bridge;dur=58.89"}
+{"i":1,"path":"exam-access/me","status":200,"ms":51,"timing":"api;dur=22.56, upstream;dur=29.36, bridge;dur=29.71"}
+{"i":1,"path":"exam-ready","ms":504}
+{"i":2,"path":"students/sessions","status":201,"ms":65,"timing":"api;dur=17.34, upstream;dur=26.73, bridge;dur=28.74"}
+{"i":2,"path":"exam-access/me","status":200,"ms":58,"timing":"api;dur=19.39, upstream;dur=26.94, bridge;dur=27.27"}
+{"i":2,"path":"promos/redeem","status":422,"ms":62,"timing":"api;dur=19.79, upstream;dur=31.79, bridge;dur=32.44","body":{"error":{"code":"PROMO_INVALID","message":"Access request could not be completed."}}}
+{"i":2,"path":"promos/redeem","status":422,"ms":33,"timing":"api;dur=3.95, upstream;dur=14.06, bridge;dur=14.63","body":{"error":{"code":"VALIDATION_ERROR","message":"Request validation failed."}}}
+{"i":2,"path":"promos/redeem","status":200,"ms":69,"timing":"api;dur=36.15, upstream;dur=46.26, bridge;dur=48.88"}
+{"i":2,"path":"exam-access/me","status":200,"ms":48,"timing":"api;dur=19.60, upstream;dur=28.88, bridge;dur=29.08"}
+{"i":2,"path":"exam-ready","ms":394}
+previous_selection [1.622, 0.582, 0.606, 0.741, 0.778]
+grouped_readiness [0.266, 0.195, 0.283, 0.201, 0.215]
+  ok 1 [390px] › tests\browser\phase04h-diagnostic.spec.ts:6:5 › local payment request timing and response diagnostics (23.1s)
+
+  1 passed (1.4m)

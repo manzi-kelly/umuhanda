@@ -1,0 +1,208 @@
+
+> roadrule@0.1.0 test:browser:admin
+> playwright test --config playwright.admin.config.ts
+
+[WebServer] 
+[WebServer] > roadrule@0.1.0 start
+[WebServer] > next start --hostname 127.0.0.1 --port 3100
+[WebServer] 
+[WebServer] (node:6744) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] ▲ Next.js 16.4.5
+[WebServer] - Local:         http://127.0.0.1:3100
+[WebServer] - Network:       http://127.0.0.1:3100
+[WebServer] ✓ Ready in 604ms
+[WebServer] ✓ Running next.config.ts took 195ms
+
+Running 12 tests using 1 worker
+
+(node:11004) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 [390px] › tests\admin-browser\admin.spec.ts:45:5 › unauthorized, forged-role and forged-cookie routes fail closed (9.6s)
+  x   2 [390px] › tests\admin-browser\admin.spec.ts:86:5 › login validation, real dashboard, all navigation, unavailable states and logout (6.1s)
+(node:16972) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  3 [390px] › tests\admin-browser\admin.spec.ts:197:5 › server expiration overrides an existing browser cookie (7.9s)
+  x   4 [390px] › tests\admin-browser\admin.spec.ts:213:5 › private PDF upload, source-backed draft and duplicate recovery (24.7s)
+(node:8316) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  5 [834px] › tests\admin-browser\admin.spec.ts:45:5 › unauthorized, forged-role and forged-cookie routes fail closed (9.9s)
+  x   6 [834px] › tests\admin-browser\admin.spec.ts:86:5 › login validation, real dashboard, all navigation, unavailable states and logout (5.9s)
+(node:4356) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  7 [834px] › tests\admin-browser\admin.spec.ts:197:5 › server expiration overrides an existing browser cookie (8.2s)
+  x   8 [834px] › tests\admin-browser\admin.spec.ts:213:5 › private PDF upload, source-backed draft and duplicate recovery (23.8s)
+(node:20440) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  9 [1440px] › tests\admin-browser\admin.spec.ts:45:5 › unauthorized, forged-role and forged-cookie routes fail closed (9.1s)
+  x  10 [1440px] › tests\admin-browser\admin.spec.ts:86:5 › login validation, real dashboard, all navigation, unavailable states and logout (3.9s)
+(node:16088) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 11 [1440px] › tests\admin-browser\admin.spec.ts:197:5 › server expiration overrides an existing browser cookie (8.3s)
+  x  12 [1440px] › tests\admin-browser\admin.spec.ts:213:5 › private PDF upload, source-backed draft and duplicate recovery (18.5s)
+
+
+  1) [390px] › tests\admin-browser\admin.spec.ts:86:5 › login validation, real dashboard, all navigation, unavailable states and logout 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText('No exam-ready bank', { exact: true })
+    Expected: visible
+    Error: strict mode violation: getByText('No exam-ready bank', { exact: true }) resolved to 2 elements:
+        1) <p class="mt-3 font-semibold">No exam-ready bank</p> aka getByRole('paragraph').filter({ hasText: 'No exam-ready bank' })
+        2) <p class="mt-3 font-semibold">No exam-ready bank</p> aka getByText('No exam-ready bank').nth(1)
+
+    Call log:
+      - Expect "toBeVisible" getByText('No exam-ready bank', { exact: true }) with timeout 15000ms
+      - waiting for getByText('No exam-ready bank', { exact: true })
+
+
+      152 |       await expect(
+      153 |         page.getByText("No exam-ready bank", { exact: true }),
+    > 154 |       ).toBeVisible();
+          |         ^
+      155 |     } else {
+      156 |       await expect(
+      157 |         page
+        at D:\Roadrules\roadrule\tests\admin-browser\admin.spec.ts:154:9
+
+    Error Context: test-results\admin-login-validation-rea-66226-available-states-and-logout-390px\error-context.md
+
+  2) [390px] › tests\admin-browser\admin.spec.ts:213:5 › private PDF upload, source-backed draft and duplicate recovery 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText('No exam-ready bank', { exact: true })
+    Expected: visible
+    Error: strict mode violation: getByText('No exam-ready bank', { exact: true }) resolved to 2 elements:
+        1) <p class="mt-3 font-semibold">No exam-ready bank</p> aka getByRole('paragraph').filter({ hasText: 'No exam-ready bank' })
+        2) <p class="mt-3 font-semibold">No exam-ready bank</p> aka getByText('No exam-ready bank').nth(1)
+
+    Call log:
+      - Expect "toBeVisible" getByText('No exam-ready bank', { exact: true }) with timeout 15000ms
+      - waiting for getByText('No exam-ready bank', { exact: true })
+
+
+      326 |   await expect(
+      327 |     page.getByText("No exam-ready bank", { exact: true }),
+    > 328 |   ).toBeVisible();
+          |     ^
+      329 |   await screenshot(page, info.project.name, "exam-bank");
+      330 |   await context.clearCookies();
+      331 |   expect((await context.request.get(imagePath!)).status()).toBe(401);
+        at D:\Roadrules\roadrule\tests\admin-browser\admin.spec.ts:328:5
+
+    Error Context: test-results\admin-private-PDF-upload-s-11d0b-raft-and-duplicate-recovery-390px\error-context.md
+
+  3) [834px] › tests\admin-browser\admin.spec.ts:86:5 › login validation, real dashboard, all navigation, unavailable states and logout 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText('No exam-ready bank', { exact: true })
+    Expected: visible
+    Error: strict mode violation: getByText('No exam-ready bank', { exact: true }) resolved to 2 elements:
+        1) <p class="mt-3 font-semibold">No exam-ready bank</p> aka getByRole('paragraph').filter({ hasText: 'No exam-ready bank' })
+        2) <p class="mt-3 font-semibold">No exam-ready bank</p> aka getByText('No exam-ready bank').nth(1)
+
+    Call log:
+      - Expect "toBeVisible" getByText('No exam-ready bank', { exact: true }) with timeout 15000ms
+      - waiting for getByText('No exam-ready bank', { exact: true })
+
+
+      152 |       await expect(
+      153 |         page.getByText("No exam-ready bank", { exact: true }),
+    > 154 |       ).toBeVisible();
+          |         ^
+      155 |     } else {
+      156 |       await expect(
+      157 |         page
+        at D:\Roadrules\roadrule\tests\admin-browser\admin.spec.ts:154:9
+
+    Error Context: test-results\admin-login-validation-rea-66226-available-states-and-logout-834px\error-context.md
+
+  4) [834px] › tests\admin-browser\admin.spec.ts:213:5 › private PDF upload, source-backed draft and duplicate recovery 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText('No exam-ready bank', { exact: true })
+    Expected: visible
+    Error: strict mode violation: getByText('No exam-ready bank', { exact: true }) resolved to 2 elements:
+        1) <p class="mt-3 font-semibold">No exam-ready bank</p> aka getByRole('paragraph').filter({ hasText: 'No exam-ready bank' })
+        2) <p class="mt-3 font-semibold">No exam-ready bank</p> aka getByText('No exam-ready bank').nth(1)
+
+    Call log:
+      - Expect "toBeVisible" getByText('No exam-ready bank', { exact: true }) with timeout 15000ms
+      - waiting for getByText('No exam-ready bank', { exact: true })
+
+
+      326 |   await expect(
+      327 |     page.getByText("No exam-ready bank", { exact: true }).filter({ visible: true }),
+    > 328 |   ).toBeVisible();
+          |     ^
+      329 |   await screenshot(page, info.project.name, "exam-bank");
+      330 |   await context.clearCookies();
+      331 |   expect((await context.request.get(imagePath!)).status()).toBe(401);
+        at D:\Roadrules\roadrule\tests\admin-browser\admin.spec.ts:328:5
+
+    Error Context: test-results\admin-private-PDF-upload-s-11d0b-raft-and-duplicate-recovery-834px\error-context.md
+
+  5) [1440px] › tests\admin-browser\admin.spec.ts:86:5 › login validation, real dashboard, all navigation, unavailable states and logout 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText('No exam-ready bank', { exact: true })
+    Expected: visible
+    Error: strict mode violation: getByText('No exam-ready bank', { exact: true }) resolved to 2 elements:
+        1) <p class="mt-3 font-semibold">No exam-ready bank</p> aka getByRole('paragraph').filter({ hasText: 'No exam-ready bank' })
+        2) <p class="mt-3 font-semibold">No exam-ready bank</p> aka getByText('No exam-ready bank').nth(1)
+
+    Call log:
+      - Expect "toBeVisible" getByText('No exam-ready bank', { exact: true }) with timeout 15000ms
+      - waiting for getByText('No exam-ready bank', { exact: true })
+
+
+      152 |       await expect(
+      153 |         page.getByText("No exam-ready bank", { exact: true }).filter({ visible: true }),
+    > 154 |       ).toBeVisible();
+          |         ^
+      155 |     } else {
+      156 |       await expect(
+      157 |         page
+        at D:\Roadrules\roadrule\tests\admin-browser\admin.spec.ts:154:9
+
+    Error Context: test-results\admin-login-validation-rea-66226-available-states-and-logout-1440px\error-context.md
+
+  6) [1440px] › tests\admin-browser\admin.spec.ts:213:5 › private PDF upload, source-backed draft and duplicate recovery 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText('No exam-ready bank', { exact: true })
+    Expected: visible
+    Error: strict mode violation: getByText('No exam-ready bank', { exact: true }) resolved to 2 elements:
+        1) <p class="mt-3 font-semibold">No exam-ready bank</p> aka getByRole('paragraph').filter({ hasText: 'No exam-ready bank' })
+        2) <p class="mt-3 font-semibold">No exam-ready bank</p> aka getByText('No exam-ready bank').nth(1)
+
+    Call log:
+      - Expect "toBeVisible" getByText('No exam-ready bank', { exact: true }) with timeout 15000ms
+      - waiting for getByText('No exam-ready bank', { exact: true })
+
+
+      326 |   await expect(
+      327 |     page.getByText("No exam-ready bank", { exact: true }).filter({ visible: true }),
+    > 328 |   ).toBeVisible();
+          |     ^
+      329 |   await screenshot(page, info.project.name, "exam-bank");
+      330 |   await context.clearCookies();
+      331 |   expect((await context.request.get(imagePath!)).status()).toBe(401);
+        at D:\Roadrules\roadrule\tests\admin-browser\admin.spec.ts:328:5
+
+    Error Context: test-results\admin-private-PDF-upload-s-11d0b-raft-and-duplicate-recovery-1440px\error-context.md
+
+  6 failed
+    [390px] › tests\admin-browser\admin.spec.ts:86:5 › login validation, real dashboard, all navigation, unavailable states and logout 
+    [390px] › tests\admin-browser\admin.spec.ts:213:5 › private PDF upload, source-backed draft and duplicate recovery 
+    [834px] › tests\admin-browser\admin.spec.ts:86:5 › login validation, real dashboard, all navigation, unavailable states and logout 
+    [834px] › tests\admin-browser\admin.spec.ts:213:5 › private PDF upload, source-backed draft and duplicate recovery 
+    [1440px] › tests\admin-browser\admin.spec.ts:86:5 › login validation, real dashboard, all navigation, unavailable states and logout 
+    [1440px] › tests\admin-browser\admin.spec.ts:213:5 › private PDF upload, source-backed draft and duplicate recovery 
+  6 passed (3.3m)

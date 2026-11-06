@@ -1,0 +1,2030 @@
+...EEFE.EFEFEFFFF.EFFFFFEEFEE.FFFFFFEEEFFFFEEFFFFEEF.FEEFFFEEE.......... [ 28%]
+........................................................................ [ 57%]
+........................................................................ [ 85%]
+....................................                                     [100%]
+=================================== ERRORS ====================================
+_________ ERROR at setup of test_admin_login_and_only_hashed_session __________
+
+admin_database = <app.db.session.Database object at 0x000001629199D5E0>
+admin_settings = Settings(app_env='testing', app_name='Road Rules API', cors_allowed_origins=['http://localhost:3000'], allowed_hosts=[...ut_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$')
+
+    @pytest.fixture
+    def account(admin_database, admin_settings):
+        password = secrets.token_urlsafe(24)
+        with admin_database.session_factory() as session:
+>           identifier = AdminAuthService(session, admin_settings).bootstrap(
+                "Test Administrator", "operator@example.com", password
+            )
+
+tests\integration\test_admin.py:100: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <app.services.admin_auth.AdminAuthService object at 0x00000162919B9E20>
+full_name = 'Test Administrator', email = 'operator@example.com'
+password = 'RkvcCGmjtm412CI4ep7eyeW-miODShc8'
+
+    def bootstrap(self, full_name: str, email: str, password: str):
+        # Validate before any insert; password never enters SQL or an audit payload.
+        validated = AdminLoginRequest(email=email, password=password)
+        name = normalize_name(full_name)
+        verifier = hash_password(validated.password.get_secret_value())
+        with self.session.begin():
+            if not self.repository.bootstrap_available():
+>               raise BootstrapRefused
+E               app.core.admin_security.BootstrapRefused
+
+app\services\admin_auth.py:62: BootstrapRefused
+_____________ ERROR at setup of test_generic_login_failure[wrong] _____________
+
+admin_database = <app.db.session.Database object at 0x0000016291A0E030>
+admin_settings = Settings(app_env='testing', app_name='Road Rules API', cors_allowed_origins=['http://localhost:3000'], allowed_hosts=[...ut_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$')
+
+    @pytest.fixture
+    def account(admin_database, admin_settings):
+        password = secrets.token_urlsafe(24)
+        with admin_database.session_factory() as session:
+>           identifier = AdminAuthService(session, admin_settings).bootstrap(
+                "Test Administrator", "operator@example.com", password
+            )
+
+tests\integration\test_admin.py:100: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <app.services.admin_auth.AdminAuthService object at 0x0000016291A0DEE0>
+full_name = 'Test Administrator', email = 'operator@example.com'
+password = 'jnBU0U5u-a1j5FYsLRWlXclxk4ofSxRv'
+
+    def bootstrap(self, full_name: str, email: str, password: str):
+        # Validate before any insert; password never enters SQL or an audit payload.
+        validated = AdminLoginRequest(email=email, password=password)
+        name = normalize_name(full_name)
+        verifier = hash_password(validated.password.get_secret_value())
+        with self.session.begin():
+            if not self.repository.bootstrap_available():
+>               raise BootstrapRefused
+E               app.core.admin_security.BootstrapRefused
+
+app\services\admin_auth.py:62: BootstrapRefused
+___________ ERROR at setup of test_generic_login_failure[inactive] ____________
+
+admin_database = <app.db.session.Database object at 0x0000016291B017F0>
+admin_settings = Settings(app_env='testing', app_name='Road Rules API', cors_allowed_origins=['http://localhost:3000'], allowed_hosts=[...ut_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$')
+
+    @pytest.fixture
+    def account(admin_database, admin_settings):
+        password = secrets.token_urlsafe(24)
+        with admin_database.session_factory() as session:
+>           identifier = AdminAuthService(session, admin_settings).bootstrap(
+                "Test Administrator", "operator@example.com", password
+            )
+
+tests\integration\test_admin.py:100: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <app.services.admin_auth.AdminAuthService object at 0x0000016291B01EB0>
+full_name = 'Test Administrator', email = 'operator@example.com'
+password = 'HDNyEPDyuFmymLS_C4DPsav3eyepEpv3'
+
+    def bootstrap(self, full_name: str, email: str, password: str):
+        # Validate before any insert; password never enters SQL or an audit payload.
+        validated = AdminLoginRequest(email=email, password=password)
+        name = normalize_name(full_name)
+        verifier = hash_password(validated.password.get_secret_value())
+        with self.session.begin():
+            if not self.repository.bootstrap_available():
+>               raise BootstrapRefused
+E               app.core.admin_security.BootstrapRefused
+
+app\services\admin_auth.py:62: BootstrapRefused
+_ ERROR at setup of test_dashboard_uses_real_count_and_null_unimplemented_metrics _
+
+admin_database = <app.db.session.Database object at 0x0000016291B865A0>
+admin_settings = Settings(app_env='testing', app_name='Road Rules API', cors_allowed_origins=['http://localhost:3000'], allowed_hosts=[...ut_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$')
+
+    @pytest.fixture
+    def account(admin_database, admin_settings):
+        password = secrets.token_urlsafe(24)
+        with admin_database.session_factory() as session:
+>           identifier = AdminAuthService(session, admin_settings).bootstrap(
+                "Test Administrator", "operator@example.com", password
+            )
+
+tests\integration\test_admin.py:100: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <app.services.admin_auth.AdminAuthService object at 0x000001629090C6B0>
+full_name = 'Test Administrator', email = 'operator@example.com'
+password = 'qjWXejWBJVUSPfYglKS7iYuLMajs_HNc'
+
+    def bootstrap(self, full_name: str, email: str, password: str):
+        # Validate before any insert; password never enters SQL or an audit payload.
+        validated = AdminLoginRequest(email=email, password=password)
+        name = normalize_name(full_name)
+        verifier = hash_password(validated.password.get_secret_value())
+        with self.session.begin():
+            if not self.repository.bootstrap_available():
+>               raise BootstrapRefused
+E               app.core.admin_security.BootstrapRefused
+
+app\services\admin_auth.py:62: BootstrapRefused
+_ ERROR at setup of test_admin_session_server_enforced_lifecycle[inactivity] __
+
+admin_database = <app.db.session.Database object at 0x0000016291B53410>
+admin_settings = Settings(app_env='testing', app_name='Road Rules API', cors_allowed_origins=['http://localhost:3000'], allowed_hosts=[...ut_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$')
+
+    @pytest.fixture
+    def account(admin_database, admin_settings):
+        password = secrets.token_urlsafe(24)
+        with admin_database.session_factory() as session:
+>           identifier = AdminAuthService(session, admin_settings).bootstrap(
+                "Test Administrator", "operator@example.com", password
+            )
+
+tests\integration\test_admin.py:100: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <app.services.admin_auth.AdminAuthService object at 0x00000162919BA660>
+full_name = 'Test Administrator', email = 'operator@example.com'
+password = 'LexXB5n7OshiGY7L-NsoQbzSW6Y4KjXW'
+
+    def bootstrap(self, full_name: str, email: str, password: str):
+        # Validate before any insert; password never enters SQL or an audit payload.
+        validated = AdminLoginRequest(email=email, password=password)
+        name = normalize_name(full_name)
+        verifier = hash_password(validated.password.get_secret_value())
+        with self.session.begin():
+            if not self.repository.bootstrap_available():
+>               raise BootstrapRefused
+E               app.core.admin_security.BootstrapRefused
+
+app\services\admin_auth.py:62: BootstrapRefused
+_________ ERROR at setup of test_logout_revocation_and_login_rotation _________
+
+admin_database = <app.db.session.Database object at 0x0000016291BCF350>
+admin_settings = Settings(app_env='testing', app_name='Road Rules API', cors_allowed_origins=['http://localhost:3000'], allowed_hosts=[...ut_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$')
+
+    @pytest.fixture
+    def account(admin_database, admin_settings):
+        password = secrets.token_urlsafe(24)
+        with admin_database.session_factory() as session:
+>           identifier = AdminAuthService(session, admin_settings).bootstrap(
+                "Test Administrator", "operator@example.com", password
+            )
+
+tests\integration\test_admin.py:100: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <app.services.admin_auth.AdminAuthService object at 0x0000016291BCEEA0>
+full_name = 'Test Administrator', email = 'operator@example.com'
+password = 'L36tSsU_fokxH3Zx1jK5xs8c0vZ-s4it'
+
+    def bootstrap(self, full_name: str, email: str, password: str):
+        # Validate before any insert; password never enters SQL or an audit payload.
+        validated = AdminLoginRequest(email=email, password=password)
+        name = normalize_name(full_name)
+        verifier = hash_password(validated.password.get_secret_value())
+        with self.session.begin():
+            if not self.repository.bootstrap_available():
+>               raise BootstrapRefused
+E               app.core.admin_security.BootstrapRefused
+
+app\services\admin_auth.py:62: BootstrapRefused
+__ ERROR at setup of test_analytics_use_persisted_records_and_require_admin ___
+
+integration_settings = Settings(app_env='testing', app_name='Road Rules API', cors_allowed_origins=['http://localhost:3000'], allowed_hosts=[...ut_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$')
+migration_config = <alembic.config.Config object at 0x0000016291CC41D0>
+tmp_path = WindowsPath('C:/Users/Admin/AppData/Local/Temp/pytest-of-Admin/pytest-33/test_analytics_use_persisted_r0')
+
+    @pytest.fixture
+    def environment(integration_settings, migration_config, tmp_path):
+        command.upgrade(migration_config, "head")
+        settings = Settings(
+            _env_file=None,
+            app_env="testing",
+            test_database_url=integration_settings.test_database_url,
+            cors_allowed_origins=["http://localhost:3000"],
+            pdf_storage_root=tmp_path / "private",
+            admin_login_limit=100,
+        )
+        database = Database(settings)
+    
+        def clear():
+            with database.engine.begin() as connection:
+                assert tuple(
+                    connection.execute(text("SELECT current_database(),current_user")).one()
+                ) == ("roadrules_test", "roadrules_test_app")
+                assert set(inspect(connection).get_table_names()) == TABLES
+                connection.execute(text("TRUNCATE " + ", ".join(sorted(TABLES - {"alembic_version"}))))
+    
+        clear()
+        password = secrets.token_urlsafe(24)
+        with database.session_factory() as session:
+>           AdminAuthService(session, settings).bootstrap(
+                "PDF Test Operator", "pdf-test@example.com", password
+            )
+
+tests\integration\test_pdf_import.py:82: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <app.services.admin_auth.AdminAuthService object at 0x0000016291E09D00>
+full_name = 'PDF Test Operator', email = 'pdf-test@example.com'
+password = 'cOd-UTy3zcUwfU2n1DmFaOM0dhVSFvmY'
+
+    def bootstrap(self, full_name: str, email: str, password: str):
+        # Validate before any insert; password never enters SQL or an audit payload.
+        validated = AdminLoginRequest(email=email, password=password)
+        name = normalize_name(full_name)
+        verifier = hash_password(validated.password.get_secret_value())
+        with self.session.begin():
+            if not self.repository.bootstrap_available():
+>               raise BootstrapRefused
+E               app.core.admin_security.BootstrapRefused
+
+app\services\admin_auth.py:62: BootstrapRefused
+_ ERROR at setup of test_promo_issuance_scope_expiry_and_redemption_concurrency _
+
+integration_settings = Settings(app_env='testing', app_name='Road Rules API', cors_allowed_origins=['http://localhost:3000'], allowed_hosts=[...ut_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$')
+migration_config = <alembic.config.Config object at 0x0000016292029B20>
+tmp_path = WindowsPath('C:/Users/Admin/AppData/Local/Temp/pytest-of-Admin/pytest-33/test_promo_issuance_scope_expi0')
+
+    @pytest.fixture
+    def environment(integration_settings, migration_config, tmp_path):
+        command.upgrade(migration_config, "head")
+        settings = Settings(
+            _env_file=None,
+            app_env="testing",
+            test_database_url=integration_settings.test_database_url,
+            cors_allowed_origins=["http://localhost:3000"],
+            pdf_storage_root=tmp_path / "private",
+            admin_login_limit=100,
+        )
+        database = Database(settings)
+    
+        def clear():
+            with database.engine.begin() as connection:
+                assert tuple(
+                    connection.execute(text("SELECT current_database(),current_user")).one()
+                ) == ("roadrules_test", "roadrules_test_app")
+                assert set(inspect(connection).get_table_names()) == TABLES
+                connection.execute(text("TRUNCATE " + ", ".join(sorted(TABLES - {"alembic_version"}))))
+    
+        clear()
+        password = secrets.token_urlsafe(24)
+        with database.session_factory() as session:
+>           AdminAuthService(session, settings).bootstrap(
+                "PDF Test Operator", "pdf-test@example.com", password
+            )
+
+tests\integration\test_pdf_import.py:82: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <app.services.admin_auth.AdminAuthService object at 0x0000016291F01250>
+full_name = 'PDF Test Operator', email = 'pdf-test@example.com'
+password = '-Ya3YtgFQNSB1oE6iOrDKTuTrOu6VgOj'
+
+    def bootstrap(self, full_name: str, email: str, password: str):
+        # Validate before any insert; password never enters SQL or an audit payload.
+        validated = AdminLoginRequest(email=email, password=password)
+        name = normalize_name(full_name)
+        verifier = hash_password(validated.password.get_secret_value())
+        with self.session.begin():
+            if not self.repository.bootstrap_available():
+>               raise BootstrapRefused
+E               app.core.admin_security.BootstrapRefused
+
+app\services\admin_auth.py:62: BootstrapRefused
+_ ERROR at setup of test_admin_promo_management_duplicate_edit_enable_and_delete _
+
+integration_settings = Settings(app_env='testing', app_name='Road Rules API', cors_allowed_origins=['http://localhost:3000'], allowed_hosts=[...ut_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$')
+migration_config = <alembic.config.Config object at 0x0000016291F03BF0>
+tmp_path = WindowsPath('C:/Users/Admin/AppData/Local/Temp/pytest-of-Admin/pytest-33/test_admin_promo_management_du0')
+
+    @pytest.fixture
+    def environment(integration_settings, migration_config, tmp_path):
+        command.upgrade(migration_config, "head")
+        settings = Settings(
+            _env_file=None,
+            app_env="testing",
+            test_database_url=integration_settings.test_database_url,
+            cors_allowed_origins=["http://localhost:3000"],
+            pdf_storage_root=tmp_path / "private",
+            admin_login_limit=100,
+        )
+        database = Database(settings)
+    
+        def clear():
+            with database.engine.begin() as connection:
+                assert tuple(
+                    connection.execute(text("SELECT current_database(),current_user")).one()
+                ) == ("roadrules_test", "roadrules_test_app")
+                assert set(inspect(connection).get_table_names()) == TABLES
+                connection.execute(text("TRUNCATE " + ", ".join(sorted(TABLES - {"alembic_version"}))))
+    
+        clear()
+        password = secrets.token_urlsafe(24)
+        with database.session_factory() as session:
+            AdminAuthService(session, settings).bootstrap(
+                "PDF Test Operator", "pdf-test@example.com", password
+            )
+        try:
+            with TestClient(
+                create_app(settings), base_url="http://localhost", raise_server_exceptions=False
+            ) as client:
+                response = client.post(
+                    ROOT + "/auth/login",
+                    headers={**HEADERS, "Content-Type": "application/json"},
+                    json={"email": "pdf-test@example.com", "password": password},
+                )
+>               assert response.status_code == 200
+E               assert 401 == 200
+E                +  where 401 = <Response [401 Unauthorized]>.status_code
+
+tests\integration\test_pdf_import.py:94: AssertionError
+____ ERROR at setup of test_invalid_disabled_expired_rate_limited_and_csrf ____
+
+integration_settings = Settings(app_env='testing', app_name='Road Rules API', cors_allowed_origins=['http://localhost:3000'], allowed_hosts=[...ut_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$')
+migration_config = <alembic.config.Config object at 0x0000016291E795B0>
+tmp_path = WindowsPath('C:/Users/Admin/AppData/Local/Temp/pytest-of-Admin/pytest-33/test_invalid_disabled_expired_0')
+
+    @pytest.fixture
+    def environment(integration_settings, migration_config, tmp_path):
+        command.upgrade(migration_config, "head")
+        settings = Settings(
+            _env_file=None,
+            app_env="testing",
+            test_database_url=integration_settings.test_database_url,
+            cors_allowed_origins=["http://localhost:3000"],
+            pdf_storage_root=tmp_path / "private",
+            admin_login_limit=100,
+        )
+        database = Database(settings)
+    
+        def clear():
+            with database.engine.begin() as connection:
+                assert tuple(
+                    connection.execute(text("SELECT current_database(),current_user")).one()
+                ) == ("roadrules_test", "roadrules_test_app")
+                assert set(inspect(connection).get_table_names()) == TABLES
+                connection.execute(text("TRUNCATE " + ", ".join(sorted(TABLES - {"alembic_version"}))))
+    
+        clear()
+        password = secrets.token_urlsafe(24)
+        with database.session_factory() as session:
+            AdminAuthService(session, settings).bootstrap(
+                "PDF Test Operator", "pdf-test@example.com", password
+            )
+        try:
+            with TestClient(
+                create_app(settings), base_url="http://localhost", raise_server_exceptions=False
+            ) as client:
+                response = client.post(
+                    ROOT + "/auth/login",
+                    headers={**HEADERS, "Content-Type": "application/json"},
+                    json={"email": "pdf-test@example.com", "password": password},
+                )
+>               assert response.status_code == 200
+E               assert 401 == 200
+E                +  where 401 = <Response [401 Unauthorized]>.status_code
+
+tests\integration\test_pdf_import.py:94: AssertionError
+_ ERROR at setup of test_mock_initiation_concurrency_settlement_and_isolation _
+
+integration_settings = Settings(app_env='testing', app_name='Road Rules API', cors_allowed_origins=['http://localhost:3000'], allowed_hosts=[...ut_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$')
+migration_config = <alembic.config.Config object at 0x0000016291CDC290>
+tmp_path = WindowsPath('C:/Users/Admin/AppData/Local/Temp/pytest-of-Admin/pytest-33/test_mock_initiation_concurren0')
+
+    @pytest.fixture
+    def environment(integration_settings, migration_config, tmp_path):
+        command.upgrade(migration_config, "head")
+        settings = Settings(
+            _env_file=None,
+            app_env="testing",
+            test_database_url=integration_settings.test_database_url,
+            cors_allowed_origins=["http://localhost:3000"],
+            pdf_storage_root=tmp_path / "private",
+            admin_login_limit=100,
+        )
+        database = Database(settings)
+    
+        def clear():
+            with database.engine.begin() as connection:
+                assert tuple(
+                    connection.execute(text("SELECT current_database(),current_user")).one()
+                ) == ("roadrules_test", "roadrules_test_app")
+                assert set(inspect(connection).get_table_names()) == TABLES
+                connection.execute(text("TRUNCATE " + ", ".join(sorted(TABLES - {"alembic_version"}))))
+    
+        clear()
+        password = secrets.token_urlsafe(24)
+        with database.session_factory() as session:
+>           AdminAuthService(session, settings).bootstrap(
+                "PDF Test Operator", "pdf-test@example.com", password
+            )
+
+tests\integration\test_pdf_import.py:82: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <app.services.admin_auth.AdminAuthService object at 0x0000016291CAEA50>
+full_name = 'PDF Test Operator', email = 'pdf-test@example.com'
+password = 'mhF9_wXsVhEZkMLdqVLodZJN6D3HTmNo'
+
+    def bootstrap(self, full_name: str, email: str, password: str):
+        # Validate before any insert; password never enters SQL or an audit payload.
+        validated = AdminLoginRequest(email=email, password=password)
+        name = normalize_name(full_name)
+        verifier = hash_password(validated.password.get_secret_value())
+        with self.session.begin():
+            if not self.repository.bootstrap_available():
+>               raise BootstrapRefused
+E               app.core.admin_security.BootstrapRefused
+
+app\services\admin_auth.py:62: BootstrapRefused
+_ ERROR at setup of test_concurrent_same_grant_is_idempotent_and_difficulty_quotas _
+
+integration_settings = Settings(app_env='testing', app_name='Road Rules API', cors_allowed_origins=['http://localhost:3000'], allowed_hosts=[...ut_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$')
+migration_config = <alembic.config.Config object at 0x000001629215AF60>
+tmp_path = WindowsPath('C:/Users/Admin/AppData/Local/Temp/pytest-of-Admin/pytest-33/test_concurrent_same_grant_is_0')
+
+    @pytest.fixture
+    def environment(integration_settings, migration_config, tmp_path):
+        command.upgrade(migration_config, "head")
+        settings = Settings(
+            _env_file=None,
+            app_env="testing",
+            test_database_url=integration_settings.test_database_url,
+            cors_allowed_origins=["http://localhost:3000"],
+            pdf_storage_root=tmp_path / "private",
+            admin_login_limit=100,
+        )
+        database = Database(settings)
+    
+        def clear():
+            with database.engine.begin() as connection:
+                assert tuple(
+                    connection.execute(text("SELECT current_database(),current_user")).one()
+                ) == ("roadrules_test", "roadrules_test_app")
+                assert set(inspect(connection).get_table_names()) == TABLES
+                connection.execute(text("TRUNCATE " + ", ".join(sorted(TABLES - {"alembic_version"}))))
+    
+        clear()
+        password = secrets.token_urlsafe(24)
+        with database.session_factory() as session:
+            AdminAuthService(session, settings).bootstrap(
+                "PDF Test Operator", "pdf-test@example.com", password
+            )
+        try:
+            with TestClient(
+                create_app(settings), base_url="http://localhost", raise_server_exceptions=False
+            ) as client:
+                response = client.post(
+                    ROOT + "/auth/login",
+                    headers={**HEADERS, "Content-Type": "application/json"},
+                    json={"email": "pdf-test@example.com", "password": password},
+                )
+>               assert response.status_code == 200
+E               assert 401 == 200
+E                +  where 401 = <Response [401 Unauthorized]>.status_code
+
+tests\integration\test_pdf_import.py:94: AssertionError
+___________ ERROR at setup of test_strict_policy_and_zero_eligible ____________
+
+integration_settings = Settings(app_env='testing', app_name='Road Rules API', cors_allowed_origins=['http://localhost:3000'], allowed_hosts=[...ut_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$')
+migration_config = <alembic.config.Config object at 0x00000162921D8470>
+tmp_path = WindowsPath('C:/Users/Admin/AppData/Local/Temp/pytest-of-Admin/pytest-33/test_strict_policy_and_zero_el0')
+
+    @pytest.fixture
+    def environment(integration_settings, migration_config, tmp_path):
+        command.upgrade(migration_config, "head")
+        settings = Settings(
+            _env_file=None,
+            app_env="testing",
+            test_database_url=integration_settings.test_database_url,
+            cors_allowed_origins=["http://localhost:3000"],
+            pdf_storage_root=tmp_path / "private",
+            admin_login_limit=100,
+        )
+        database = Database(settings)
+    
+        def clear():
+            with database.engine.begin() as connection:
+                assert tuple(
+                    connection.execute(text("SELECT current_database(),current_user")).one()
+                ) == ("roadrules_test", "roadrules_test_app")
+                assert set(inspect(connection).get_table_names()) == TABLES
+                connection.execute(text("TRUNCATE " + ", ".join(sorted(TABLES - {"alembic_version"}))))
+    
+        clear()
+        password = secrets.token_urlsafe(24)
+        with database.session_factory() as session:
+            AdminAuthService(session, settings).bootstrap(
+                "PDF Test Operator", "pdf-test@example.com", password
+            )
+        try:
+            with TestClient(
+                create_app(settings), base_url="http://localhost", raise_server_exceptions=False
+            ) as client:
+                response = client.post(
+                    ROOT + "/auth/login",
+                    headers={**HEADERS, "Content-Type": "application/json"},
+                    json={"email": "pdf-test@example.com", "password": password},
+                )
+>               assert response.status_code == 200
+E               assert 401 == 200
+E                +  where 401 = <Response [401 Unauthorized]>.status_code
+
+tests\integration\test_pdf_import.py:94: AssertionError
+_ ERROR at setup of test_reprocess_existing_source_after_explicit_policy_change _
+
+integration_settings = Settings(app_env='testing', app_name='Road Rules API', cors_allowed_origins=['http://localhost:3000'], allowed_hosts=[...ut_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$')
+migration_config = <alembic.config.Config object at 0x00000162921E9E20>
+tmp_path = WindowsPath('C:/Users/Admin/AppData/Local/Temp/pytest-of-Admin/pytest-33/test_reprocess_existing_source0')
+
+    @pytest.fixture
+    def environment(integration_settings, migration_config, tmp_path):
+        command.upgrade(migration_config, "head")
+        settings = Settings(
+            _env_file=None,
+            app_env="testing",
+            test_database_url=integration_settings.test_database_url,
+            cors_allowed_origins=["http://localhost:3000"],
+            pdf_storage_root=tmp_path / "private",
+            admin_login_limit=100,
+        )
+        database = Database(settings)
+    
+        def clear():
+            with database.engine.begin() as connection:
+                assert tuple(
+                    connection.execute(text("SELECT current_database(),current_user")).one()
+                ) == ("roadrules_test", "roadrules_test_app")
+                assert set(inspect(connection).get_table_names()) == TABLES
+                connection.execute(text("TRUNCATE " + ", ".join(sorted(TABLES - {"alembic_version"}))))
+    
+        clear()
+        password = secrets.token_urlsafe(24)
+        with database.session_factory() as session:
+>           AdminAuthService(session, settings).bootstrap(
+                "PDF Test Operator", "pdf-test@example.com", password
+            )
+
+tests\integration\test_pdf_import.py:82: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <app.services.admin_auth.AdminAuthService object at 0x0000016291EDAB40>
+full_name = 'PDF Test Operator', email = 'pdf-test@example.com'
+password = 'koS3qThz_ymT6baAvMyBIUA4HD6DZztT'
+
+    def bootstrap(self, full_name: str, email: str, password: str):
+        # Validate before any insert; password never enters SQL or an audit payload.
+        validated = AdminLoginRequest(email=email, password=password)
+        name = normalize_name(full_name)
+        verifier = hash_password(validated.password.get_secret_value())
+        with self.session.begin():
+            if not self.repository.bootstrap_available():
+>               raise BootstrapRefused
+E               app.core.admin_security.BootstrapRefused
+
+app\services\admin_auth.py:62: BootstrapRefused
+__ ERROR at setup of test_twentieth_next_finishes_and_media_is_current_only ___
+
+integration_settings = Settings(app_env='testing', app_name='Road Rules API', cors_allowed_origins=['http://localhost:3000'], allowed_hosts=[...ut_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$')
+migration_config = <alembic.config.Config object at 0x0000016292167A70>
+tmp_path = WindowsPath('C:/Users/Admin/AppData/Local/Temp/pytest-of-Admin/pytest-33/test_twentieth_next_finishes_a0')
+
+    @pytest.fixture
+    def environment(integration_settings, migration_config, tmp_path):
+        command.upgrade(migration_config, "head")
+        settings = Settings(
+            _env_file=None,
+            app_env="testing",
+            test_database_url=integration_settings.test_database_url,
+            cors_allowed_origins=["http://localhost:3000"],
+            pdf_storage_root=tmp_path / "private",
+            admin_login_limit=100,
+        )
+        database = Database(settings)
+    
+        def clear():
+            with database.engine.begin() as connection:
+                assert tuple(
+                    connection.execute(text("SELECT current_database(),current_user")).one()
+                ) == ("roadrules_test", "roadrules_test_app")
+                assert set(inspect(connection).get_table_names()) == TABLES
+                connection.execute(text("TRUNCATE " + ", ".join(sorted(TABLES - {"alembic_version"}))))
+    
+        clear()
+        password = secrets.token_urlsafe(24)
+        with database.session_factory() as session:
+            AdminAuthService(session, settings).bootstrap(
+                "PDF Test Operator", "pdf-test@example.com", password
+            )
+        try:
+            with TestClient(
+                create_app(settings), base_url="http://localhost", raise_server_exceptions=False
+            ) as client:
+                response = client.post(
+                    ROOT + "/auth/login",
+                    headers={**HEADERS, "Content-Type": "application/json"},
+                    json={"email": "pdf-test@example.com", "password": password},
+                )
+>               assert response.status_code == 200
+E               assert 401 == 200
+E                +  where 401 = <Response [401 Unauthorized]>.status_code
+
+tests\integration\test_pdf_import.py:94: AssertionError
+____________ ERROR at setup of test_result_thresholds_and_scope[0] ____________
+
+integration_settings = Settings(app_env='testing', app_name='Road Rules API', cors_allowed_origins=['http://localhost:3000'], allowed_hosts=[...ut_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$')
+migration_config = <alembic.config.Config object at 0x0000016291C72180>
+tmp_path = WindowsPath('C:/Users/Admin/AppData/Local/Temp/pytest-of-Admin/pytest-33/test_result_thresholds_and_sco0')
+
+    @pytest.fixture
+    def environment(integration_settings, migration_config, tmp_path):
+        command.upgrade(migration_config, "head")
+        settings = Settings(
+            _env_file=None,
+            app_env="testing",
+            test_database_url=integration_settings.test_database_url,
+            cors_allowed_origins=["http://localhost:3000"],
+            pdf_storage_root=tmp_path / "private",
+            admin_login_limit=100,
+        )
+        database = Database(settings)
+    
+        def clear():
+            with database.engine.begin() as connection:
+                assert tuple(
+                    connection.execute(text("SELECT current_database(),current_user")).one()
+                ) == ("roadrules_test", "roadrules_test_app")
+                assert set(inspect(connection).get_table_names()) == TABLES
+                connection.execute(text("TRUNCATE " + ", ".join(sorted(TABLES - {"alembic_version"}))))
+    
+        clear()
+        password = secrets.token_urlsafe(24)
+        with database.session_factory() as session:
+>           AdminAuthService(session, settings).bootstrap(
+                "PDF Test Operator", "pdf-test@example.com", password
+            )
+
+tests\integration\test_pdf_import.py:82: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <app.services.admin_auth.AdminAuthService object at 0x0000016291E4A4E0>
+full_name = 'PDF Test Operator', email = 'pdf-test@example.com'
+password = 'n_PlOgI_CvDEtzTwrf7_Tz3G_Ryh0DaX'
+
+    def bootstrap(self, full_name: str, email: str, password: str):
+        # Validate before any insert; password never enters SQL or an audit payload.
+        validated = AdminLoginRequest(email=email, password=password)
+        name = normalize_name(full_name)
+        verifier = hash_password(validated.password.get_secret_value())
+        with self.session.begin():
+            if not self.repository.bootstrap_available():
+>               raise BootstrapRefused
+E               app.core.admin_security.BootstrapRefused
+
+app\services\admin_auth.py:62: BootstrapRefused
+________ ERROR at setup of test_corrupt_snapshot_preserves_completion _________
+
+integration_settings = Settings(app_env='testing', app_name='Road Rules API', cors_allowed_origins=['http://localhost:3000'], allowed_hosts=[...ut_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$')
+migration_config = <alembic.config.Config object at 0x0000016291D97E60>
+tmp_path = WindowsPath('C:/Users/Admin/AppData/Local/Temp/pytest-of-Admin/pytest-33/test_corrupt_snapshot_preserve0')
+
+    @pytest.fixture
+    def environment(integration_settings, migration_config, tmp_path):
+        command.upgrade(migration_config, "head")
+        settings = Settings(
+            _env_file=None,
+            app_env="testing",
+            test_database_url=integration_settings.test_database_url,
+            cors_allowed_origins=["http://localhost:3000"],
+            pdf_storage_root=tmp_path / "private",
+            admin_login_limit=100,
+        )
+        database = Database(settings)
+    
+        def clear():
+            with database.engine.begin() as connection:
+                assert tuple(
+                    connection.execute(text("SELECT current_database(),current_user")).one()
+                ) == ("roadrules_test", "roadrules_test_app")
+                assert set(inspect(connection).get_table_names()) == TABLES
+                connection.execute(text("TRUNCATE " + ", ".join(sorted(TABLES - {"alembic_version"}))))
+    
+        clear()
+        password = secrets.token_urlsafe(24)
+        with database.session_factory() as session:
+            AdminAuthService(session, settings).bootstrap(
+                "PDF Test Operator", "pdf-test@example.com", password
+            )
+        try:
+            with TestClient(
+                create_app(settings), base_url="http://localhost", raise_server_exceptions=False
+            ) as client:
+                response = client.post(
+                    ROOT + "/auth/login",
+                    headers={**HEADERS, "Content-Type": "application/json"},
+                    json={"email": "pdf-test@example.com", "password": password},
+                )
+>               assert response.status_code == 200
+E               assert 401 == 200
+E                +  where 401 = <Response [401 Unauthorized]>.status_code
+
+tests\integration\test_pdf_import.py:94: AssertionError
+_ ERROR at setup of test_vector_choices_activate_and_use_current_question_media _
+
+integration_settings = Settings(app_env='testing', app_name='Road Rules API', cors_allowed_origins=['http://localhost:3000'], allowed_hosts=[...ut_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$')
+migration_config = <alembic.config.Config object at 0x0000016291E2AC30>
+tmp_path = WindowsPath('C:/Users/Admin/AppData/Local/Temp/pytest-of-Admin/pytest-33/test_vector_choices_activate_a0')
+
+    @pytest.fixture
+    def environment(integration_settings, migration_config, tmp_path):
+        command.upgrade(migration_config, "head")
+        settings = Settings(
+            _env_file=None,
+            app_env="testing",
+            test_database_url=integration_settings.test_database_url,
+            cors_allowed_origins=["http://localhost:3000"],
+            pdf_storage_root=tmp_path / "private",
+            admin_login_limit=100,
+        )
+        database = Database(settings)
+    
+        def clear():
+            with database.engine.begin() as connection:
+                assert tuple(
+                    connection.execute(text("SELECT current_database(),current_user")).one()
+                ) == ("roadrules_test", "roadrules_test_app")
+                assert set(inspect(connection).get_table_names()) == TABLES
+                connection.execute(text("TRUNCATE " + ", ".join(sorted(TABLES - {"alembic_version"}))))
+    
+        clear()
+        password = secrets.token_urlsafe(24)
+        with database.session_factory() as session:
+            AdminAuthService(session, settings).bootstrap(
+                "PDF Test Operator", "pdf-test@example.com", password
+            )
+        try:
+            with TestClient(
+                create_app(settings), base_url="http://localhost", raise_server_exceptions=False
+            ) as client:
+                response = client.post(
+                    ROOT + "/auth/login",
+                    headers={**HEADERS, "Content-Type": "application/json"},
+                    json={"email": "pdf-test@example.com", "password": password},
+                )
+>               assert response.status_code == 200
+E               assert 401 == 200
+E                +  where 401 = <Response [401 Unauthorized]>.status_code
+
+tests\integration\test_pdf_import.py:94: AssertionError
+_ ERROR at setup of test_duplicate_upload_and_operation_retry_do_not_duplicate_records _
+
+integration_settings = Settings(app_env='testing', app_name='Road Rules API', cors_allowed_origins=['http://localhost:3000'], allowed_hosts=[...ut_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$')
+migration_config = <alembic.config.Config object at 0x0000016291E74CE0>
+tmp_path = WindowsPath('C:/Users/Admin/AppData/Local/Temp/pytest-of-Admin/pytest-33/test_duplicate_upload_and_oper0')
+
+    @pytest.fixture
+    def environment(integration_settings, migration_config, tmp_path):
+        command.upgrade(migration_config, "head")
+        settings = Settings(
+            _env_file=None,
+            app_env="testing",
+            test_database_url=integration_settings.test_database_url,
+            cors_allowed_origins=["http://localhost:3000"],
+            pdf_storage_root=tmp_path / "private",
+            admin_login_limit=100,
+        )
+        database = Database(settings)
+    
+        def clear():
+            with database.engine.begin() as connection:
+                assert tuple(
+                    connection.execute(text("SELECT current_database(),current_user")).one()
+                ) == ("roadrules_test", "roadrules_test_app")
+                assert set(inspect(connection).get_table_names()) == TABLES
+                connection.execute(text("TRUNCATE " + ", ".join(sorted(TABLES - {"alembic_version"}))))
+    
+        clear()
+        password = secrets.token_urlsafe(24)
+        with database.session_factory() as session:
+            AdminAuthService(session, settings).bootstrap(
+                "PDF Test Operator", "pdf-test@example.com", password
+            )
+        try:
+            with TestClient(
+                create_app(settings), base_url="http://localhost", raise_server_exceptions=False
+            ) as client:
+                response = client.post(
+                    ROOT + "/auth/login",
+                    headers={**HEADERS, "Content-Type": "application/json"},
+                    json={"email": "pdf-test@example.com", "password": password},
+                )
+>               assert response.status_code == 200
+E               assert 401 == 200
+E                +  where 401 = <Response [401 Unauthorized]>.status_code
+
+tests\integration\test_pdf_import.py:94: AssertionError
+_ ERROR at setup of test_invalid_uploads_are_rejected_without_source_rows[not a PDF-bad.pdf-application/pdf-INVALID_PDF] _
+
+integration_settings = Settings(app_env='testing', app_name='Road Rules API', cors_allowed_origins=['http://localhost:3000'], allowed_hosts=[...ut_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$')
+migration_config = <alembic.config.Config object at 0x0000016291E29F10>
+tmp_path = WindowsPath('C:/Users/Admin/AppData/Local/Temp/pytest-of-Admin/pytest-33/test_invalid_uploads_are_rejec0')
+
+    @pytest.fixture
+    def environment(integration_settings, migration_config, tmp_path):
+        command.upgrade(migration_config, "head")
+        settings = Settings(
+            _env_file=None,
+            app_env="testing",
+            test_database_url=integration_settings.test_database_url,
+            cors_allowed_origins=["http://localhost:3000"],
+            pdf_storage_root=tmp_path / "private",
+            admin_login_limit=100,
+        )
+        database = Database(settings)
+    
+        def clear():
+            with database.engine.begin() as connection:
+                assert tuple(
+                    connection.execute(text("SELECT current_database(),current_user")).one()
+                ) == ("roadrules_test", "roadrules_test_app")
+                assert set(inspect(connection).get_table_names()) == TABLES
+                connection.execute(text("TRUNCATE " + ", ".join(sorted(TABLES - {"alembic_version"}))))
+    
+        clear()
+        password = secrets.token_urlsafe(24)
+        with database.session_factory() as session:
+            AdminAuthService(session, settings).bootstrap(
+                "PDF Test Operator", "pdf-test@example.com", password
+            )
+        try:
+            with TestClient(
+                create_app(settings), base_url="http://localhost", raise_server_exceptions=False
+            ) as client:
+                response = client.post(
+                    ROOT + "/auth/login",
+                    headers={**HEADERS, "Content-Type": "application/json"},
+                    json={"email": "pdf-test@example.com", "password": password},
+                )
+>               assert response.status_code == 200
+E               assert 401 == 200
+E                +  where 401 = <Response [401 Unauthorized]>.status_code
+
+tests\integration\test_pdf_import.py:94: AssertionError
+_ ERROR at setup of test_invalid_uploads_are_rejected_without_source_rows[x-../bad.pdf-application/pdf-INVALID_FILENAME] _
+
+integration_settings = Settings(app_env='testing', app_name='Road Rules API', cors_allowed_origins=['http://localhost:3000'], allowed_hosts=[...ut_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$')
+migration_config = <alembic.config.Config object at 0x0000016292231D90>
+tmp_path = WindowsPath('C:/Users/Admin/AppData/Local/Temp/pytest-of-Admin/pytest-33/test_invalid_uploads_are_rejec4')
+
+    @pytest.fixture
+    def environment(integration_settings, migration_config, tmp_path):
+        command.upgrade(migration_config, "head")
+        settings = Settings(
+            _env_file=None,
+            app_env="testing",
+            test_database_url=integration_settings.test_database_url,
+            cors_allowed_origins=["http://localhost:3000"],
+            pdf_storage_root=tmp_path / "private",
+            admin_login_limit=100,
+        )
+        database = Database(settings)
+    
+        def clear():
+            with database.engine.begin() as connection:
+                assert tuple(
+                    connection.execute(text("SELECT current_database(),current_user")).one()
+                ) == ("roadrules_test", "roadrules_test_app")
+                assert set(inspect(connection).get_table_names()) == TABLES
+                connection.execute(text("TRUNCATE " + ", ".join(sorted(TABLES - {"alembic_version"}))))
+    
+        clear()
+        password = secrets.token_urlsafe(24)
+        with database.session_factory() as session:
+            AdminAuthService(session, settings).bootstrap(
+                "PDF Test Operator", "pdf-test@example.com", password
+            )
+        try:
+            with TestClient(
+                create_app(settings), base_url="http://localhost", raise_server_exceptions=False
+            ) as client:
+                response = client.post(
+                    ROOT + "/auth/login",
+                    headers={**HEADERS, "Content-Type": "application/json"},
+                    json={"email": "pdf-test@example.com", "password": password},
+                )
+>               assert response.status_code == 200
+E               assert 401 == 200
+E                +  where 401 = <Response [401 Unauthorized]>.status_code
+
+tests\integration\test_pdf_import.py:94: AssertionError
+_ ERROR at setup of test_invalid_uploads_are_rejected_without_source_rows[x-bad.pdf-text/plain-PDF_CONTENT_TYPE_REQUIRED] _
+
+integration_settings = Settings(app_env='testing', app_name='Road Rules API', cors_allowed_origins=['http://localhost:3000'], allowed_hosts=[...ut_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$')
+migration_config = <alembic.config.Config object at 0x00000162920295B0>
+tmp_path = WindowsPath('C:/Users/Admin/AppData/Local/Temp/pytest-of-Admin/pytest-33/test_invalid_uploads_are_rejec5')
+
+    @pytest.fixture
+    def environment(integration_settings, migration_config, tmp_path):
+        command.upgrade(migration_config, "head")
+        settings = Settings(
+            _env_file=None,
+            app_env="testing",
+            test_database_url=integration_settings.test_database_url,
+            cors_allowed_origins=["http://localhost:3000"],
+            pdf_storage_root=tmp_path / "private",
+            admin_login_limit=100,
+        )
+        database = Database(settings)
+    
+        def clear():
+            with database.engine.begin() as connection:
+                assert tuple(
+                    connection.execute(text("SELECT current_database(),current_user")).one()
+                ) == ("roadrules_test", "roadrules_test_app")
+                assert set(inspect(connection).get_table_names()) == TABLES
+                connection.execute(text("TRUNCATE " + ", ".join(sorted(TABLES - {"alembic_version"}))))
+    
+        clear()
+        password = secrets.token_urlsafe(24)
+        with database.session_factory() as session:
+            AdminAuthService(session, settings).bootstrap(
+                "PDF Test Operator", "pdf-test@example.com", password
+            )
+        try:
+            with TestClient(
+                create_app(settings), base_url="http://localhost", raise_server_exceptions=False
+            ) as client:
+                response = client.post(
+                    ROOT + "/auth/login",
+                    headers={**HEADERS, "Content-Type": "application/json"},
+                    json={"email": "pdf-test@example.com", "password": password},
+                )
+>               assert response.status_code == 200
+E               assert 401 == 200
+E                +  where 401 = <Response [401 Unauthorized]>.status_code
+
+tests\integration\test_pdf_import.py:94: AssertionError
+__________ ERROR at setup of test_limits_and_durable_attempt_budget ___________
+
+integration_settings = Settings(app_env='testing', app_name='Road Rules API', cors_allowed_origins=['http://localhost:3000'], allowed_hosts=[...ut_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$')
+migration_config = <alembic.config.Config object at 0x000001629204D670>
+tmp_path = WindowsPath('C:/Users/Admin/AppData/Local/Temp/pytest-of-Admin/pytest-33/test_limits_and_durable_attemp0')
+
+    @pytest.fixture
+    def environment(integration_settings, migration_config, tmp_path):
+        command.upgrade(migration_config, "head")
+        settings = Settings(
+            _env_file=None,
+            app_env="testing",
+            test_database_url=integration_settings.test_database_url,
+            cors_allowed_origins=["http://localhost:3000"],
+            pdf_storage_root=tmp_path / "private",
+            admin_login_limit=100,
+        )
+        database = Database(settings)
+    
+        def clear():
+            with database.engine.begin() as connection:
+                assert tuple(
+                    connection.execute(text("SELECT current_database(),current_user")).one()
+                ) == ("roadrules_test", "roadrules_test_app")
+                assert set(inspect(connection).get_table_names()) == TABLES
+                connection.execute(text("TRUNCATE " + ", ".join(sorted(TABLES - {"alembic_version"}))))
+    
+        clear()
+        password = secrets.token_urlsafe(24)
+        with database.session_factory() as session:
+            AdminAuthService(session, settings).bootstrap(
+                "PDF Test Operator", "pdf-test@example.com", password
+            )
+        try:
+            with TestClient(
+                create_app(settings), base_url="http://localhost", raise_server_exceptions=False
+            ) as client:
+                response = client.post(
+                    ROOT + "/auth/login",
+                    headers={**HEADERS, "Content-Type": "application/json"},
+                    json={"email": "pdf-test@example.com", "password": password},
+                )
+>               assert response.status_code == 200
+E               assert 401 == 200
+E                +  where 401 = <Response [401 Unauthorized]>.status_code
+
+tests\integration\test_pdf_import.py:94: AssertionError
+================================== FAILURES ===================================
+_____________________ test_generic_login_failure[unknown] _____________________
+
+admin_client = <starlette.testclient.TestClient object at 0x0000016291AF63F0>
+account = {'id': UUID('06371552-ac88-4638-a949-b5e33561c2d2'), 'email': 'operator@example.com', 'password': '1G-tKN6ciAHAeGPb1EwWiCV1PhFD_plp'}
+admin_database = <app.db.session.Database object at 0x00000162919B8CB0>
+case = 'unknown'
+
+    @pytest.mark.parametrize("case", ["wrong", "unknown", "inactive"])
+    def test_generic_login_failure(admin_client, account, admin_database, case):
+        payload = {"email": account["email"], "password": account["password"]}
+        if case == "wrong":
+            payload["password"] = "incorrect"
+        if case == "unknown":
+            payload["email"] = "missing@example.com"
+        if case == "inactive":
+            with admin_database.engine.begin() as connection:
+                connection.execute(update(AdminUser).values(is_active=False))
+        response = admin_client.post(LOGIN, json=payload, headers=HEADERS)
+        assert response.status_code == 401
+        assert response.json() == {
+            "error": {"code": "ADMIN_AUTH_REQUIRED", "message": "Administrator authentication failed."}
+        }
+        assert "operator@example.com" not in response.text
+        with admin_database.session_factory() as session:
+            assert session.scalar(select(func.count()).select_from(AdminSession)) == 0
+>           assert (
+                session.scalar(
+                    select(func.count())
+                    .select_from(AdminAuditEvent)
+                    .where(AdminAuditEvent.event_type == "ADMIN_LOGIN_ATTEMPT")
+                )
+                == 1
+            )
+E           AssertionError: assert 0 == 1
+E            +  where 0 = scalar(<sqlalchemy.sql.selectable.Select object at 0x0000016291AA1160>)
+E            +    where scalar = <sqlalchemy.orm.session.Session object at 0x0000016291A86BD0>.scalar
+E            +    and   <sqlalchemy.sql.selectable.Select object at 0x0000016291AA1160> = where(<sqlalchemy.orm.attributes.InstrumentedAttribute object at 0x000001628EDCD1C0> == 'ADMIN_LOGIN_ATTEMPT')
+E            +      where where = <sqlalchemy.sql.selectable.Select object at 0x0000016291AA1130>.where
+E            +        where <sqlalchemy.sql.selectable.Select object at 0x0000016291AA1130> = select_from(AdminAuditEvent)
+E            +          where select_from = <sqlalchemy.sql.selectable.Select object at 0x0000016291AA10D0>.select_from
+E            +            where <sqlalchemy.sql.selectable.Select object at 0x0000016291AA10D0> = select(<sqlalchemy.sql.functions.count at 0x16291aa0f80; count>)
+E            +              where <sqlalchemy.sql.functions.count at 0x16291aa0f80; count> = <sqlalchemy.sql.functions._FunctionGenerator object at 0x000001629199CDA0>()
+E            +                where <sqlalchemy.sql.functions._FunctionGenerator object at 0x000001629199CDA0> = func.count
+E            +      and   <sqlalchemy.orm.attributes.InstrumentedAttribute object at 0x000001628EDCD1C0> = AdminAuditEvent.event_type
+
+tests\integration\test_admin.py:198: AssertionError
+___________ test_admin_session_server_enforced_lifecycle[absolute] ____________
+
+admin_client = <starlette.testclient.TestClient object at 0x0000016291B52FC0>
+account = {'id': UUID('2e2fa2f0-86fd-4b06-977d-2bf73a182100'), 'email': 'operator@example.com', 'password': 'X9-eaYytgwyhPMR_vjVq7h55rzH5S1qf'}
+admin_database = <app.db.session.Database object at 0x0000016291B99CD0>
+kind = 'absolute'
+
+    @pytest.mark.parametrize("kind", ["absolute", "inactivity", "disabled"])
+    def test_admin_session_server_enforced_lifecycle(admin_client, account, admin_database, kind):
+        _, token = login(admin_client, account)
+        with admin_database.engine.begin() as connection:
+            if kind == "absolute":
+                connection.execute(
+                    text(
+                        "UPDATE admin_sessions SET created_at=clock_timestamp()-interval '10 hours', "
+                        "expires_at=clock_timestamp()-interval '1 minute', "
+                        "last_activity_at=clock_timestamp()-interval '2 minutes'"
+                    )
+                )
+            elif kind == "inactivity":
+                connection.execute(
+                    text(
+                        "UPDATE admin_sessions SET created_at=clock_timestamp()-interval '2 hours', "
+                        "last_activity_at=clock_timestamp()-interval '31 minutes'"
+                    )
+                )
+            else:
+                connection.execute(update(AdminUser).values(is_active=False))
+        assert admin_client.get(SUMMARY).status_code == 401
+        admin_client.cookies.clear()
+        admin_client.cookies.set("roadrules_admin", token, path=ADMIN_PATH)
+        assert admin_client.get(ME).status_code == 401
+        with admin_database.session_factory() as session:
+>           assert session.scalar(select(AdminSession.revoked_at)) is not None
+E           assert None is not None
+E            +  where None = scalar(<sqlalchemy.sql.selectable.Select object at 0x0000016291C1EA80>)
+E            +    where scalar = <sqlalchemy.orm.session.Session object at 0x0000016291C1E900>.scalar
+E            +    and   <sqlalchemy.sql.selectable.Select object at 0x0000016291C1EA80> = select(<sqlalchemy.orm.attributes.InstrumentedAttribute object at 0x000001628EDCC220>)
+E            +      where <sqlalchemy.orm.attributes.InstrumentedAttribute object at 0x000001628EDCC220> = AdminSession.revoked_at
+
+tests\integration\test_admin.py:272: AssertionError
+___________ test_admin_session_server_enforced_lifecycle[disabled] ____________
+
+admin_client = <starlette.testclient.TestClient object at 0x0000016291BCDCA0>
+account = {'id': UUID('93972929-86f7-4fa2-a142-aead96091b06'), 'email': 'operator@example.com', 'password': 'ripz0JSGopj6hIXuCrnC7IDhAnG7AwGk'}
+admin_database = <app.db.session.Database object at 0x0000016291B856D0>
+kind = 'disabled'
+
+    @pytest.mark.parametrize("kind", ["absolute", "inactivity", "disabled"])
+    def test_admin_session_server_enforced_lifecycle(admin_client, account, admin_database, kind):
+        _, token = login(admin_client, account)
+        with admin_database.engine.begin() as connection:
+            if kind == "absolute":
+                connection.execute(
+                    text(
+                        "UPDATE admin_sessions SET created_at=clock_timestamp()-interval '10 hours', "
+                        "expires_at=clock_timestamp()-interval '1 minute', "
+                        "last_activity_at=clock_timestamp()-interval '2 minutes'"
+                    )
+                )
+            elif kind == "inactivity":
+                connection.execute(
+                    text(
+                        "UPDATE admin_sessions SET created_at=clock_timestamp()-interval '2 hours', "
+                        "last_activity_at=clock_timestamp()-interval '31 minutes'"
+                    )
+                )
+            else:
+                connection.execute(update(AdminUser).values(is_active=False))
+        assert admin_client.get(SUMMARY).status_code == 401
+        admin_client.cookies.clear()
+        admin_client.cookies.set("roadrules_admin", token, path=ADMIN_PATH)
+        assert admin_client.get(ME).status_code == 401
+        with admin_database.session_factory() as session:
+>           assert session.scalar(select(AdminSession.revoked_at)) is not None
+E           assert None is not None
+E            +  where None = scalar(<sqlalchemy.sql.selectable.Select object at 0x0000016291BCFE60>)
+E            +    where scalar = <sqlalchemy.orm.session.Session object at 0x0000016291BCF410>.scalar
+E            +    and   <sqlalchemy.sql.selectable.Select object at 0x0000016291BCFE60> = select(<sqlalchemy.orm.attributes.InstrumentedAttribute object at 0x000001628EDCC220>)
+E            +      where <sqlalchemy.orm.attributes.InstrumentedAttribute object at 0x000001628EDCC220> = AdminSession.revoked_at
+
+tests\integration\test_admin.py:272: AssertionError
+_________________ test_login_limits_persist_across_instances __________________
+
+admin_database = <app.db.session.Database object at 0x0000016291BCE870>
+admin_settings = Settings(app_env='testing', app_name='Road Rules API', cors_allowed_origins=['http://localhost:3000'], allowed_hosts=[...ut_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$')
+account = {'id': UUID('821594f2-850f-412f-901c-0d71b6b01881'), 'email': 'operator@example.com', 'password': 'PyWOgPPA28f97XAhaJbASFlrkDKAwZqg'}
+
+    def test_login_limits_persist_across_instances(admin_database, admin_settings, account):
+        options = admin_settings.model_dump()
+        options["admin_login_limit"] = 1
+        settings = Settings(_env_file=None, **options)
+        with TestClient(create_app(settings), base_url="http://localhost") as first:
+            assert (
+                first.post(
+                    LOGIN, headers=HEADERS, json={"email": account["email"], "password": "wrong"}
+                ).status_code
+                == 401
+            )
+        with TestClient(create_app(settings), base_url="http://localhost") as second:
+            response = second.post(
+                LOGIN,
+                headers={**HEADERS, "X-Forwarded-For": "203.0.113.10"},
+                json={"email": account["email"], "password": account["password"]},
+            )
+>           assert response.status_code == 429 and response.headers["retry-after"] == "60"
+E           assert (401 == 429)
+E            +  where 401 = <Response [401 Unauthorized]>.status_code
+
+tests\integration\test_admin.py:317: AssertionError
+______________ test_csrf_guards_admin_login_and_logout[headers0] ______________
+
+admin_client = <starlette.testclient.TestClient object at 0x0000016291CDC6E0>
+account = {'id': UUID('e73978b6-c14d-4e78-b4a3-cf381b7bd37f'), 'email': 'operator@example.com', 'password': 'UTp3CI6x2l7w9couN8vNiMDompPHy-yP'}
+headers = {}
+
+    @pytest.mark.parametrize(
+        "headers",
+        [
+            {},
+            {"Origin": "http://localhost:3000"},
+            {"Origin": "https://evil.example", "X-CSRF-Protection": "1"},
+        ],
+    )
+    def test_csrf_guards_admin_login_and_logout(admin_client, account, headers):
+        assert (
+            admin_client.post(
+                LOGIN,
+                json={"email": account["email"], "password": account["password"]},
+                headers=headers,
+            ).status_code
+            == 403
+        )
+        login(admin_client, account)
+        assert admin_client.post(LOGOUT, headers=headers).status_code == 403
+>       assert admin_client.get(ME).status_code == 200
+E       AssertionError: assert 401 == 200
+E        +  where 401 = <Response [401 Unauthorized]>.status_code
+E        +    where <Response [401 Unauthorized]> = get('/api/v1/admin/auth/me')
+E        +      where get = <starlette.testclient.TestClient object at 0x0000016291CDC6E0>.get
+
+tests\integration\test_admin.py:339: AssertionError
+______________ test_csrf_guards_admin_login_and_logout[headers1] ______________
+
+admin_client = <starlette.testclient.TestClient object at 0x0000016291D72E40>
+account = {'id': UUID('02729cd3-b173-4a9d-9716-2cca13846ccc'), 'email': 'operator@example.com', 'password': 'w2iVTs6tOhSWxBy34VjP7hwT4GcWaE21'}
+headers = {'Origin': 'http://localhost:3000'}
+
+    @pytest.mark.parametrize(
+        "headers",
+        [
+            {},
+            {"Origin": "http://localhost:3000"},
+            {"Origin": "https://evil.example", "X-CSRF-Protection": "1"},
+        ],
+    )
+    def test_csrf_guards_admin_login_and_logout(admin_client, account, headers):
+        assert (
+            admin_client.post(
+                LOGIN,
+                json={"email": account["email"], "password": account["password"]},
+                headers=headers,
+            ).status_code
+            == 403
+        )
+        login(admin_client, account)
+        assert admin_client.post(LOGOUT, headers=headers).status_code == 403
+>       assert admin_client.get(ME).status_code == 200
+E       AssertionError: assert 401 == 200
+E        +  where 401 = <Response [401 Unauthorized]>.status_code
+E        +    where <Response [401 Unauthorized]> = get('/api/v1/admin/auth/me')
+E        +      where get = <starlette.testclient.TestClient object at 0x0000016291D72E40>.get
+
+tests\integration\test_admin.py:339: AssertionError
+______________ test_csrf_guards_admin_login_and_logout[headers2] ______________
+
+admin_client = <starlette.testclient.TestClient object at 0x0000016291C37D40>
+account = {'id': UUID('4d16ebc3-a8d8-43e5-921f-c63b5edf74f4'), 'email': 'operator@example.com', 'password': 'o-YVie6taemvbU0oMt1Kc0gSOv_aX_3t'}
+headers = {'Origin': 'https://evil.example', 'X-CSRF-Protection': '1'}
+
+    @pytest.mark.parametrize(
+        "headers",
+        [
+            {},
+            {"Origin": "http://localhost:3000"},
+            {"Origin": "https://evil.example", "X-CSRF-Protection": "1"},
+        ],
+    )
+    def test_csrf_guards_admin_login_and_logout(admin_client, account, headers):
+        assert (
+            admin_client.post(
+                LOGIN,
+                json={"email": account["email"], "password": account["password"]},
+                headers=headers,
+            ).status_code
+            == 403
+        )
+        login(admin_client, account)
+        assert admin_client.post(LOGOUT, headers=headers).status_code == 403
+>       assert admin_client.get(ME).status_code == 200
+E       AssertionError: assert 401 == 200
+E        +  where 401 = <Response [401 Unauthorized]>.status_code
+E        +    where <Response [401 Unauthorized]> = get('/api/v1/admin/auth/me')
+E        +      where get = <starlette.testclient.TestClient object at 0x0000016291C37D40>.get
+
+tests\integration\test_admin.py:339: AssertionError
+_________ test_exam_analytics_include_current_and_graded_attempts[0] __________
+
+environment = (<starlette.testclient.TestClient object at 0x0000016291E499D0>, <app.db.session.Database object at 0x0000016291E78DA0...t_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$'))
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000016291E78920>
+correct = 0
+
+    @pytest.mark.parametrize("correct", [0, 12])
+    def test_exam_analytics_include_current_and_graded_attempts(environment, monkeypatch, correct):
+        admin, database, settings = environment
+>       token, grant = prepared(environment)
+                       ^^^^^^^^^^^^^^^^^^^^^
+
+tests\integration\test_admin_analytics.py:65: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\integration\test_exam_execution.py:25: in prepared
+    submit(environment, fixture_pdf(45))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+environment = (<starlette.testclient.TestClient object at 0x0000016291E499D0>, <app.db.session.Database object at 0x0000016291E78DA0...t_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$'))
+data = b'%PDF-1.7\n%\xc2\xb5\xc2\xb6\n% Written by MuPDF 1.28.2\n\n1 0 obj\n<</Type/Catalog/Pages 2 0 R/Info<</Producer(MuPDF...e 209/Root 1 0 R/ID[<23C39147C28AC3951376370FC3A52554><78D2454E971A7646CFEE772D48AA7807>]>>\nstartxref\n31448\n%%EOF\n'
+policy = 'UNSTRATIFIED', process = True
+
+    def submit(environment, data, *, policy="UNSTRATIFIED", process=True):
+        client, _, settings = environment
+        response = upload(client, data)
+>       assert response.status_code == 202, response.text
+E       AssertionError: {"error":{"code":"ADMIN_AUTH_REQUIRED","message":"Administrator authentication failed."}}
+E       assert 401 == 202
+E        +  where 401 = <Response [401 Unauthorized]>.status_code
+
+tests\integration\test_exam_bank.py:71: AssertionError
+_________ test_exam_analytics_include_current_and_graded_attempts[12] _________
+
+environment = (<starlette.testclient.TestClient object at 0x0000016291CDD310>, <app.db.session.Database object at 0x0000016291C64A10...t_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$'))
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000016291E4A6C0>
+correct = 12
+
+    @pytest.mark.parametrize("correct", [0, 12])
+    def test_exam_analytics_include_current_and_graded_attempts(environment, monkeypatch, correct):
+        admin, database, settings = environment
+>       token, grant = prepared(environment)
+                       ^^^^^^^^^^^^^^^^^^^^^
+
+tests\integration\test_admin_analytics.py:65: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\integration\test_exam_execution.py:25: in prepared
+    submit(environment, fixture_pdf(45))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+environment = (<starlette.testclient.TestClient object at 0x0000016291CDD310>, <app.db.session.Database object at 0x0000016291C64A10...t_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$'))
+data = b'%PDF-1.7\n%\xc2\xb5\xc2\xb6\n% Written by MuPDF 1.28.2\n\n1 0 obj\n<</Type/Catalog/Pages 2 0 R/Info<</Producer(MuPDF...e 209/Root 1 0 R/ID[<C3B0C2B103C29DC28CC2AE19C28D60C3><90342B12A55B33AB19CDFA647D506753>]>>\nstartxref\n31448\n%%EOF\n'
+policy = 'UNSTRATIFIED', process = True
+
+    def submit(environment, data, *, policy="UNSTRATIFIED", process=True):
+        client, _, settings = environment
+        response = upload(client, data)
+>       assert response.status_code == 202, response.text
+E       AssertionError: {"error":{"code":"ADMIN_AUTH_REQUIRED","message":"Administrator authentication failed."}}
+E       assert 401 == 202
+E        +  where 401 = <Response [401 Unauthorized]>.status_code
+
+tests\integration\test_exam_bank.py:71: AssertionError
+________________ test_category_shortage_preserves_healthy_bank ________________
+
+environment = (<starlette.testclient.TestClient object at 0x0000016291EA50A0>, <app.db.session.Database object at 0x0000016291E4B290...t_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$'))
+
+    def test_category_shortage_preserves_healthy_bank(environment):
+        _, database, settings = environment
+>       submit(environment, fixture_pdf(42, sign_interval=2))
+
+tests\integration\test_category_policy.py:35: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+environment = (<starlette.testclient.TestClient object at 0x0000016291EA50A0>, <app.db.session.Database object at 0x0000016291E4B290...t_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$'))
+data = b'%PDF-1.7\n%\xc2\xb5\xc2\xb6\n% Written by MuPDF 1.28.2\n\n1 0 obj\n<</Type/Catalog/Pages 2 0 R/Info<</Producer(MuPDF...e 207/Root 1 0 R/ID[<C3BF3F08626FC38F3460C3AF6CC38032><82D7856919D5318E7AE6F64E25B8ED50>]>>\nstartxref\n30627\n%%EOF\n'
+policy = 'UNSTRATIFIED', process = True
+
+    def submit(environment, data, *, policy="UNSTRATIFIED", process=True):
+        client, _, settings = environment
+        response = upload(client, data)
+>       assert response.status_code == 202, response.text
+E       AssertionError: {"error":{"code":"ADMIN_AUTH_REQUIRED","message":"Administrator authentication failed."}}
+E       assert 401 == 202
+E        +  where 401 = <Response [401 Unauthorized]>.status_code
+
+tests\integration\test_exam_bank.py:71: AssertionError
+_______ test_explicit_difficulty_policy_requires_source_classification ________
+
+environment = (<starlette.testclient.TestClient object at 0x0000016291FA13A0>, <app.db.session.Database object at 0x0000016291F42000...t_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$'))
+
+    def test_explicit_difficulty_policy_requires_source_classification(environment):
+        _, database, settings = environment
+>       _, job = submit(environment, fixture_pdf(42, sign_interval=2), process=False)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\integration\test_category_policy.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+environment = (<starlette.testclient.TestClient object at 0x0000016291FA13A0>, <app.db.session.Database object at 0x0000016291F42000...t_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$'))
+data = b'%PDF-1.7\n%\xc2\xb5\xc2\xb6\n% Written by MuPDF 1.28.2\n\n1 0 obj\n<</Type/Catalog/Pages 2 0 R/Info<</Producer(MuPDF...e 207/Root 1 0 R/ID[<02202B1D725AC39B36C3B06EC3B74064><045E2697E76B8576285BBEB1B3459E01>]>>\nstartxref\n30627\n%%EOF\n'
+policy = 'UNSTRATIFIED', process = False
+
+    def submit(environment, data, *, policy="UNSTRATIFIED", process=True):
+        client, _, settings = environment
+        response = upload(client, data)
+>       assert response.status_code == 202, response.text
+E       AssertionError: {"error":{"code":"ADMIN_AUTH_REQUIRED","message":"Administrator authentication failed."}}
+E       assert 401 == 202
+E        +  where 401 = <Response [401 Unauthorized]>.status_code
+
+tests\integration\test_exam_bank.py:71: AssertionError
+___________________ test_real_category_bank_and_timed_exam ____________________
+
+environment = (<starlette.testclient.TestClient object at 0x0000016292029490>, <app.db.session.Database object at 0x0000016291F40A40...t_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$'))
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000016291FD0C20>
+
+    def test_real_category_bank_and_timed_exam(environment, monkeypatch):
+        source = os.getenv("PHASE04I_SOURCE_PDF")
+        if not source or not Path(source).is_file():
+            pytest.skip("Set PHASE04I_SOURCE_PDF to the local road-rules source.")
+        admin, database, settings = environment
+>       _, job = submit(environment, Path(source).read_bytes(), process=False)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\integration\test_category_policy.py:69: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+environment = (<starlette.testclient.TestClient object at 0x0000016292029490>, <app.db.session.Database object at 0x0000016291F40A40...t_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$'))
+data = b'%PDF-1.5\r\n%\xb5\xb5\xb5\xb5\r\n1 0 obj\r\n<</Type/Catalog/Pages 2 0 R/Lang(en-US) /StructTreeRoot 524 0 R/MarkInfo...CBBA11FABA69F7AD5><C623850F9EB9554CBBA11FABA69F7AD5>] /Prev 2269350/XRefStm 2256710>>\r\nstartxref\r\n2388955\r\n%%EOF'
+policy = 'UNSTRATIFIED', process = False
+
+    def submit(environment, data, *, policy="UNSTRATIFIED", process=True):
+        client, _, settings = environment
+        response = upload(client, data)
+>       assert response.status_code == 202, response.text
+E       AssertionError: {"error":{"code":"ADMIN_AUTH_REQUIRED","message":"Administrator authentication failed."}}
+E       assert 401 == 202
+E        +  where 401 = <Response [401 Unauthorized]>.status_code
+
+tests\integration\test_exam_bank.py:71: AssertionError
+__________________ test_unpublished_promo_cannot_be_redeemed __________________
+
+environment = (<starlette.testclient.TestClient object at 0x0000016291E2B230>, <app.db.session.Database object at 0x0000016291F856D0...t_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$'))
+
+    def test_unpublished_promo_cannot_be_redeemed(environment):
+        admin, database, settings = environment
+>       submit(environment, fixture_pdf(30))
+
+tests\integration\test_exam_access.py:144: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+environment = (<starlette.testclient.TestClient object at 0x0000016291E2B230>, <app.db.session.Database object at 0x0000016291F856D0...t_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$'))
+data = b'%PDF-1.7\n%\xc2\xb5\xc2\xb6\n% Written by MuPDF 1.28.2\n\n1 0 obj\n<</Type/Catalog/Pages 2 0 R/Info<</Producer(MuPDF...e 140/Root 1 0 R/ID[<C2AFC3B63F10C2883422C291C29720C3><C96CE2E1030244E55651A6509C5B0E6B>]>>\nstartxref\n20901\n%%EOF\n'
+policy = 'UNSTRATIFIED', process = True
+
+    def submit(environment, data, *, policy="UNSTRATIFIED", process=True):
+        client, _, settings = environment
+        response = upload(client, data)
+>       assert response.status_code == 202, response.text
+E       AssertionError: {"error":{"code":"ADMIN_AUTH_REQUIRED","message":"Administrator authentication failed."}}
+E       assert 401 == 202
+E        +  where 401 = <Response [401 Unauthorized]>.status_code
+
+tests\integration\test_exam_bank.py:71: AssertionError
+____ test_unavailable_retains_grant_and_snapshot_consumption_is_idempotent ____
+
+environment = (<starlette.testclient.TestClient object at 0x0000016291B40C20>, <app.db.session.Database object at 0x0000016291B526C0...t_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$'))
+
+    def test_unavailable_retains_grant_and_snapshot_consumption_is_idempotent(environment):
+        admin, database, settings = environment
+        _, token = guest(database, settings)
+>       created = make_promo(admin)
+                  ^^^^^^^^^^^^^^^^^
+
+tests\integration\test_exam_access.py:266: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+admin = <starlette.testclient.TestClient object at 0x0000016291B40C20>
+limit = 1, code = 'QA-5A17FF1C77128EF9', hours = 24
+
+    def make_promo(admin, limit=1, code=None, hours=24):
+        code = code or "QA-" + secrets.token_hex(8).upper()
+        response = admin.post(
+            PROMOS,
+            headers=HEADERS,
+            json={"code": code, "usageLimit": limit, "expiresInHours": hours},
+        )
+>       assert response.status_code == 201, response.text
+E       AssertionError: {"error":{"code":"ADMIN_AUTH_REQUIRED","message":"Administrator authentication failed."}}
+E       assert 401 == 201
+E        +  where 401 = <Response [401 Unauthorized]>.status_code
+
+tests\integration\test_exam_access.py:41: AssertionError
+__________ test_settlement_rolls_back_when_entitlement_insert_fails ___________
+
+environment = (<starlette.testclient.TestClient object at 0x0000016291AB45C0>, <app.db.session.Database object at 0x00000162900AFC50...t_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$'))
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000016291CDE180>
+
+    def test_settlement_rolls_back_when_entitlement_insert_fails(environment, monkeypatch):
+        _, database, settings = environment
+>       submit(environment, fixture_pdf(30))
+
+tests\integration\test_exam_access.py:308: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+environment = (<starlette.testclient.TestClient object at 0x0000016291AB45C0>, <app.db.session.Database object at 0x00000162900AFC50...t_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$'))
+data = b'%PDF-1.7\n%\xc2\xb5\xc2\xb6\n% Written by MuPDF 1.28.2\n\n1 0 obj\n<</Type/Catalog/Pages 2 0 R/Info<</Producer(MuPDF...e 140/Root 1 0 R/ID[<C2B96619C281C2A6411DC3B519C2A4C3><85A78E8A607D806138ED03F0535FD092>]>>\nstartxref\n20901\n%%EOF\n'
+policy = 'UNSTRATIFIED', process = True
+
+    def submit(environment, data, *, policy="UNSTRATIFIED", process=True):
+        client, _, settings = environment
+        response = upload(client, data)
+>       assert response.status_code == 202, response.text
+E       AssertionError: {"error":{"code":"ADMIN_AUTH_REQUIRED","message":"Administrator authentication failed."}}
+E       assert 401 == 202
+E        +  where 401 = <Response [401 Unauthorized]>.status_code
+
+tests\integration\test_exam_bank.py:71: AssertionError
+_________________ test_promo_request_contract_and_whitespace __________________
+
+environment = (<starlette.testclient.TestClient object at 0x0000016291B63A70>, <app.db.session.Database object at 0x0000016291D14740...t_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$'))
+
+    def test_promo_request_contract_and_whitespace(environment):
+        admin, database, settings = environment
+>       submit(environment, fixture_pdf(30))
+
+tests\integration\test_exam_access.py:331: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+environment = (<starlette.testclient.TestClient object at 0x0000016291B63A70>, <app.db.session.Database object at 0x0000016291D14740...t_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$'))
+data = b'%PDF-1.7\n%\xc2\xb5\xc2\xb6\n% Written by MuPDF 1.28.2\n\n1 0 obj\n<</Type/Catalog/Pages 2 0 R/Info<</Producer(MuPDF...e 140/Root 1 0 R/ID[<C39414C28CC2B3C2BF64C39FC3A8C2A8><ECB2FDD6F2C14E6C025128544EB57A79>]>>\nstartxref\n20901\n%%EOF\n'
+policy = 'UNSTRATIFIED', process = True
+
+    def submit(environment, data, *, policy="UNSTRATIFIED", process=True):
+        client, _, settings = environment
+        response = upload(client, data)
+>       assert response.status_code == 202, response.text
+E       AssertionError: {"error":{"code":"ADMIN_AUTH_REQUIRED","message":"Administrator authentication failed."}}
+E       assert 401 == 202
+E        +  where 401 = <Response [401 Unauthorized]>.status_code
+
+tests\integration\test_exam_bank.py:71: AssertionError
+_____________________ test_auto_eligibility_and_evidence ______________________
+
+environment = (<starlette.testclient.TestClient object at 0x000001629201FBF0>, <app.db.session.Database object at 0x000001629199D790...t_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$'))
+
+    def test_auto_eligibility_and_evidence(environment):
+        client, database, _ = environment
+>       document, _ = submit(environment, fixture_pdf(defects=True))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\integration\test_exam_bank.py:99: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+environment = (<starlette.testclient.TestClient object at 0x000001629201FBF0>, <app.db.session.Database object at 0x000001629199D790...t_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$'))
+data = b'%PDF-1.7\n%\xc2\xb5\xc2\xb6\n% Written by MuPDF 1.28.2\n\n1 0 obj\n<</Type/Catalog/Pages 2 0 R/Info<</Producer(MuPDF...e 186/Root 1 0 R/ID[<C2B4C2A56CC3ABC388C2817EC3AC7AC2><B331040AAFB1C28AE8A36A40FFC09F25>]>>\nstartxref\n28029\n%%EOF\n'
+policy = 'UNSTRATIFIED', process = True
+
+    def submit(environment, data, *, policy="UNSTRATIFIED", process=True):
+        client, _, settings = environment
+        response = upload(client, data)
+>       assert response.status_code == 202, response.text
+E       AssertionError: {"error":{"code":"ADMIN_AUTH_REQUIRED","message":"Administrator authentication failed."}}
+E       assert 401 == 202
+E        +  where 401 = <Response [401 Unauthorized]>.status_code
+
+tests\integration\test_exam_bank.py:71: AssertionError
+____________________ test_replacement_and_snapshot_history ____________________
+
+environment = (<starlette.testclient.TestClient object at 0x0000016291F35100>, <app.db.session.Database object at 0x0000016292027440...t_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$'))
+
+    def test_replacement_and_snapshot_history(environment):
+        client, database, settings = environment
+>       first, _ = submit(environment, fixture_pdf())
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\integration\test_exam_bank.py:118: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+environment = (<starlette.testclient.TestClient object at 0x0000016291F35100>, <app.db.session.Database object at 0x0000016292027440...t_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$'))
+data = b'%PDF-1.7\n%\xc2\xb5\xc2\xb6\n% Written by MuPDF 1.28.2\n\n1 0 obj\n<</Type/Catalog/Pages 2 0 R/Info<</Producer(MuPDF...e 186/Root 1 0 R/ID[<0EC2BBC28E6CC2B57E0CC286C382C28B><8CC876698932EF411E051C78DAE5D29B>]>>\nstartxref\n27939\n%%EOF\n'
+policy = 'UNSTRATIFIED', process = True
+
+    def submit(environment, data, *, policy="UNSTRATIFIED", process=True):
+        client, _, settings = environment
+        response = upload(client, data)
+>       assert response.status_code == 202, response.text
+E       AssertionError: {"error":{"code":"ADMIN_AUTH_REQUIRED","message":"Administrator authentication failed."}}
+E       assert 401 == 202
+E        +  where 401 = <Response [401 Unauthorized]>.status_code
+
+tests\integration\test_exam_bank.py:71: AssertionError
+_____________ test_no_bank_no_eligible_and_authorization_boundary _____________
+
+environment = (<starlette.testclient.TestClient object at 0x000001629211ADB0>, <app.db.session.Database object at 0x0000016291FD3E00...t_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$'))
+
+    def test_no_bank_no_eligible_and_authorization_boundary(environment):
+        client, database, settings = environment
+        identity, token = guest(database, settings)
+        grant = uuid4()
+        assert generate(database, settings, token, grant, identity.sessionReference) == ExamUnavailable(
+            "NO_ACTIVE_BANK"
+        )
+        with pytest.raises(InvalidGuestSession):
+            generate(database, settings, None, grant, identity.sessionReference)
+        with pytest.raises(PermissionError):
+            generate(database, settings, token, grant, uuid4())
+>       submit(environment, fixture_pdf(1, defects=True, variant="strict"), policy="DIFFICULTY_QUOTAS")
+
+tests\integration\test_exam_bank.py:164: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+environment = (<starlette.testclient.TestClient object at 0x000001629211ADB0>, <app.db.session.Database object at 0x0000016291FD3E00...t_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$'))
+data = b'%PDF-1.7\n%\xc2\xb5\xc2\xb6\n% Written by MuPDF 1.28.2\n\n1 0 obj\n<</Type/Catalog/Pages 2 0 R/Info<</Producer(MuPDF...ize 11/Root 1 0 R/ID[<C294C3BBC3857A793CC29E3AC2B4C384><2D1B27377528EB13D99D92C05587A8DC>]>>\nstartxref\n1138\n%%EOF\n'
+policy = 'DIFFICULTY_QUOTAS', process = True
+
+    def submit(environment, data, *, policy="UNSTRATIFIED", process=True):
+        client, _, settings = environment
+        response = upload(client, data)
+>       assert response.status_code == 202, response.text
+E       AssertionError: {"error":{"code":"ADMIN_AUTH_REQUIRED","message":"Administrator authentication failed."}}
+E       assert 401 == 202
+E        +  where 401 = <Response [401 Unauthorized]>.status_code
+
+tests\integration\test_exam_bank.py:71: AssertionError
+______________ test_authorized_start_and_concurrent_idempotence _______________
+
+environment = (<starlette.testclient.TestClient object at 0x00000162924D0AD0>, <app.db.session.Database object at 0x00000162924D29C0...t_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$'))
+
+    def test_authorized_start_and_concurrent_idempotence(environment):
+        _, database, settings = environment
+>       token, grant = prepared(environment)
+                       ^^^^^^^^^^^^^^^^^^^^^
+
+tests\integration\test_exam_execution.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\integration\test_exam_execution.py:25: in prepared
+    submit(environment, fixture_pdf(45))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+environment = (<starlette.testclient.TestClient object at 0x00000162924D0AD0>, <app.db.session.Database object at 0x00000162924D29C0...t_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$'))
+data = b'%PDF-1.7\n%\xc2\xb5\xc2\xb6\n% Written by MuPDF 1.28.2\n\n1 0 obj\n<</Type/Catalog/Pages 2 0 R/Info<</Producer(MuPDF...e 209/Root 1 0 R/ID[<C3BC0AC3A65909C2A149C28CC284C284><49CDECB86676C9854C8D21DDE20AB6EF>]>>\nstartxref\n31448\n%%EOF\n'
+policy = 'UNSTRATIFIED', process = True
+
+    def submit(environment, data, *, policy="UNSTRATIFIED", process=True):
+        client, _, settings = environment
+        response = upload(client, data)
+>       assert response.status_code == 202, response.text
+E       AssertionError: {"error":{"code":"ADMIN_AUTH_REQUIRED","message":"Administrator authentication failed."}}
+E       assert 401 == 202
+E        +  where 401 = <Response [401 Unauthorized]>.status_code
+
+tests\integration\test_exam_bank.py:71: AssertionError
+__________ test_ownership_csrf_and_unavailable_preserve_entitlement ___________
+
+environment = (<starlette.testclient.TestClient object at 0x00000162924F01D0>, <app.db.session.Database object at 0x000001629255C4A0...t_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$'))
+
+    def test_ownership_csrf_and_unavailable_preserve_entitlement(environment):
+        admin, database, settings = environment
+>       token, grant = prepared(environment)
+                       ^^^^^^^^^^^^^^^^^^^^^
+
+tests\integration\test_exam_execution.py:85: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\integration\test_exam_execution.py:25: in prepared
+    submit(environment, fixture_pdf(45))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+environment = (<starlette.testclient.TestClient object at 0x00000162924F01D0>, <app.db.session.Database object at 0x000001629255C4A0...t_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$'))
+data = b'%PDF-1.7\n%\xc2\xb5\xc2\xb6\n% Written by MuPDF 1.28.2\n\n1 0 obj\n<</Type/Catalog/Pages 2 0 R/Info<</Producer(MuPDF...e 209/Root 1 0 R/ID[<C3B9C28AC3844D59C2911F0066C3AEC3><9484983151009C1BABFB1C92F5D48ED7>]>>\nstartxref\n31448\n%%EOF\n'
+policy = 'UNSTRATIFIED', process = True
+
+    def submit(environment, data, *, policy="UNSTRATIFIED", process=True):
+        client, _, settings = environment
+        response = upload(client, data)
+>       assert response.status_code == 202, response.text
+E       AssertionError: {"error":{"code":"ADMIN_AUTH_REQUIRED","message":"Administrator authentication failed."}}
+E       assert 401 == 202
+E        +  where 401 = <Response [401 Unauthorized]>.status_code
+
+tests\integration\test_exam_bank.py:71: AssertionError
+_______________ test_answer_version_refresh_and_concurrent_next _______________
+
+environment = (<starlette.testclient.TestClient object at 0x00000162924D2A80>, <app.db.session.Database object at 0x00000162924F0800...t_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$'))
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000162924F11F0>
+
+    def test_answer_version_refresh_and_concurrent_next(environment, monkeypatch):
+        _, database, settings = environment
+>       token, grant = prepared(environment)
+                       ^^^^^^^^^^^^^^^^^^^^^
+
+tests\integration\test_exam_execution.py:132: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\integration\test_exam_execution.py:25: in prepared
+    submit(environment, fixture_pdf(45))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+environment = (<starlette.testclient.TestClient object at 0x00000162924D2A80>, <app.db.session.Database object at 0x00000162924F0800...t_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$'))
+data = b'%PDF-1.7\n%\xc2\xb5\xc2\xb6\n% Written by MuPDF 1.28.2\n\n1 0 obj\n<</Type/Catalog/Pages 2 0 R/Info<</Producer(MuPDF...e 209/Root 1 0 R/ID[<3F2133C29B5CC3AF3519C28F28593FC3><C2E300E52AAB7A592A09D8A40346C597>]>>\nstartxref\n31448\n%%EOF\n'
+policy = 'UNSTRATIFIED', process = True
+
+    def submit(environment, data, *, policy="UNSTRATIFIED", process=True):
+        client, _, settings = environment
+        response = upload(client, data)
+>       assert response.status_code == 202, response.text
+E       AssertionError: {"error":{"code":"ADMIN_AUTH_REQUIRED","message":"Administrator authentication failed."}}
+E       assert 401 == 202
+E        +  where 401 = <Response [401 Unauthorized]>.status_code
+
+tests\integration\test_exam_bank.py:71: AssertionError
+______ test_exact_deadlines_offline_reconciliation_and_idempotent_finish ______
+
+environment = (<starlette.testclient.TestClient object at 0x0000016292167AA0>, <app.db.session.Database object at 0x00000162921DA750...t_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$'))
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000162921EF860>
+
+    def test_exact_deadlines_offline_reconciliation_and_idempotent_finish(environment, monkeypatch):
+        _, database, settings = environment
+>       token, grant = prepared(environment)
+                       ^^^^^^^^^^^^^^^^^^^^^
+
+tests\integration\test_exam_execution.py:185: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\integration\test_exam_execution.py:25: in prepared
+    submit(environment, fixture_pdf(45))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+environment = (<starlette.testclient.TestClient object at 0x0000016292167AA0>, <app.db.session.Database object at 0x00000162921DA750...t_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$'))
+data = b'%PDF-1.7\n%\xc2\xb5\xc2\xb6\n% Written by MuPDF 1.28.2\n\n1 0 obj\n<</Type/Catalog/Pages 2 0 R/Info<</Producer(MuPDF...e 209/Root 1 0 R/ID[<C2827108C28607C2A0C29F5C325474C3><878EF718E45B75C2FDDDA8D680C7EF34>]>>\nstartxref\n31448\n%%EOF\n'
+policy = 'UNSTRATIFIED', process = True
+
+    def submit(environment, data, *, policy="UNSTRATIFIED", process=True):
+        client, _, settings = environment
+        response = upload(client, data)
+>       assert response.status_code == 202, response.text
+E       AssertionError: {"error":{"code":"ADMIN_AUTH_REQUIRED","message":"Administrator authentication failed."}}
+E       assert 401 == 202
+E        +  where 401 = <Response [401 Unauthorized]>.status_code
+
+tests\integration\test_exam_bank.py:71: AssertionError
+____________________ test_result_thresholds_and_scope[11] _____________________
+
+environment = (<starlette.testclient.TestClient object at 0x00000162919B93A0>, <app.db.session.Database object at 0x0000016291BB3350...t_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$'))
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000016291B61250>
+correct = 11
+
+    @pytest.mark.parametrize("correct", [0, 11, 12, 20])
+    def test_result_thresholds_and_scope(environment, monkeypatch, correct):
+        admin, database, settings = environment
+>       token, grant = prepared(environment)
+                       ^^^^^^^^^^^^^^^^^^^^^
+
+tests\integration\test_exam_execution.py:270: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\integration\test_exam_execution.py:25: in prepared
+    submit(environment, fixture_pdf(45))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+environment = (<starlette.testclient.TestClient object at 0x00000162919B93A0>, <app.db.session.Database object at 0x0000016291BB3350...t_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$'))
+data = b'%PDF-1.7\n%\xc2\xb5\xc2\xb6\n% Written by MuPDF 1.28.2\n\n1 0 obj\n<</Type/Catalog/Pages 2 0 R/Info<</Producer(MuPDF...e 209/Root 1 0 R/ID[<772017534EC287704DC282C298C28E14><9829510F74F3A3DC589AE0ECE0B9A0B2>]>>\nstartxref\n31448\n%%EOF\n'
+policy = 'UNSTRATIFIED', process = True
+
+    def submit(environment, data, *, policy="UNSTRATIFIED", process=True):
+        client, _, settings = environment
+        response = upload(client, data)
+>       assert response.status_code == 202, response.text
+E       AssertionError: {"error":{"code":"ADMIN_AUTH_REQUIRED","message":"Administrator authentication failed."}}
+E       assert 401 == 202
+E        +  where 401 = <Response [401 Unauthorized]>.status_code
+
+tests\integration\test_exam_bank.py:71: AssertionError
+____________________ test_result_thresholds_and_scope[12] _____________________
+
+environment = (<starlette.testclient.TestClient object at 0x0000016291AB4560>, <app.db.session.Database object at 0x0000016291B63A70...t_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$'))
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000016291E49040>
+correct = 12
+
+    @pytest.mark.parametrize("correct", [0, 11, 12, 20])
+    def test_result_thresholds_and_scope(environment, monkeypatch, correct):
+        admin, database, settings = environment
+>       token, grant = prepared(environment)
+                       ^^^^^^^^^^^^^^^^^^^^^
+
+tests\integration\test_exam_execution.py:270: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\integration\test_exam_execution.py:25: in prepared
+    submit(environment, fixture_pdf(45))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+environment = (<starlette.testclient.TestClient object at 0x0000016291AB4560>, <app.db.session.Database object at 0x0000016291B63A70...t_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$'))
+data = b'%PDF-1.7\n%\xc2\xb5\xc2\xb6\n% Written by MuPDF 1.28.2\n\n1 0 obj\n<</Type/Catalog/Pages 2 0 R/Info<</Producer(MuPDF...e 209/Root 1 0 R/ID[<C390C390324424C289C2BE6FC2B517C3><A758E30DCE5716297063D5AA96806C14>]>>\nstartxref\n31448\n%%EOF\n'
+policy = 'UNSTRATIFIED', process = True
+
+    def submit(environment, data, *, policy="UNSTRATIFIED", process=True):
+        client, _, settings = environment
+        response = upload(client, data)
+>       assert response.status_code == 202, response.text
+E       AssertionError: {"error":{"code":"ADMIN_AUTH_REQUIRED","message":"Administrator authentication failed."}}
+E       assert 401 == 202
+E        +  where 401 = <Response [401 Unauthorized]>.status_code
+
+tests\integration\test_exam_bank.py:71: AssertionError
+____________________ test_result_thresholds_and_scope[20] _____________________
+
+environment = (<starlette.testclient.TestClient object at 0x0000016291B418B0>, <app.db.session.Database object at 0x00000162904CFD70...t_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$'))
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000016290873E30>
+correct = 20
+
+    @pytest.mark.parametrize("correct", [0, 11, 12, 20])
+    def test_result_thresholds_and_scope(environment, monkeypatch, correct):
+        admin, database, settings = environment
+>       token, grant = prepared(environment)
+                       ^^^^^^^^^^^^^^^^^^^^^
+
+tests\integration\test_exam_execution.py:270: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\integration\test_exam_execution.py:25: in prepared
+    submit(environment, fixture_pdf(45))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+environment = (<starlette.testclient.TestClient object at 0x0000016291B418B0>, <app.db.session.Database object at 0x00000162904CFD70...t_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$'))
+data = b'%PDF-1.7\n%\xc2\xb5\xc2\xb6\n% Written by MuPDF 1.28.2\n\n1 0 obj\n<</Type/Catalog/Pages 2 0 R/Info<</Producer(MuPDF...e 209/Root 1 0 R/ID[<43272FC29F7EC28AC29C48C3BEC3B40C><6AC08156E56DE32E785EDAD41781E660>]>>\nstartxref\n31448\n%%EOF\n'
+policy = 'UNSTRATIFIED', process = True
+
+    def submit(environment, data, *, policy="UNSTRATIFIED", process=True):
+        client, _, settings = environment
+        response = upload(client, data)
+>       assert response.status_code == 202, response.text
+E       AssertionError: {"error":{"code":"DATABASE_UNAVAILABLE","message":"Database service is unavailable."}}
+E       assert 503 == 202
+E        +  where 503 = <Response [503 Service Unavailable]>.status_code
+
+tests\integration\test_exam_bank.py:71: AssertionError
+______________ test_simultaneous_completion_and_grading_rollback ______________
+
+environment = (<starlette.testclient.TestClient object at 0x0000016291D97530>, <app.db.session.Database object at 0x0000016291CAD5B0...t_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$'))
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000016291C65EB0>
+
+    def test_simultaneous_completion_and_grading_rollback(environment, monkeypatch):
+        from sqlalchemy.exc import OperationalError
+    
+        from app.services import exam_execution
+    
+        _, database, settings = environment
+>       token, grant = prepared(environment)
+                       ^^^^^^^^^^^^^^^^^^^^^
+
+tests\integration\test_exam_execution.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\integration\test_exam_execution.py:25: in prepared
+    submit(environment, fixture_pdf(45))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+environment = (<starlette.testclient.TestClient object at 0x0000016291D97530>, <app.db.session.Database object at 0x0000016291CAD5B0...t_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$'))
+data = b'%PDF-1.7\n%\xc2\xb5\xc2\xb6\n% Written by MuPDF 1.28.2\n\n1 0 obj\n<</Type/Catalog/Pages 2 0 R/Info<</Producer(MuPDF...e 209/Root 1 0 R/ID[<C283C387C3A2C2A8506D1D5AC2925519><9403FD2EAE161E6EA3AE442FD61FA498>]>>\nstartxref\n31448\n%%EOF\n'
+policy = 'UNSTRATIFIED', process = True
+
+    def submit(environment, data, *, policy="UNSTRATIFIED", process=True):
+        client, _, settings = environment
+        response = upload(client, data)
+>       assert response.status_code == 202, response.text
+E       AssertionError: {"error":{"code":"ADMIN_AUTH_REQUIRED","message":"Administrator authentication failed."}}
+E       assert 401 == 202
+E        +  where 401 = <Response [401 Unauthorized]>.status_code
+
+tests\integration\test_exam_bank.py:71: AssertionError
+__________ test_alembic_upgrade_downgrade_repeatability_and_metadata __________
+
+database = <app.db.session.Database object at 0x0000016291F84EC0>
+migration_config = <alembic.config.Config object at 0x0000016291F866C0>
+
+    def test_alembic_upgrade_downgrade_repeatability_and_metadata(database, migration_config):
+        baseline_tables = {"alembic_version", "students", "guest_sessions", "student_activity_events"}
+        approved = baseline_tables | {
+            "admin_users",
+            "admin_sessions",
+            "admin_audit_events",
+            "exam_bank_revisions",
+            "exam_bank_questions",
+            "exam_attempts",
+            "exam_attempt_items",
+            "exam_operational_events",
+            "exam_timing",
+            "refund_requests",
+            "exam_results",
+            "exam_grading_failures",
+            "exam_responses",
+            "exam_entitlements",
+            "payment_transactions",
+            "promo_codes",
+            "promo_attempts",
+            "pdf_documents",
+            "pdf_import_jobs",
+            "question_drafts",
+            "question_draft_options",
+            "question_draft_answers",
+            "question_draft_assets",
+        }
+        # Only empty approved tables in the isolated test database may be downgraded.
+        with database.engine.connect() as connection:
+            tables = set(inspect(connection).get_table_names())
+            assert tables <= approved
+            for table in tables - {"alembic_version"}:
+>               assert connection.execute(text(f'SELECT count(*) FROM "{table}"')).scalar_one() == 0
+E               assert 1 == 0
+E                +  where 1 = scalar_one()
+E                +    where scalar_one = <sqlalchemy.engine.cursor.CursorResult object at 0x0000016292030910>.scalar_one
+E                +      where <sqlalchemy.engine.cursor.CursorResult object at 0x0000016292030910> = execute(<sqlalchemy.sql.elements.TextClause object at 0x0000016291FA38F0>)
+E                +        where execute = <sqlalchemy.engine.base.Connection object at 0x0000016291F87F80>.execute
+E                +        and   <sqlalchemy.sql.elements.TextClause object at 0x0000016291FA38F0> = text('SELECT count(*) FROM "admin_audit_events"')
+
+tests\integration\test_migrations.py:44: AssertionError
+__ test_upload_persistence_extraction_images_answers_preview_and_pagination ___
+
+environment = (<starlette.testclient.TestClient object at 0x0000016291F42F60>, <app.db.session.Database object at 0x0000016291C37E30...t_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$'))
+
+    def test_upload_persistence_extraction_images_answers_preview_and_pagination(environment):
+        client, database, settings = environment
+        source = sample_pdf()
+        response = upload(client, source)
+>       assert response.status_code == 202, response.text
+E       AssertionError: {"error":{"code":"DATABASE_UNAVAILABLE","message":"Database service is unavailable."}}
+E       assert 503 == 202
+E        +  where 503 = <Response [503 Service Unavailable]>.status_code
+
+tests\integration\test_pdf_import.py:119: AssertionError
+_ test_invalid_uploads_are_rejected_without_source_rows[%PDF-broken-bad.pdf-application/pdf-INVALID_PDF] _
+
+environment = (<starlette.testclient.TestClient object at 0x0000016291E2A000>, <app.db.session.Database object at 0x0000016291B847A0...t_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$'))
+data = b'%PDF-broken', filename = 'bad.pdf', kind = 'application/pdf'
+code = 'INVALID_PDF'
+
+    @pytest.mark.parametrize(
+        "data,filename,kind,code",
+        [
+            (b"not a PDF", "bad.pdf", "application/pdf", "INVALID_PDF"),
+            (b"%PDF-broken", "bad.pdf", "application/pdf", "INVALID_PDF"),
+            (b"", "empty.pdf", "application/pdf", "EMPTY_PDF"),
+            (b"x", "script.exe", "application/pdf", "INVALID_FILENAME"),
+            (b"x", "../bad.pdf", "application/pdf", "INVALID_FILENAME"),
+            (b"x", "bad.pdf", "text/plain", "PDF_CONTENT_TYPE_REQUIRED"),
+        ],
+    )
+    def test_invalid_uploads_are_rejected_without_source_rows(environment, data, filename, kind, code):
+        client, database, _ = environment
+        result = upload(client, data, filename, {**HEADERS, "Content-Type": kind})
+>       assert result.status_code in {415, 422} and result.json()["error"]["code"] == code
+E       assert (401 in {415, 422})
+E        +  where 401 = <Response [401 Unauthorized]>.status_code
+
+tests\integration\test_pdf_import.py:195: AssertionError
+_ test_invalid_uploads_are_rejected_without_source_rows[-empty.pdf-application/pdf-EMPTY_PDF] _
+
+environment = (<starlette.testclient.TestClient object at 0x0000016291B853A0>, <app.db.session.Database object at 0x0000016291DAD580...t_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$'))
+data = b'', filename = 'empty.pdf', kind = 'application/pdf', code = 'EMPTY_PDF'
+
+    @pytest.mark.parametrize(
+        "data,filename,kind,code",
+        [
+            (b"not a PDF", "bad.pdf", "application/pdf", "INVALID_PDF"),
+            (b"%PDF-broken", "bad.pdf", "application/pdf", "INVALID_PDF"),
+            (b"", "empty.pdf", "application/pdf", "EMPTY_PDF"),
+            (b"x", "script.exe", "application/pdf", "INVALID_FILENAME"),
+            (b"x", "../bad.pdf", "application/pdf", "INVALID_FILENAME"),
+            (b"x", "bad.pdf", "text/plain", "PDF_CONTENT_TYPE_REQUIRED"),
+        ],
+    )
+    def test_invalid_uploads_are_rejected_without_source_rows(environment, data, filename, kind, code):
+        client, database, _ = environment
+        result = upload(client, data, filename, {**HEADERS, "Content-Type": kind})
+>       assert result.status_code in {415, 422} and result.json()["error"]["code"] == code
+E       assert (401 in {415, 422})
+E        +  where 401 = <Response [401 Unauthorized]>.status_code
+
+tests\integration\test_pdf_import.py:195: AssertionError
+_ test_invalid_uploads_are_rejected_without_source_rows[x-script.exe-application/pdf-INVALID_FILENAME] _
+
+environment = (<starlette.testclient.TestClient object at 0x0000016292230B60>, <app.db.session.Database object at 0x0000016291FDF0E0...t_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$'))
+data = b'x', filename = 'script.exe', kind = 'application/pdf'
+code = 'INVALID_FILENAME'
+
+    @pytest.mark.parametrize(
+        "data,filename,kind,code",
+        [
+            (b"not a PDF", "bad.pdf", "application/pdf", "INVALID_PDF"),
+            (b"%PDF-broken", "bad.pdf", "application/pdf", "INVALID_PDF"),
+            (b"", "empty.pdf", "application/pdf", "EMPTY_PDF"),
+            (b"x", "script.exe", "application/pdf", "INVALID_FILENAME"),
+            (b"x", "../bad.pdf", "application/pdf", "INVALID_FILENAME"),
+            (b"x", "bad.pdf", "text/plain", "PDF_CONTENT_TYPE_REQUIRED"),
+        ],
+    )
+    def test_invalid_uploads_are_rejected_without_source_rows(environment, data, filename, kind, code):
+        client, database, _ = environment
+        result = upload(client, data, filename, {**HEADERS, "Content-Type": kind})
+>       assert result.status_code in {415, 422} and result.json()["error"]["code"] == code
+E       assert (401 in {415, 422})
+E        +  where 401 = <Response [401 Unauthorized]>.status_code
+
+tests\integration\test_pdf_import.py:195: AssertionError
+============================== warnings summary ===============================
+.venv\Lib\site-packages\fastapi\testclient.py:1
+  D:\Roadrules\roadrule\backend\.venv\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+ERROR tests/integration/test_admin.py::test_admin_login_and_only_hashed_session
+ERROR tests/integration/test_admin.py::test_generic_login_failure[wrong] - ap...
+ERROR tests/integration/test_admin.py::test_generic_login_failure[inactive]
+ERROR tests/integration/test_admin.py::test_dashboard_uses_real_count_and_null_unimplemented_metrics
+ERROR tests/integration/test_admin.py::test_admin_session_server_enforced_lifecycle[inactivity]
+ERROR tests/integration/test_admin.py::test_logout_revocation_and_login_rotation
+ERROR tests/integration/test_admin_analytics.py::test_analytics_use_persisted_records_and_require_admin
+ERROR tests/integration/test_exam_access.py::test_promo_issuance_scope_expiry_and_redemption_concurrency
+ERROR tests/integration/test_exam_access.py::test_admin_promo_management_duplicate_edit_enable_and_delete
+ERROR tests/integration/test_exam_access.py::test_invalid_disabled_expired_rate_limited_and_csrf
+ERROR tests/integration/test_exam_access.py::test_mock_initiation_concurrency_settlement_and_isolation
+ERROR tests/integration/test_exam_bank.py::test_concurrent_same_grant_is_idempotent_and_difficulty_quotas
+ERROR tests/integration/test_exam_bank.py::test_strict_policy_and_zero_eligible
+ERROR tests/integration/test_exam_bank.py::test_reprocess_existing_source_after_explicit_policy_change
+ERROR tests/integration/test_exam_execution.py::test_twentieth_next_finishes_and_media_is_current_only
+ERROR tests/integration/test_exam_execution.py::test_result_thresholds_and_scope[0]
+ERROR tests/integration/test_exam_execution.py::test_corrupt_snapshot_preserves_completion
+ERROR tests/integration/test_image_option_exam.py::test_vector_choices_activate_and_use_current_question_media
+ERROR tests/integration/test_pdf_import.py::test_duplicate_upload_and_operation_retry_do_not_duplicate_records
+ERROR tests/integration/test_pdf_import.py::test_invalid_uploads_are_rejected_without_source_rows[not a PDF-bad.pdf-application/pdf-INVALID_PDF]
+ERROR tests/integration/test_pdf_import.py::test_invalid_uploads_are_rejected_without_source_rows[x-../bad.pdf-application/pdf-INVALID_FILENAME]
+ERROR tests/integration/test_pdf_import.py::test_invalid_uploads_are_rejected_without_source_rows[x-bad.pdf-text/plain-PDF_CONTENT_TYPE_REQUIRED]
+ERROR tests/integration/test_pdf_import.py::test_limits_and_durable_attempt_budget
+FAILED tests/integration/test_admin.py::test_generic_login_failure[unknown]
+FAILED tests/integration/test_admin.py::test_admin_session_server_enforced_lifecycle[absolute]
+FAILED tests/integration/test_admin.py::test_admin_session_server_enforced_lifecycle[disabled]
+FAILED tests/integration/test_admin.py::test_login_limits_persist_across_instances
+FAILED tests/integration/test_admin.py::test_csrf_guards_admin_login_and_logout[headers0]
+FAILED tests/integration/test_admin.py::test_csrf_guards_admin_login_and_logout[headers1]
+FAILED tests/integration/test_admin.py::test_csrf_guards_admin_login_and_logout[headers2]
+FAILED tests/integration/test_admin_analytics.py::test_exam_analytics_include_current_and_graded_attempts[0]
+FAILED tests/integration/test_admin_analytics.py::test_exam_analytics_include_current_and_graded_attempts[12]
+FAILED tests/integration/test_category_policy.py::test_category_shortage_preserves_healthy_bank
+FAILED tests/integration/test_category_policy.py::test_explicit_difficulty_policy_requires_source_classification
+FAILED tests/integration/test_category_policy.py::test_real_category_bank_and_timed_exam
+FAILED tests/integration/test_exam_access.py::test_unpublished_promo_cannot_be_redeemed
+FAILED tests/integration/test_exam_access.py::test_unavailable_retains_grant_and_snapshot_consumption_is_idempotent
+FAILED tests/integration/test_exam_access.py::test_settlement_rolls_back_when_entitlement_insert_fails
+FAILED tests/integration/test_exam_access.py::test_promo_request_contract_and_whitespace
+FAILED tests/integration/test_exam_bank.py::test_auto_eligibility_and_evidence
+FAILED tests/integration/test_exam_bank.py::test_replacement_and_snapshot_history
+FAILED tests/integration/test_exam_bank.py::test_no_bank_no_eligible_and_authorization_boundary
+FAILED tests/integration/test_exam_execution.py::test_authorized_start_and_concurrent_idempotence
+FAILED tests/integration/test_exam_execution.py::test_ownership_csrf_and_unavailable_preserve_entitlement
+FAILED tests/integration/test_exam_execution.py::test_answer_version_refresh_and_concurrent_next
+FAILED tests/integration/test_exam_execution.py::test_exact_deadlines_offline_reconciliation_and_idempotent_finish
+FAILED tests/integration/test_exam_execution.py::test_result_thresholds_and_scope[11]
+FAILED tests/integration/test_exam_execution.py::test_result_thresholds_and_scope[12]
+FAILED tests/integration/test_exam_execution.py::test_result_thresholds_and_scope[20]
+FAILED tests/integration/test_exam_execution.py::test_simultaneous_completion_and_grading_rollback
+FAILED tests/integration/test_migrations.py::test_alembic_upgrade_downgrade_repeatability_and_metadata
+FAILED tests/integration/test_pdf_import.py::test_upload_persistence_extraction_images_answers_preview_and_pagination
+FAILED tests/integration/test_pdf_import.py::test_invalid_uploads_are_rejected_without_source_rows[%PDF-broken-bad.pdf-application/pdf-INVALID_PDF]
+FAILED tests/integration/test_pdf_import.py::test_invalid_uploads_are_rejected_without_source_rows[-empty.pdf-application/pdf-EMPTY_PDF]
+FAILED tests/integration/test_pdf_import.py::test_invalid_uploads_are_rejected_without_source_rows[x-script.exe-application/pdf-INVALID_FILENAME]
+32 failed, 197 passed, 1 warning, 23 errors in 330.24s (0:05:30)

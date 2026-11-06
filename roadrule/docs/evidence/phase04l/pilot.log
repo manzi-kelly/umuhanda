@@ -1,0 +1,46 @@
+FF
+================================== FAILURES ===================================
+________________ test_category_shortage_preserves_healthy_bank ________________
+
+environment = (<starlette.testclient.TestClient object at 0x000001A9C45B5070>, <app.db.session.Database object at 0x000001A9C33ADBB0...t_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$'))
+
+    def test_category_shortage_preserves_healthy_bank(environment):
+        _, database, settings = environment
+        submit(environment, fixture_pdf(42, sign_interval=2))
+        with database.session_factory() as db:
+            original = db.scalar(select(BankRevision.id).where(BankRevision.active))
+        _, job = submit(environment, fixture_pdf(30, variant="shortage"), process=False)
+>       assert process_job(category_settings(settings, 10), job)
+E       AssertionError: assert False
+E        +  where False = process_job(Settings(app_env='testing', app_name='Road Rules API', cors_allowed_origins=['http://localhost:3000'], allowed_hosts=[...ut_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$'), UUID('2366d15b-a890-47df-bffd-88b7d694de03'))
+E        +    where Settings(app_env='testing', app_name='Road Rules API', cors_allowed_origins=['http://localhost:3000'], allowed_hosts=[...ut_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$') = category_settings(Settings(app_env='testing', app_name='Road Rules API', cors_allowed_origins=['http://localhost:3000'], allowed_hosts=[...ut_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$'), 10)
+
+tests\integration\test_category_policy.py:38: AssertionError
+___________________ test_real_category_bank_and_timed_exam ____________________
+
+environment = (<starlette.testclient.TestClient object at 0x000001A9C34F02C0>, <app.db.session.Database object at 0x000001A9C46443B0...t_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$'))
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001A9C45B5820>
+
+    def test_explicit_difficulty_policy_requires_source_classification(environment):
+        _, database, settings = environment
+        _, job = submit(environment, fixture_pdf(42, sign_interval=2), process=False)
+        strict = settings.model_copy(update={"exam_selection_policy": "DIFFICULTY_BALANCED"})
+        assert process_job(strict, job)
+        with database.session_factory() as db:
+>           bank = db.scalar(select(BankRevision).where(BankRevision.job_id == job))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           AssertionError: assert False
+E            +  where False = process_job(Settings(app_env='testing', app_name='Road Rules API', cors_allowed_origins=['http://localhost:3000'], allowed_hosts=[...ut_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$'), UUID('b35f09b0-642b-4b80-9840-e5d270abe8bf'))
+E            +    where Settings(app_env='testing', app_name='Road Rules API', cors_allowed_origins=['http://localhost:3000'], allowed_hosts=[...ut_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$') = category_settings(Settings(app_env='testing', app_name='Road Rules API', cors_allowed_origins=['http://localhost:3000'], allowed_hosts=[...ut_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$'), 2)
+
+tests\integration\test_category_policy.py:51: AssertionError
+============================== warnings summary ===============================
+.venv\Lib\site-packages\fastapi\testclient.py:1
+  D:\Roadrules\roadrule\backend\.venv\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED tests/integration/test_category_policy.py::test_category_shortage_preserves_healthy_bank
+FAILED tests/integration/test_category_policy.py::test_real_category_bank_and_timed_exam
+2 failed, 1 warning in 70.29s (0:01:10)

@@ -1,0 +1,19 @@
+
+> roadrule@0.1.0 typecheck
+> tsc --noEmit
+
+.next/dev/types/validator.ts(30,44): error TS2344: Type 'Route' does not satisfy the constraint '"/"'.
+  Type 'LayoutRoutes' is not assignable to type '"/"'.
+    Type '"/admin"' is not assignable to type '"/"'.
+.next/dev/types/validator.ts(30,75): error TS2344: Type 'Route' does not satisfy the constraint '"/"'.
+  Type 'LayoutRoutes' is not assignable to type '"/"'.
+    Type '"/admin"' is not assignable to type '"/"'.
+.next/types/validator.ts(47,39): error TS2307: Cannot find module '../../src/app/exam/page.js' or its corresponding type declarations.
+.next/types/validator.ts(55,69): error TS2344: Type '__InvalidParamMatchingKeys' does not satisfy the constraint 'never'.
+  Type 'string' is not assignable to type 'never'.
+.next/types/validator.ts(64,39): error TS2307: Cannot find module '../../src/app/page.js' or its corresponding type declarations.
+.next/types/validator.ts(72,69): error TS2344: Type '__InvalidParamMatchingKeys' does not satisfy the constraint 'never'.
+  Type 'string' is not assignable to type 'never'.
+.next/types/validator.ts(81,39): error TS2307: Cannot find module '../../src/app/tangira/page.js' or its corresponding type declarations.
+.next/types/validator.ts(89,69): error TS2344: Type '__InvalidParamMatchingKeys' does not satisfy the constraint 'never'.
+  Type 'string' is not assignable to type 'never'.

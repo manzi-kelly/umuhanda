@@ -1,0 +1,216 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\Roadrules\\roadrule\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "phase04k-image.spec.ts",
+      "--project=390px",
+      "--reporter=list,json"
+    ],
+    "configFile": "D:\\Roadrules\\roadrule\\playwright.config.ts",
+    "rootDir": "D:/Roadrules/roadrule/tests/browser",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": "D:\\Roadrules\\roadrule\\tests\\browser\\teardown.ts",
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/Roadrules/roadrule/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "390px",
+        "name": "390px",
+        "testDir": "D:/Roadrules/roadrule/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      },
+      {
+        "outputDir": "D:/Roadrules/roadrule/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "834px",
+        "name": "834px",
+        "testDir": "D:/Roadrules/roadrule/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      },
+      {
+        "outputDir": "D:/Roadrules/roadrule/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "1440px",
+        "name": "1440px",
+        "testDir": "D:/Roadrules/roadrule/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\Roadrules\\roadrule\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "390px",
+        "testDir": "D:\\Roadrules\\roadrule\\tests\\browser",
+        "snapshotDir": "D:\\Roadrules\\roadrule\\tests\\browser",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 90000,
+        "use": {
+          "baseURL": "http://127.0.0.1:3100",
+          "channel": "chrome",
+          "headless": true,
+          "trace": "off",
+          "screenshot": "off",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "390px"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "phase04k-image.spec.ts",
+      "file": "phase04k-image.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "source-backed vector choices render inside the authenticated student options",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "390px",
+              "projectName": "390px",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 37534,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { name: 'Ibibazo byasomwe (20)', exact: true })\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('heading', { name: 'Ibibazo byasomwe (20)', exact: true }) with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: 'Ibibazo byasomwe (20)', exact: true })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { name: 'Ibibazo byasomwe (20)', exact: true })\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('heading', { name: 'Ibibazo byasomwe (20)', exact: true }) with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: 'Ibibazo byasomwe (20)', exact: true })\u001b[22m\n\n    at D:\\Roadrules\\roadrule\\tests\\browser\\phase04k-image.spec.ts:28:91",
+                    "location": {
+                      "file": "D:\\Roadrules\\roadrule\\tests\\browser\\phase04k-image.spec.ts",
+                      "column": 91,
+                      "line": 28
+                    },
+                    "snippet": "  26 |     cwd, windowsHide: true, stdio: \"pipe\",\n  27 |   });\n> 28 |   await expect(page.getByRole(\"heading\", { name: \"Ibibazo byasomwe (20)\", exact: true })).toBeVisible();\n     |                                                                                           ^\n  29 |   await page.goto(\"/admin/questions\");\n  30 |   await expect(page.getByRole(\"listitem\").filter({ hasText: \"synthetic-vector-choice-bank.pdf\" }))\n  31 |     .toContainText(\"Active source\");"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\Roadrules\\roadrule\\tests\\browser\\phase04k-image.spec.ts",
+                        "column": 91,
+                        "line": 28
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { name: 'Ibibazo byasomwe (20)', exact: true })\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('heading', { name: 'Ibibazo byasomwe (20)', exact: true }) with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: 'Ibibazo byasomwe (20)', exact: true })\u001b[22m\n\n\n  26 |     cwd, windowsHide: true, stdio: \"pipe\",\n  27 |   });\n> 28 |   await expect(page.getByRole(\"heading\", { name: \"Ibibazo byasomwe (20)\", exact: true })).toBeVisible();\n     |                                                                                           ^\n  29 |   await page.goto(\"/admin/questions\");\n  30 |   await expect(page.getByRole(\"listitem\").filter({ hasText: \"synthetic-vector-choice-bank.pdf\" }))\n  31 |     .toContainText(\"Active source\");\n    at D:\\Roadrules\\roadrule\\tests\\browser\\phase04k-image.spec.ts:28:91"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [
+                    {
+                      "buffer": "RDpcUm9hZHJ1bGVzXHJvYWRydWxlXGJhY2tlbmRcLnZlbnZcTGliXHNpdGUtcGFja2FnZXNcZmFzdGFwaVx0ZXN0Y2xpZW50LnB5OjE6IFN0YXJsZXR0ZURlcHJlY2F0aW9uV2FybmluZzogVXNpbmcgYGh0dHB4YCB3aXRoIGBzdGFybGV0dGUudGVzdGNsaWVudGAgaXMgZGVwcmVjYXRlZDsgaW5zdGFsbCBgaHR0cHgyYCBpbnN0ZWFkLg0KICBmcm9tIHN0YXJsZXR0ZS50ZXN0Y2xpZW50IGltcG9ydCBUZXN0Q2xpZW50IGFzIFRlc3RDbGllbnQgICMgbm9xYQ0K"
+                    }
+                  ],
+                  "retry": 0,
+                  "startTime": "2026-11-05T23:14:31.007Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\Roadrules\\roadrule\\test-results\\phase04k-image-source-back-9f90f-thenticated-student-options-390px\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\Roadrules\\roadrule\\tests\\browser\\phase04k-image.spec.ts",
+                    "column": 91,
+                    "line": 28
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "227a5e14d0fd2b42acf9-c172bf73646a297d5b43",
+          "file": "phase04k-image.spec.ts",
+          "line": 6,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-05T23:14:15.727Z",
+    "duration": 61979.055,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

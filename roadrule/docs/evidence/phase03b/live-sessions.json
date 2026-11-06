@@ -1,0 +1,19 @@
+{
+  "health": 200,
+  "ready": 200,
+  "missing_session": 401,
+  "csrf_missing": 403,
+  "create": 201,
+  "authenticated_me": 200,
+  "revoke": 204,
+  "repeat_revoke": 204,
+  "replay_after_revoke": 401,
+  "http_only": true,
+  "same_site": "lax",
+  "cookie_path": "/api/v1",
+  "raw_token_in_json": false,
+  "raw_token_in_logs": false,
+  "access_granted": false,
+  "clean_shutdown": true,
+  "synthetic_test_data_removed": true
+}

@@ -1,0 +1,17 @@
+{
+  "testDatabaseCounts": {
+    "admin_users": 0,
+    "admin_sessions": 0,
+    "admin_audit_events": 0,
+    "students": 0,
+    "guest_sessions": 0,
+    "student_activity_events": 0,
+    "pdf_documents": 0,
+    "pdf_import_jobs": 0,
+    "question_drafts": 0,
+    "question_draft_options": 0,
+    "question_draft_answers": 0,
+    "question_draft_assets": 0
+  },
+  "temporaryCredentialsAndFilesRemoved": true
+}

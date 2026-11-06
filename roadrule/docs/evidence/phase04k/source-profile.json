@@ -1,0 +1,174 @@
+{
+  "pages": 149,
+  "drafts": 394,
+  "parse_ms": 4343.2,
+  "page_median_ms": 24.1,
+  "page_p95_ms": 55.6,
+  "page_max_ms": 120.4,
+  "image_ms": 7874.6,
+  "crops": 37,
+  "image_choices": {
+    "224": {
+      "page": 63,
+      "labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "has_mark": true
+    },
+    "235": {
+      "page": 67,
+      "labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "has_mark": true
+    },
+    "236": {
+      "page": 67,
+      "labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "has_mark": true
+    },
+    "249": {
+      "page": 72,
+      "labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "has_mark": true
+    },
+    "266": {
+      "page": 79,
+      "labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "has_mark": true
+    }
+  },
+  "structural": [
+    {
+      "code": "UNSUPPORTED_QUESTION_STRUCTURE",
+      "page": 64,
+      "question": "228",
+      "labels": [
+        "A",
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    {
+      "code": "UNSUPPORTED_QUESTION_STRUCTURE",
+      "page": 64,
+      "question": "229",
+      "labels": [
+        "A",
+        "B",
+        "B",
+        "C"
+      ]
+    },
+    {
+      "code": "UNSUPPORTED_QUESTION_STRUCTURE",
+      "page": 75,
+      "question": "256",
+      "labels": [
+        "A",
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    {
+      "code": "UNSUPPORTED_QUESTION_STRUCTURE",
+      "page": 78,
+      "question": "265",
+      "labels": [
+        "A",
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    {
+      "code": "UNSUPPORTED_QUESTION_STRUCTURE",
+      "page": 79,
+      "question": "267",
+      "labels": [
+        "A",
+        "B",
+        "B",
+        "C"
+      ]
+    },
+    {
+      "code": "UNSUPPORTED_QUESTION_STRUCTURE",
+      "page": 80,
+      "question": "270",
+      "labels": [
+        "A",
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    {
+      "code": "UNSUPPORTED_QUESTION_STRUCTURE",
+      "page": 91,
+      "question": "294",
+      "labels": [
+        "A",
+        "C",
+        "C",
+        "D"
+      ]
+    },
+    {
+      "code": "UNSUPPORTED_QUESTION_STRUCTURE",
+      "page": 93,
+      "question": "299",
+      "labels": [
+        "A",
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    {
+      "code": "UNSUPPORTED_QUESTION_STRUCTURE",
+      "page": 93,
+      "question": "300",
+      "labels": [
+        "A",
+        "B",
+        "B",
+        "C"
+      ]
+    },
+    {
+      "code": "UNSUPPORTED_QUESTION_STRUCTURE",
+      "page": 133,
+      "question": "395",
+      "labels": [
+        "A",
+        "A",
+        "C",
+        "D"
+      ]
+    }
+  ]
+}

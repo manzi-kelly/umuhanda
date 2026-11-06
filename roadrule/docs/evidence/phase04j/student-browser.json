@@ -1,0 +1,468 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\Roadrules\\roadrule\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "phase02.spec.ts",
+      "--reporter=list,json"
+    ],
+    "configFile": "D:\\Roadrules\\roadrule\\playwright.config.ts",
+    "rootDir": "D:/Roadrules/roadrule/tests/browser",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": "D:\\Roadrules\\roadrule\\tests\\browser\\teardown.ts",
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/Roadrules/roadrule/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "390px",
+        "name": "390px",
+        "testDir": "D:/Roadrules/roadrule/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      },
+      {
+        "outputDir": "D:/Roadrules/roadrule/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "834px",
+        "name": "834px",
+        "testDir": "D:/Roadrules/roadrule/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      },
+      {
+        "outputDir": "D:/Roadrules/roadrule/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "1440px",
+        "name": "1440px",
+        "testDir": "D:/Roadrules/roadrule/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\Roadrules\\roadrule\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "390px",
+        "testDir": "D:\\Roadrules\\roadrule\\tests\\browser",
+        "snapshotDir": "D:\\Roadrules\\roadrule\\tests\\browser",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 90000,
+        "use": {
+          "baseURL": "http://127.0.0.1:3100",
+          "channel": "chrome",
+          "headless": true,
+          "trace": "off",
+          "screenshot": "off",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "390px"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\Roadrules\\roadrule\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "834px",
+        "testDir": "D:\\Roadrules\\roadrule\\tests\\browser",
+        "snapshotDir": "D:\\Roadrules\\roadrule\\tests\\browser",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 90000,
+        "use": {
+          "baseURL": "http://127.0.0.1:3100",
+          "channel": "chrome",
+          "headless": true,
+          "trace": "off",
+          "screenshot": "off",
+          "viewport": {
+            "width": 834,
+            "height": 1112
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "834px"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\Roadrules\\roadrule\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "1440px",
+        "testDir": "D:\\Roadrules\\roadrule\\tests\\browser",
+        "snapshotDir": "D:\\Roadrules\\roadrule\\tests\\browser",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 90000,
+        "use": {
+          "baseURL": "http://127.0.0.1:3100",
+          "channel": "chrome",
+          "headless": true,
+          "trace": "off",
+          "screenshot": "off",
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "1440px"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "phase02.spec.ts",
+      "file": "phase02.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "student flow, navigation, responsive layout and locked exam",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "390px",
+              "projectName": "390px",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 44926,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "PHASE04I_ACCEPTANCE {\"latency\":{\"start\":[262],\"current\":[875,177,48,168,87,46,37,38,62,55,57,50,65,50,44,42,41,44,39,67],\"answer\":[257,105,157,170,55,53,132,55,48,72,102,60,82,63,55,56,43,43,42,59],\"next\":[172,139,139,137,50,71,66,59,62,118,62,58,75,66,56,65,45,42,105,91],\"result\":[45,50,49,56,45]},\"database\":{\"items\":[20,20],\"fingerprintOverlap\":0,\"scores\":[1,12],\"consumedGrants\":2,\"overview\":{\"students\":3,\"attempts\":2,\"passed\":1,\"failed\":1,\"redeemed\":1,\"mock\":2}}}\n"
+                    }
+                  ],
+                  "stderr": [
+                    {
+                      "buffer": ""
+                    }
+                  ],
+                  "retry": 0,
+                  "startTime": "2026-11-05T22:33:13.494Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "acceptance-data",
+                      "contentType": "application/json",
+                      "body": "eyJsYXRlbmN5Ijp7InN0YXJ0IjpbMjYyXSwiY3VycmVudCI6Wzg3NSwxNzcsNDgsMTY4LDg3LDQ2LDM3LDM4LDYyLDU1LDU3LDUwLDY1LDUwLDQ0LDQyLDQxLDQ0LDM5LDY3XSwiYW5zd2VyIjpbMjU3LDEwNSwxNTcsMTcwLDU1LDUzLDEzMiw1NSw0OCw3MiwxMDIsNjAsODIsNjMsNTUsNTYsNDMsNDMsNDIsNTldLCJuZXh0IjpbMTcyLDEzOSwxMzksMTM3LDUwLDcxLDY2LDU5LDYyLDExOCw2Miw1OCw3NSw2Niw1Niw2NSw0NSw0MiwxMDUsOTFdLCJyZXN1bHQiOls0NSw1MCw0OSw1Niw0NV19LCJkYXRhYmFzZSI6eyJpdGVtcyI6WzIwLDIwXSwiZmluZ2VycHJpbnRPdmVybGFwIjowLCJzY29yZXMiOlsxLDEyXSwiY29uc3VtZWRHcmFudHMiOjIsIm92ZXJ2aWV3Ijp7InN0dWRlbnRzIjozLCJhdHRlbXB0cyI6MiwicGFzc2VkIjoxLCJmYWlsZWQiOjEsInJlZGVlbWVkIjoxLCJtb2NrIjoyfX19"
+                    },
+                    {
+                      "name": "browser-observations",
+                      "contentType": "application/json",
+                      "body": "ewogICJ3aWR0aCI6ICIzOTBweCIsCiAgImJyb3dzZXJWZXJzaW9uIjogIjE1Ny4wLjgxMDMuMzgiLAogICJjb25zb2xlRXJyb3JzIjogW10sCiAgInBhZ2VFcnJvcnMiOiBbXSwKICAiZmFpbGVkUmVxdWVzdHMiOiBbXSwKICAidW5leHBlY3RlZFJlc3BvbnNlcyI6IFtdLAogICJtdXRhdGlvbnMiOiBbCiAgICAiUE9TVCBodHRwOi8vMTI3LjAuMC4xOjMxMDAvc3R1ZGVudC1hcGkvc3R1ZGVudHMvc2Vzc2lvbnMiLAogICAgIlBPU1QgaHR0cDovLzEyNy4wLjAuMTozMTAwL3N0dWRlbnQtYXBpL3N0dWRlbnRzL3Nlc3Npb25zIiwKICAgICJQT1NUIGh0dHA6Ly8xMjcuMC4wLjE6MzEwMC9zdHVkZW50LWFwaS9wcm9tb3MvcmVkZWVtIiwKICAgICJQT1NUIGh0dHA6Ly8xMjcuMC4wLjE6MzEwMC9zdHVkZW50LWFwaS9wYXltZW50cy9tb2NrL2luaXRpYXRlIiwKICAgICJQT1NUIGh0dHA6Ly8xMjcuMC4wLjE6MzEwMC9zdHVkZW50LWFwaS9wYXltZW50cy9tb2NrL2luaXRpYXRlIiwKICAgICJQT1NUIGh0dHA6Ly8xMjcuMC4wLjE6MzEwMC9zdHVkZW50LWFwaS9wcm9tb3MvcmVkZWVtIiwKICAgICJQT1NUIGh0dHA6Ly8xMjcuMC4wLjE6MzEwMC9zdHVkZW50LWFwaS9leGFtcy9zdGFydCIsCiAgICAiUFVUIGh0dHA6Ly8xMjcuMC4wLjE6MzEwMC9zdHVkZW50LWFwaS9leGFtcy9hZTBiY2UyMy0wNjkzLTQxZTYtOTM4ZC1mODlhMDEwM2Y1NjQvYW5zd2VyIiwKICAgICJQVVQgaHR0cDovLzEyNy4wLjAuMTozMTAwL3N0dWRlbnQtYXBpL2V4YW1zL2FlMGJjZTIzLTA2OTMtNDFlNi05MzhkLWY4OWEwMTAzZjU2NC9hbnN3ZXIiLAogICAgIlBPU1QgaHR0cDovLzEyNy4wLjAuMTozMTAwL3N0dWRlbnQtYXBpL2V4YW1zL2FlMGJjZTIzLTA2OTMtNDFlNi05MzhkLWY4OWEwMTAzZjU2NC9uZXh0IiwKICAgICJQT1NUIGh0dHA6Ly8xMjcuMC4wLjE6MzEwMC9zdHVkZW50LWFwaS9leGFtcy9zdGFydCIKICBdLAogICJ0aW1pbmdzIjogewogICAgInNlbGVjdE10biI6IHsKICAgICAgImNsaWNrVG9SZWFkeU1zIjogNDUKICAgIH0sCiAgICAicmVkZWVtUHJvbW8iOiB7CiAgICAgICJjbGlja1RvUmVhZHlNcyI6IDM0NiwKICAgICAgImNsaWNrVG9SZXF1ZXN0TXMiOiAxLAogICAgICAiYnJvd3NlclJlcXVlc3RNcyI6IDE2OSwKICAgICAgInNlcnZlciI6IHsKICAgICAgICAiYXBpIjogNDQuOTYsCiAgICAgICAgInVwc3RyZWFtIjogNzAuMDIsCiAgICAgICAgImJyaWRnZSI6IDcwLjgyCiAgICAgIH0KICAgIH0KICB9Cn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3f76b986ba5de2a01e04-ff2ea0f5b28e34863aca",
+          "file": "phase02.spec.ts",
+          "line": 7,
+          "column": 5
+        },
+        {
+          "title": "direct exam entry stays locked without JavaScript",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "390px",
+              "projectName": "390px",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1228,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T22:33:59.226Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3f76b986ba5de2a01e04-a973f32931fcf17d68aa",
+          "file": "phase02.spec.ts",
+          "line": 791,
+          "column": 5
+        },
+        {
+          "title": "student flow, navigation, responsive layout and locked exam",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "834px",
+              "projectName": "834px",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 39521,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "PHASE04I_ACCEPTANCE {\"latency\":{\"start\":[126],\"current\":[84,55,53,38,43,41,47,131,75,43,45,44,43,51,44,43,55,44,60,82],\"answer\":[66,60,64,42,52,49,52,108,67,45,55,52,51,60,70,54,53,55,70,64],\"next\":[65,57,71,45,49,52,129,97,58,56,66,51,64,58,55,67,57,87,71,86],\"result\":[59,54,45,47,47]},\"database\":{\"items\":[20,20],\"fingerprintOverlap\":0,\"scores\":[1,12],\"consumedGrants\":2,\"overview\":{\"students\":6,\"attempts\":4,\"passed\":2,\"failed\":2,\"redeemed\":2,\"mock\":4}}}\n"
+                    }
+                  ],
+                  "stderr": [
+                    {
+                      "buffer": ""
+                    }
+                  ],
+                  "retry": 0,
+                  "startTime": "2026-11-05T22:34:05.306Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "acceptance-data",
+                      "contentType": "application/json",
+                      "body": "eyJsYXRlbmN5Ijp7InN0YXJ0IjpbMTI2XSwiY3VycmVudCI6Wzg0LDU1LDUzLDM4LDQzLDQxLDQ3LDEzMSw3NSw0Myw0NSw0NCw0Myw1MSw0NCw0Myw1NSw0NCw2MCw4Ml0sImFuc3dlciI6WzY2LDYwLDY0LDQyLDUyLDQ5LDUyLDEwOCw2Nyw0NSw1NSw1Miw1MSw2MCw3MCw1NCw1Myw1NSw3MCw2NF0sIm5leHQiOls2NSw1Nyw3MSw0NSw0OSw1MiwxMjksOTcsNTgsNTYsNjYsNTEsNjQsNTgsNTUsNjcsNTcsODcsNzEsODZdLCJyZXN1bHQiOls1OSw1NCw0NSw0Nyw0N119LCJkYXRhYmFzZSI6eyJpdGVtcyI6WzIwLDIwXSwiZmluZ2VycHJpbnRPdmVybGFwIjowLCJzY29yZXMiOlsxLDEyXSwiY29uc3VtZWRHcmFudHMiOjIsIm92ZXJ2aWV3Ijp7InN0dWRlbnRzIjo2LCJhdHRlbXB0cyI6NCwicGFzc2VkIjoyLCJmYWlsZWQiOjIsInJlZGVlbWVkIjoyLCJtb2NrIjo0fX19"
+                    },
+                    {
+                      "name": "browser-observations",
+                      "contentType": "application/json",
+                      "body": "ewogICJ3aWR0aCI6ICI4MzRweCIsCiAgImJyb3dzZXJWZXJzaW9uIjogIjE1Ny4wLjgxMDMuMzgiLAogICJjb25zb2xlRXJyb3JzIjogW10sCiAgInBhZ2VFcnJvcnMiOiBbXSwKICAiZmFpbGVkUmVxdWVzdHMiOiBbXSwKICAidW5leHBlY3RlZFJlc3BvbnNlcyI6IFtdLAogICJtdXRhdGlvbnMiOiBbCiAgICAiUE9TVCBodHRwOi8vMTI3LjAuMC4xOjMxMDAvc3R1ZGVudC1hcGkvc3R1ZGVudHMvc2Vzc2lvbnMiLAogICAgIlBPU1QgaHR0cDovLzEyNy4wLjAuMTozMTAwL3N0dWRlbnQtYXBpL3N0dWRlbnRzL3Nlc3Npb25zIiwKICAgICJQT1NUIGh0dHA6Ly8xMjcuMC4wLjE6MzEwMC9zdHVkZW50LWFwaS9wcm9tb3MvcmVkZWVtIiwKICAgICJQT1NUIGh0dHA6Ly8xMjcuMC4wLjE6MzEwMC9zdHVkZW50LWFwaS9wYXltZW50cy9tb2NrL2luaXRpYXRlIiwKICAgICJQT1NUIGh0dHA6Ly8xMjcuMC4wLjE6MzEwMC9zdHVkZW50LWFwaS9wYXltZW50cy9tb2NrL2luaXRpYXRlIiwKICAgICJQT1NUIGh0dHA6Ly8xMjcuMC4wLjE6MzEwMC9zdHVkZW50LWFwaS9wcm9tb3MvcmVkZWVtIiwKICAgICJQT1NUIGh0dHA6Ly8xMjcuMC4wLjE6MzEwMC9zdHVkZW50LWFwaS9leGFtcy9zdGFydCIsCiAgICAiUFVUIGh0dHA6Ly8xMjcuMC4wLjE6MzEwMC9zdHVkZW50LWFwaS9leGFtcy9hNGI2NzY0ZS0yMjkzLTRlNDctOTc5My0xOTE2ZTExMGYzN2QvYW5zd2VyIiwKICAgICJQVVQgaHR0cDovLzEyNy4wLjAuMTozMTAwL3N0dWRlbnQtYXBpL2V4YW1zL2E0YjY3NjRlLTIyOTMtNGU0Ny05NzkzLTE5MTZlMTEwZjM3ZC9hbnN3ZXIiLAogICAgIlBPU1QgaHR0cDovLzEyNy4wLjAuMTozMTAwL3N0dWRlbnQtYXBpL2V4YW1zL2E0YjY3NjRlLTIyOTMtNGU0Ny05NzkzLTE5MTZlMTEwZjM3ZC9uZXh0IiwKICAgICJQT1NUIGh0dHA6Ly8xMjcuMC4wLjE6MzEwMC9zdHVkZW50LWFwaS9leGFtcy9zdGFydCIKICBdLAogICJ0aW1pbmdzIjogewogICAgInNlbGVjdE10biI6IHsKICAgICAgImNsaWNrVG9SZWFkeU1zIjogNDcKICAgIH0sCiAgICAicmVkZWVtUHJvbW8iOiB7CiAgICAgICJjbGlja1RvUmVhZHlNcyI6IDM1MiwKICAgICAgImNsaWNrVG9SZXF1ZXN0TXMiOiAzLAogICAgICAiYnJvd3NlclJlcXVlc3RNcyI6IDE1NiwKICAgICAgInNlcnZlciI6IHsKICAgICAgICAiYXBpIjogNTIuNjYsCiAgICAgICAgInVwc3RyZWFtIjogNjEuNDIsCiAgICAgICAgImJyaWRnZSI6IDYyLjI1CiAgICAgIH0KICAgIH0KICB9Cn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3f76b986ba5de2a01e04-8be98eecc6cef7eae63b",
+          "file": "phase02.spec.ts",
+          "line": 7,
+          "column": 5
+        },
+        {
+          "title": "direct exam entry stays locked without JavaScript",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "834px",
+              "projectName": "834px",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1685,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T22:34:46.002Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3f76b986ba5de2a01e04-8d2f0e492a30c8341809",
+          "file": "phase02.spec.ts",
+          "line": 791,
+          "column": 5
+        },
+        {
+          "title": "student flow, navigation, responsive layout and locked exam",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "1440px",
+              "projectName": "1440px",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 45859,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "PHASE04I_ACCEPTANCE {\"latency\":{\"start\":[142],\"current\":[92,63,55,59,48,54,70,53,45,155,84,82,48,83,65,44,46,48,49,83],\"answer\":[62,76,69,68,72,74,75,56,74,200,71,66,59,84,57,60,55,62,56,66],\"next\":[70,67,71,66,72,74,86,55,60,134,80,52,134,89,58,65,73,69,71,100],\"result\":[48,48,71,46,42]},\"database\":{\"items\":[20,20],\"fingerprintOverlap\":0,\"scores\":[1,12],\"consumedGrants\":2,\"overview\":{\"students\":9,\"attempts\":6,\"passed\":3,\"failed\":3,\"redeemed\":3,\"mock\":6}}}\n"
+                    }
+                  ],
+                  "stderr": [
+                    {
+                      "buffer": ""
+                    }
+                  ],
+                  "retry": 0,
+                  "startTime": "2026-11-05T22:34:54.514Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "acceptance-data",
+                      "contentType": "application/json",
+                      "body": "eyJsYXRlbmN5Ijp7InN0YXJ0IjpbMTQyXSwiY3VycmVudCI6WzkyLDYzLDU1LDU5LDQ4LDU0LDcwLDUzLDQ1LDE1NSw4NCw4Miw0OCw4Myw2NSw0NCw0Niw0OCw0OSw4M10sImFuc3dlciI6WzYyLDc2LDY5LDY4LDcyLDc0LDc1LDU2LDc0LDIwMCw3MSw2Niw1OSw4NCw1Nyw2MCw1NSw2Miw1Niw2Nl0sIm5leHQiOls3MCw2Nyw3MSw2Niw3Miw3NCw4Niw1NSw2MCwxMzQsODAsNTIsMTM0LDg5LDU4LDY1LDczLDY5LDcxLDEwMF0sInJlc3VsdCI6WzQ4LDQ4LDcxLDQ2LDQyXX0sImRhdGFiYXNlIjp7Iml0ZW1zIjpbMjAsMjBdLCJmaW5nZXJwcmludE92ZXJsYXAiOjAsInNjb3JlcyI6WzEsMTJdLCJjb25zdW1lZEdyYW50cyI6Miwib3ZlcnZpZXciOnsic3R1ZGVudHMiOjksImF0dGVtcHRzIjo2LCJwYXNzZWQiOjMsImZhaWxlZCI6MywicmVkZWVtZWQiOjMsIm1vY2siOjZ9fX0="
+                    },
+                    {
+                      "name": "browser-observations",
+                      "contentType": "application/json",
+                      "body": "ewogICJ3aWR0aCI6ICIxNDQwcHgiLAogICJicm93c2VyVmVyc2lvbiI6ICIxNTcuMC44MTAzLjM4IiwKICAiY29uc29sZUVycm9ycyI6IFtdLAogICJwYWdlRXJyb3JzIjogW10sCiAgImZhaWxlZFJlcXVlc3RzIjogW10sCiAgInVuZXhwZWN0ZWRSZXNwb25zZXMiOiBbXSwKICAibXV0YXRpb25zIjogWwogICAgIlBPU1QgaHR0cDovLzEyNy4wLjAuMTozMTAwL3N0dWRlbnQtYXBpL3N0dWRlbnRzL3Nlc3Npb25zIiwKICAgICJQT1NUIGh0dHA6Ly8xMjcuMC4wLjE6MzEwMC9zdHVkZW50LWFwaS9zdHVkZW50cy9zZXNzaW9ucyIsCiAgICAiUE9TVCBodHRwOi8vMTI3LjAuMC4xOjMxMDAvc3R1ZGVudC1hcGkvcHJvbW9zL3JlZGVlbSIsCiAgICAiUE9TVCBodHRwOi8vMTI3LjAuMC4xOjMxMDAvc3R1ZGVudC1hcGkvcGF5bWVudHMvbW9jay9pbml0aWF0ZSIsCiAgICAiUE9TVCBodHRwOi8vMTI3LjAuMC4xOjMxMDAvc3R1ZGVudC1hcGkvcGF5bWVudHMvbW9jay9pbml0aWF0ZSIsCiAgICAiUE9TVCBodHRwOi8vMTI3LjAuMC4xOjMxMDAvc3R1ZGVudC1hcGkvcHJvbW9zL3JlZGVlbSIsCiAgICAiUE9TVCBodHRwOi8vMTI3LjAuMC4xOjMxMDAvc3R1ZGVudC1hcGkvZXhhbXMvc3RhcnQiLAogICAgIlBVVCBodHRwOi8vMTI3LjAuMC4xOjMxMDAvc3R1ZGVudC1hcGkvZXhhbXMvN2FjMGUxZDEtZTBjZS00ZWE1LTg0MmMtZTY5MTI3ZDQ4NWRmL2Fuc3dlciIsCiAgICAiUFVUIGh0dHA6Ly8xMjcuMC4wLjE6MzEwMC9zdHVkZW50LWFwaS9leGFtcy83YWMwZTFkMS1lMGNlLTRlYTUtODQyYy1lNjkxMjdkNDg1ZGYvYW5zd2VyIiwKICAgICJQT1NUIGh0dHA6Ly8xMjcuMC4wLjE6MzEwMC9zdHVkZW50LWFwaS9leGFtcy83YWMwZTFkMS1lMGNlLTRlYTUtODQyYy1lNjkxMjdkNDg1ZGYvbmV4dCIsCiAgICAiUE9TVCBodHRwOi8vMTI3LjAuMC4xOjMxMDAvc3R1ZGVudC1hcGkvZXhhbXMvc3RhcnQiCiAgXSwKICAidGltaW5ncyI6IHsKICAgICJzZWxlY3RNdG4iOiB7CiAgICAgICJjbGlja1RvUmVhZHlNcyI6IDU3CiAgICB9LAogICAgInJlZGVlbVByb21vIjogewogICAgICAiY2xpY2tUb1JlYWR5TXMiOiAzMzYsCiAgICAgICJjbGlja1RvUmVxdWVzdE1zIjogMiwKICAgICAgImJyb3dzZXJSZXF1ZXN0TXMiOiAxMzIsCiAgICAgICJzZXJ2ZXIiOiB7CiAgICAgICAgImFwaSI6IDM4LjksCiAgICAgICAgInVwc3RyZWFtIjogNDcuMSwKICAgICAgICAiYnJpZGdlIjogNDcuODQKICAgICAgfQogICAgfQogIH0KfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3f76b986ba5de2a01e04-95e18294ee3ec20b44f6",
+          "file": "phase02.spec.ts",
+          "line": 7,
+          "column": 5
+        },
+        {
+          "title": "direct exam entry stays locked without JavaScript",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "1440px",
+              "projectName": "1440px",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1729,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T22:35:41.653Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3f76b986ba5de2a01e04-4a4f547ab759d89c0411",
+          "file": "phase02.spec.ts",
+          "line": 791,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-05T22:33:00.231Z",
+    "duration": 179087.787,
+    "expected": 6,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

@@ -1,0 +1,17 @@
+
+> roadrule@0.1.0 test
+> node --test tests/phase02.test.mjs
+
+✔ normalizes supported local and international formats across mobile ranges (8.254ms)
+✔ rejects reserved ranges, landlines, foreign, malformed and wrong length numbers (5.3082ms)
+✔ required fields, names and invalid phone prevent progression (13.3597ms)
+✔ normalizes names while preserving Unicode and name punctuation (11.9723ms)
+✔ payment and arbitrary promo cannot approve or grant access and make no network request (1.9099ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4956.9427

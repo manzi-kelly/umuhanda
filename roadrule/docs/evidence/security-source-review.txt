@@ -1,0 +1,28 @@
+Source review patterns: browser authorization storage/cookies, console logging, frontend secret names, private keys, password inputs.
+Matches:
+
+Payment adapter:
+import type { PaymentInitiationRequest, ServiceUnavailable } from "./types";
+/** Offline boundary. Never synthesize transactions, references or success. */
+export async function initiatePayment(request: PaymentInitiationRequest): Promise<ServiceUnavailable> {
+  void request;
+  return { status: "VERIFICATION_UNAVAILABLE", accessGranted: false };
+}
+
+Promo adapter:
+import type { ServiceUnavailable } from "../payment/types";
+import type { PromoValidationRequest } from "./types";
+export async function redeemPromo(request: PromoValidationRequest): Promise<ServiceUnavailable> {
+  void request;
+  return { status: "VERIFICATION_UNAVAILABLE", accessGranted: false };
+}
+
+Exam route:
+import type { Metadata } from "next";
+import Container from "@/components/ui/Container";
+import ExamEntryShell from "@/components/exam/ExamEntryShell";
+export const metadata: Metadata = { title: "Kwitegura ikizamini", robots: { index: false, follow: false } };
+/** Always locked. No storage, frontend state or query value can grant access. */
+export default function ExamPage() {
+  return <Container className="py-12 sm:py-20"><ExamEntryShell /></Container>;
+}

@@ -1,0 +1,22 @@
+{
+  "development": {
+    "database": "roadrules_dev",
+    "role": "roadrules_dev_app",
+    "revision": "20261104_0002",
+    "row_counts": {
+      "students": 0,
+      "guest_sessions": 0,
+      "student_activity_events": 0
+    }
+  },
+  "testing": {
+    "database": "roadrules_test",
+    "role": "roadrules_test_app",
+    "revision": "20261104_0002",
+    "row_counts": {
+      "student_activity_events": 0,
+      "guest_sessions": 0,
+      "students": 0
+    }
+  }
+}

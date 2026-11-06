@@ -1,0 +1,133 @@
+..F...                                                                   [100%]
+================================== FAILURES ===================================
+__________ test_mock_initiation_concurrency_settlement_and_isolation __________
+
+environment = (<starlette.testclient.TestClient object at 0x0000015BC66631A0>, <app.db.session.Database object at 0x0000015BC65E5220...t_seconds=300, pdf_question_pattern='^\\s*(\\d{1,4})[.)]\\s+(.+)$', pdf_option_pattern='^\\s*([A-Da-d])[.)]\\s+(.+)$'))
+
+    def test_mock_initiation_concurrency_settlement_and_isolation(environment):
+        _, database, settings = environment
+        _, token = guest(database, settings)
+        mock = settings.model_copy(update={"mock_payments_enabled": True, "mock_exam_amount_rwf": 650})
+        key = str(uuid4())
+        payload = {"provider": "MTN", "idempotencyKey": key}
+        with client_for(settings, token) as client:
+            assert client.post(PAY, headers=HEADERS, json=payload).status_code == 403
+        with client_for(mock, token) as client:
+            assert (
+                client.post(PAY, headers=HEADERS, json=payload).json()["error"]["code"]
+                == "EXAM_UNAVAILABLE"
+            )
+        submit(environment, fixture_pdf(30))
+    
+        def initiate(_):
+            with client_for(mock, token) as client:
+                result = client.post(PAY, headers=HEADERS, json=payload)
+                assert result.status_code == 201, result.text
+                return result.json()
+    
+        with ThreadPoolExecutor(max_workers=2) as pool:
+            payments = list(pool.map(initiate, range(2)))
+        assert payments[0] == payments[1]
+        payment = payments[0]
+        assert (payment["status"], payment["amount"], payment["currency"]) == ("PENDING", 650, "RWF")
+        identifier = UUID(payment["id"])
+        with client_for(mock, token) as client:
+            assert client.get(ACCESS).json()["entitlements"] == []
+            assert (
+                client.post(PAY, headers=HEADERS, json={**payload, "status": "SUCCESSFUL"}).status_code
+                == 422
+            )
+            assert (
+                client.post(ROOT + f"/payments/{identifier}/success", headers=HEADERS).status_code
+                == 404
+            )
+        _, other_token = guest(database, settings)
+        with client_for(mock, other_token) as client:
+            assert client.get(ROOT + f"/payments/{identifier}/status").status_code == 404
+    
+        def settle(_):
+            with database.session_factory() as session:
+                return settle_mock(session, mock, identifier, "SUCCESSFUL")
+    
+        with ThreadPoolExecutor(max_workers=2) as pool:
+            assert all(row["status"] == "SUCCESSFUL" for row in pool.map(settle, range(2)))
+        with database.session_factory() as session:
+            assert session.scalar(select(func.count()).select_from(PaymentTransaction)) == 1
+            assert session.scalar(select(func.count()).select_from(ExamEntitlement)) == 1
+            with pytest.raises(AccessError, match="INVALID_PAYMENT_STATE"):
+>               settle_mock(session, mock, identifier, "FAILED")
+
+tests\integration\test_exam_access.py:144: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+app\services\exam_access.py:82: in settle_mock
+    with session.begin():
+         ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <sqlalchemy.orm.session.Session object at 0x0000015BC678FD70>
+nested = False
+
+    def begin(self, nested: bool = False) -> SessionTransaction:
+        """Begin a transaction, or nested transaction,
+        on this :class:`.Session`, if one is not already begun.
+    
+        The :class:`_orm.Session` object features **autobegin** behavior,
+        so that normally it is not necessary to call the
+        :meth:`_orm.Session.begin`
+        method explicitly. However, it may be used in order to control
+        the scope of when the transactional state is begun.
+    
+        When used to begin the outermost transaction, an error is raised
+        if this :class:`.Session` is already inside of a transaction.
+    
+        :param nested: if True, begins a SAVEPOINT transaction and is
+         equivalent to calling :meth:`~.Session.begin_nested`. For
+         documentation on SAVEPOINT transactions, please see
+         :ref:`session_begin_nested`.
+    
+        :return: the :class:`.SessionTransaction` object.  Note that
+         :class:`.SessionTransaction`
+         acts as a Python context manager, allowing :meth:`.Session.begin`
+         to be used in a "with" block.  See :ref:`session_explicit_begin` for
+         an example.
+    
+        .. seealso::
+    
+            :ref:`session_autobegin`
+    
+            :ref:`unitofwork_transaction`
+    
+            :meth:`.Session.begin_nested`
+    
+    
+        """
+    
+        trans = self._transaction
+        if trans is None:
+            trans = self._autobegin_t(begin=True)
+    
+            if not nested:
+                return trans
+    
+        assert trans is not None
+    
+        if nested:
+            trans = trans._begin(nested=nested)
+            assert self._transaction is trans
+            self._nested_transaction = trans
+        else:
+>           raise sa_exc.InvalidRequestError(
+                "A transaction is already begun on this Session."
+            )
+E           sqlalchemy.exc.InvalidRequestError: A transaction is already begun on this Session.
+
+.venv\Lib\site-packages\sqlalchemy\orm\session.py:1946: InvalidRequestError
+============================== warnings summary ===============================
+.venv\Lib\site-packages\fastapi\testclient.py:1
+  D:\Roadrules\roadrule\backend\.venv\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED tests/integration/test_exam_access.py::test_mock_initiation_concurrency_settlement_and_isolation
+1 failed, 5 passed, 1 warning in 51.63s

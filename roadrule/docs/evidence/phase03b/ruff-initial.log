@@ -1,0 +1,252 @@
+E501 Line too long (112 > 100)
+  --> tests\integration\test_student_sessions.py:42:101
+   |
+40 | @pytest.fixture
+41 | def session_settings(integration_settings):
+42 |     return Settings(_env_file=None, app_env="testing", test_database_url=integration_settings.test_database_url,
+   |                                                                                                     ^^^^^^^^^^^^
+43 |                     cors_allowed_origins=["http://localhost:3000"])
+   |
+
+E501 Line too long (120 > 100)
+  --> tests\integration\test_student_sessions.py:48:101
+   |
+46 | @pytest.fixture
+47 | def session_client(session_database, session_settings):
+48 |     with TestClient(create_app(session_settings), base_url="http://localhost", raise_server_exceptions=False) as client:
+   |                                                                                                     ^^^^^^^^^^^^^^^^^^^^
+49 |         yield client
+   |
+
+E501 Line too long (120 > 100)
+  --> tests\integration\test_student_sessions.py:67:101
+   |
+65 |     response, token = create(session_client)
+66 |     body = response.json()
+67 |     assert set(body) == {"studentId", "sessionReference", "fullName", "maskedPhoneNumber", "expiresAt", "accessGranted"}
+   |                                                                                                     ^^^^^^^^^^^^^^^^^^^^
+68 |     assert body["fullName"] == "Jean Claude" and body["maskedPhoneNumber"] == "+25078*****67"
+69 |     assert body["accessGranted"] is False and body["expiresAt"].endswith("Z")
+   |
+
+E501 Line too long (118 > 100)
+   --> tests\integration\test_student_sessions.py:107:101
+    |
+107 | def test_failure_after_student_and_session_flush_rolls_everything_back(session_client, session_database, monkeypatch):
+    |                                                                                                     ^^^^^^^^^^^^^^^^^^
+108 |     original = StudentSessionRepository.add
+109 |     def fail_audit(self, record):
+    |
+
+E501 Line too long (108 > 100)
+   --> tests\integration\test_student_sessions.py:125:101
+    |
+123 |     session_client.cookies.clear()
+124 |     assert session_client.get(PATH + "/me").status_code == 401
+125 |     assert session_client.get(PATH + "/me", headers={"Authorization": f"Bearer {token}"}).status_code == 401
+    |                                                                                                     ^^^^^^^^
+126 |     for value in (created.json()["studentId"], created.json()["sessionReference"], new_token(), "malformed"):
+127 |         session_client.cookies.set("roadrules_guest", value, path=COOKIE_PATH)
+    |
+
+E501 Line too long (109 > 100)
+   --> tests\integration\test_student_sessions.py:126:101
+    |
+124 |     assert session_client.get(PATH + "/me").status_code == 401
+125 |     assert session_client.get(PATH + "/me", headers={"Authorization": f"Bearer {token}"}).status_code == 401
+126 |     for value in (created.json()["studentId"], created.json()["sessionReference"], new_token(), "malformed"):
+    |                                                                                                     ^^^^^^^^^
+127 |         session_client.cookies.set("roadrules_guest", value, path=COOKIE_PATH)
+128 |         assert session_client.get(PATH + "/me").status_code == 401
+    |
+
+E501 Line too long (106 > 100)
+   --> tests\integration\test_student_sessions.py:130:101
+    |
+128 |         assert session_client.get(PATH + "/me").status_code == 401
+129 |         session_client.cookies.clear()
+130 |     assert session_client.get(PATH + "/me?token=" + created.json()["sessionReference"]).status_code == 401
+    |                                                                                                     ^^^^^^
+131 |     assert session_client.get("/api/v1/students/" + created.json()["studentId"]).status_code == 404
+    |
+
+E501 Line too long (113 > 100)
+   --> tests\integration\test_student_sessions.py:139:101
+    |
+137 |     with session_database.engine.begin() as connection:
+138 |         if expiration == "absolute":
+139 |             connection.execute(text("UPDATE guest_sessions SET created_at=clock_timestamp()-interval '3 hours', "
+    |                                                                                                     ^^^^^^^^^^^^^
+140 |                 "last_activity_at=clock_timestamp()-interval '2 minutes', expires_at=clock_timestamp()-interval '1 minute'"))
+141 |         else:
+    |
+
+E501 Line too long (125 > 100)
+   --> tests\integration\test_student_sessions.py:140:101
+    |
+138 |         if expiration == "absolute":
+139 |             connection.execute(text("UPDATE guest_sessions SET created_at=clock_timestamp()-interval '3 hours', "
+140 |                 "last_activity_at=clock_timestamp()-interval '2 minutes', expires_at=clock_timestamp()-interval '1 minute'"))
+    |                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+141 |         else:
+142 |             connection.execute(text("UPDATE guest_sessions SET created_at=clock_timestamp()-interval '2 hours', "
+    |
+
+E501 Line too long (113 > 100)
+   --> tests\integration\test_student_sessions.py:142:101
+    |
+140 |                 "last_activity_at=clock_timestamp()-interval '2 minutes', expires_at=clock_timestamp()-interval '1 minute'"))
+141 |         else:
+142 |             connection.execute(text("UPDATE guest_sessions SET created_at=clock_timestamp()-interval '2 hours', "
+    |                                                                                                     ^^^^^^^^^^^^^
+143 |                 "last_activity_at=clock_timestamp()-interval '31 minutes'"))
+144 |     for _ in range(2):
+    |
+
+E501 Line too long (106 > 100)
+   --> tests\integration\test_student_sessions.py:154:101
+    |
+154 | def test_activity_update_is_throttled_and_never_extends_absolute_expiry(session_client, session_database):
+    |                                                                                                     ^^^^^^
+155 |     created, _ = create(session_client)
+156 |     def read():
+    |
+
+E501 Line too long (108 > 100)
+   --> tests\integration\test_student_sessions.py:158:101
+    |
+156 |     def read():
+157 |         with session_database.engine.connect() as connection:
+158 |             return connection.execute(text("SELECT last_activity_at, expires_at FROM guest_sessions")).one()
+    |                                                                                                     ^^^^^^^^
+159 |     initial = read()
+160 |     assert session_client.get(PATH + "/me").status_code == 200
+    |
+
+E501 Line too long (111 > 100)
+   --> tests\integration\test_student_sessions.py:163:101
+    |
+161 |     assert read() == initial
+162 |     with session_database.engine.begin() as connection:
+163 |         connection.execute(text("UPDATE guest_sessions SET created_at=clock_timestamp()-interval '3 minutes', "
+    |                                                                                                     ^^^^^^^^^^^
+164 |                                 "last_activity_at=clock_timestamp()-interval '2 minutes'"))
+165 |     older = read()
+    |
+
+E501 Line too long (112 > 100)
+   --> tests\integration\test_student_sessions.py:172:101
+    |
+172 | def test_revocation_is_persistent_idempotent_and_old_credential_cannot_replay(session_client, session_database):
+    |                                                                                                     ^^^^^^^^^^^^
+173 |     _, token = create(session_client)
+174 |     response = session_client.post(PATH + "/revoke", headers=HEADERS)
+    |
+
+E501 Line too long (109 > 100)
+   --> tests\integration\test_student_sessions.py:176:101
+    |
+174 |     response = session_client.post(PATH + "/revoke", headers=HEADERS)
+175 |     assert response.status_code == 204 and response.content == b""
+176 |     assert "Max-Age=0" in response.headers["set-cookie"] and "Path=/api/v1" in response.headers["set-cookie"]
+    |                                                                                                     ^^^^^^^^^
+177 |     assert session_client.post(PATH + "/revoke", headers=HEADERS).status_code == 204
+178 |     session_client.cookies.set("roadrules_guest", token, path=COOKIE_PATH)
+    |
+
+E501 Line too long (106 > 100)
+   --> tests\integration\test_student_sessions.py:200:101
+    |
+198 |     create(session_client)
+199 |     assert session_client.post(PATH + "/revoke").status_code == 403
+200 |     assert session_client.get(PATH + "/me", headers={"Origin": "https://evil.example"}).status_code == 403
+    |                                                                                                     ^^^^^^
+201 |     assert session_client.get(PATH + "/me").status_code == 200
+202 |     response = session_client.options(PATH, headers={"Origin": HEADERS["Origin"],
+    |
+
+E501 Line too long (117 > 100)
+   --> tests\integration\test_student_sessions.py:203:101
+    |
+201 |     assert session_client.get(PATH + "/me").status_code == 200
+202 |     response = session_client.options(PATH, headers={"Origin": HEADERS["Origin"],
+203 |         "Access-Control-Request-Method": "POST", "Access-Control-Request-Headers": "content-type,x-csrf-protection"})
+    |                                                                                                     ^^^^^^^^^^^^^^^^^
+204 |     assert response.status_code == 200
+205 |     assert response.headers["access-control-allow-credentials"] == "true"
+    |
+
+E501 Line too long (116 > 100)
+   --> tests\integration\test_student_sessions.py:229:101
+    |
+227 |         with TestClient(create_app(settings), base_url="http://localhost") as second:
+228 |             with ThreadPoolExecutor(max_workers=2) as pool:
+229 |                 results = list(pool.map(lambda client: client.post(PATH, json=PAYLOAD, headers=HEADERS).status_code,
+    |                                                                                                     ^^^^^^^^^^^^^^^^
+230 |                                         [first, second]))
+231 |     assert sorted(results) == [201, 429] and counts(session_database) == (1, 1, 2)
+    |
+
+E501 Line too long (110 > 100)
+   --> tests\integration\test_student_sessions.py:247:101
+    |
+245 |     response, _ = create(session_client)
+246 |     assert response.json()["accessGranted"] is False
+247 |     assert session_client.get(PATH + "/me?accessGranted=true&status=SUCCESS").json()["accessGranted"] is False
+    |                                                                                                     ^^^^^^^^^^
+248 |     for endpoint in ("/api/v1/exam", "/api/v1/payments/initiate", "/api/v1/promos/redeem"):
+249 |         assert session_client.post(endpoint).status_code == 404
+    |
+
+E501 Line too long (127 > 100)
+  --> tests\unit\test_guest_security.py:43:101
+   |
+43 | @pytest.mark.parametrize("value", ["", "  ", "123", "Jean 123", "<script>", "Jean--Claude", "-Jean", "Jean'", "🙂", "A" * 121])
+   |                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+44 | def test_invalid_names(value):
+45 |     with pytest.raises(ValueError):
+   |
+
+E501 Line too long (101 > 100)
+  --> tests\unit\test_guest_security.py:63:101
+   |
+62 | def test_tokens_have_256_bits_and_only_verifier_is_derived():
+63 |     with patch("app.core.session_security.secrets.token_urlsafe", return_value="x" * 43) as generate:
+   |                                                                                                     ^
+64 |         assert new_token() == "x" * 43
+65 |         generate.assert_called_once_with(32)
+   |
+
+E501 Line too long (105 > 100)
+  --> tests\unit\test_guest_security.py:74:101
+   |
+73 | @pytest.mark.parametrize("value", ["", "not-a-token", "0" * 64, "a" * 42, "a" * 44,
+74 |                                  "a" * 42 + "!", "a" * 42 + "é", "00000000-0000-0000-0000-000000000000"])
+   |                                                                                                     ^^^^^
+75 | def test_invalid_token_shapes(value):
+76 |     with pytest.raises(InvalidGuestSession):
+   |
+
+E501 Line too long (104 > 100)
+   --> tests\unit\test_guest_security.py:113:101
+    |
+111 |     [("origin", "http://localhost:3000")],
+112 |     [("origin", "http://localhost:3000"), ("x-csrf-protection", "wrong")],
+113 |     [("origin", "http://localhost:3000"), ("x-csrf-protection", "1"), ("sec-fetch-site", "cross-site")],
+    |                                                                                                     ^^^^
+114 |     [("origin", "http://localhost:3000"), ("origin", "http://evil.example"), ("x-csrf-protection", "1")]])
+115 | def test_csrf_rejects_untrusted_or_missing_protection(settings, headers):
+    |
+
+E501 Line too long (106 > 100)
+   --> tests\unit\test_guest_security.py:114:101
+    |
+112 |     [("origin", "http://localhost:3000"), ("x-csrf-protection", "wrong")],
+113 |     [("origin", "http://localhost:3000"), ("x-csrf-protection", "1"), ("sec-fetch-site", "cross-site")],
+114 |     [("origin", "http://localhost:3000"), ("origin", "http://evil.example"), ("x-csrf-protection", "1")]])
+    |                                                                                                     ^^^^^^
+115 | def test_csrf_rejects_untrusted_or_missing_protection(settings, headers):
+116 |     assert not session_request_allowed(request(headers=headers), settings)
+    |
+
+Found 26 errors (2 fixed, 24 remaining).

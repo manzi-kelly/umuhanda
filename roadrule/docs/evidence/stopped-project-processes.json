@@ -1,0 +1,10 @@
+[
+  {
+    "ProcessId": 6224,
+    "CommandLine": "\"node\"   \"D:\\Roadrules\\roadrule\\node_modules\\.bin\\\\..\\next\\dist\\bin\\next\" dev"
+  },
+  {
+    "ProcessId": 2268,
+    "CommandLine": "\"C:\\Program Files\\nodejs\\node.exe\" D:\\Roadrules\\roadrule\\node_modules\\next\\dist\\server\\lib\\start-server.js"
+  }
+]

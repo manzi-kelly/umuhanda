@@ -1,0 +1,29 @@
+
+> roadrule@0.1.0 test:browser:admin
+> playwright test --config playwright.admin.config.ts --grep private PDF upload
+
+[WebServer] 
+[WebServer] > roadrule@0.1.0 start
+[WebServer] > next start --hostname 127.0.0.1 --port 3100
+[WebServer] 
+[WebServer] (node:14552) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] ▲ Next.js 16.4.5
+[WebServer] - Local:         http://127.0.0.1:3100
+[WebServer] - Network:       http://127.0.0.1:3100
+[WebServer] ✓ Ready in 323ms
+[WebServer] ✓ Running next.config.ts took 124ms
+
+Running 3 tests using 1 worker
+
+(node:11144) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 [390px] › tests\admin-browser\admin.spec.ts:204:5 › private PDF upload, source-backed draft and duplicate recovery (23.7s)
+(node:9708) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 2 [834px] › tests\admin-browser\admin.spec.ts:204:5 › private PDF upload, source-backed draft and duplicate recovery (17.1s)
+(node:14644) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 3 [1440px] › tests\admin-browser\admin.spec.ts:204:5 › private PDF upload, source-backed draft and duplicate recovery (17.4s)
+
+  3 passed (1.2m)

@@ -1,0 +1,11 @@
+{"pid":15504,"code":"EACCES","syscall":"connect","address":"127.0.0.1","port":55553}
+{"pid":17644,"code":"EACCES","syscall":"connect","address":"127.0.0.1","port":55556}
+{"pid":18440,"code":"EACCES","syscall":"connect","address":"127.0.0.1","port":55560}
+{"pid":28932,"code":"EACCES","syscall":"connect","address":"127.0.0.1","port":55563}
+{"pid":23468,"code":"EACCES","syscall":"connect","address":"127.0.0.1","port":55565}
+{"pid":13172,"code":"EACCES","syscall":"connect","address":"127.0.0.1","port":55567}
+{"pid":14428,"code":"EACCES","syscall":"connect","address":"127.0.0.1","port":51500}
+{"pid":27976,"code":"EACCES","syscall":"connect","address":"127.0.0.1","port":51504}
+{"pid":14172,"code":"EACCES","syscall":"connect","address":"127.0.0.1","port":49455}
+{"pid":1732,"code":"EACCES","syscall":"connect","address":"127.0.0.1","port":65521}
+{"pid":14868,"code":"EACCES","syscall":"connect","address":"127.0.0.1","port":65523}

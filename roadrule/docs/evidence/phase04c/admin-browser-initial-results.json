@@ -1,0 +1,802 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\Roadrules\\roadrule\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config",
+      "playwright.admin.config.ts"
+    ],
+    "configFile": "D:\\Roadrules\\roadrule\\playwright.admin.config.ts",
+    "rootDir": "D:/Roadrules/roadrule/tests/admin-browser",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\teardown.ts",
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/Roadrules/roadrule/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "390px",
+        "name": "390px",
+        "testDir": "D:/Roadrules/roadrule/tests/admin-browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "D:/Roadrules/roadrule/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "834px",
+        "name": "834px",
+        "testDir": "D:/Roadrules/roadrule/tests/admin-browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "D:/Roadrules/roadrule/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "1440px",
+        "name": "1440px",
+        "testDir": "D:/Roadrules/roadrule/tests/admin-browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\Roadrules\\roadrule\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "390px",
+        "testDir": "D:\\Roadrules\\roadrule\\tests\\admin-browser",
+        "snapshotDir": "D:\\Roadrules\\roadrule\\tests\\admin-browser",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 120000,
+        "use": {
+          "baseURL": "http://127.0.0.1:3100",
+          "channel": "chrome",
+          "headless": true,
+          "trace": "off",
+          "screenshot": "off",
+          "video": "off",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "390px"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\Roadrules\\roadrule\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "834px",
+        "testDir": "D:\\Roadrules\\roadrule\\tests\\admin-browser",
+        "snapshotDir": "D:\\Roadrules\\roadrule\\tests\\admin-browser",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 120000,
+        "use": {
+          "baseURL": "http://127.0.0.1:3100",
+          "channel": "chrome",
+          "headless": true,
+          "trace": "off",
+          "screenshot": "off",
+          "video": "off",
+          "viewport": {
+            "width": 834,
+            "height": 1112
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "834px"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\Roadrules\\roadrule\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "1440px",
+        "testDir": "D:\\Roadrules\\roadrule\\tests\\admin-browser",
+        "snapshotDir": "D:\\Roadrules\\roadrule\\tests\\admin-browser",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 120000,
+        "use": {
+          "baseURL": "http://127.0.0.1:3100",
+          "channel": "chrome",
+          "headless": true,
+          "trace": "off",
+          "screenshot": "off",
+          "video": "off",
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "1440px"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "docs/evidence/phase04c/admin-browser-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "admin.spec.ts",
+      "file": "admin.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "unauthorized, forged-role and forged-cookie routes fail closed",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "390px",
+              "projectName": "390px",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9572,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T10:35:49.212Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-8969d7042cb59fb35496",
+          "file": "admin.spec.ts",
+          "line": 45,
+          "column": 5
+        },
+        {
+          "title": "login validation, real dashboard, all navigation, unavailable states and logout",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "390px",
+              "projectName": "390px",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6073,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('No exam-ready bank', { exact: true })\nExpected: visible\nError: strict mode violation: getByText('No exam-ready bank', { exact: true }) resolved to 2 elements:\n    1) <p class=\"mt-3 font-semibold\">No exam-ready bank</p> aka getByRole('paragraph').filter({ hasText: 'No exam-ready bank' })\n    2) <p class=\"mt-3 font-semibold\">No exam-ready bank</p> aka getByText('No exam-ready bank').nth(1)\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('No exam-ready bank', { exact: true }) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText('No exam-ready bank', { exact: true })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('No exam-ready bank', { exact: true })\nExpected: visible\nError: strict mode violation: getByText('No exam-ready bank', { exact: true }) resolved to 2 elements:\n    1) <p class=\"mt-3 font-semibold\">No exam-ready bank</p> aka getByRole('paragraph').filter({ hasText: 'No exam-ready bank' })\n    2) <p class=\"mt-3 font-semibold\">No exam-ready bank</p> aka getByText('No exam-ready bank').nth(1)\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('No exam-ready bank', { exact: true }) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText('No exam-ready bank', { exact: true })\u001b[22m\n\n    at D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts:154:9",
+                    "location": {
+                      "file": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts",
+                      "column": 9,
+                      "line": 154
+                    },
+                    "snippet": "  152 |       await expect(\n  153 |         page.getByText(\"No exam-ready bank\", { exact: true }),\n> 154 |       ).toBeVisible();\n      |         ^\n  155 |     } else {\n  156 |       await expect(\n  157 |         page"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts",
+                        "column": 9,
+                        "line": 154
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('No exam-ready bank', { exact: true })\nExpected: visible\nError: strict mode violation: getByText('No exam-ready bank', { exact: true }) resolved to 2 elements:\n    1) <p class=\"mt-3 font-semibold\">No exam-ready bank</p> aka getByRole('paragraph').filter({ hasText: 'No exam-ready bank' })\n    2) <p class=\"mt-3 font-semibold\">No exam-ready bank</p> aka getByText('No exam-ready bank').nth(1)\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('No exam-ready bank', { exact: true }) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText('No exam-ready bank', { exact: true })\u001b[22m\n\n\n  152 |       await expect(\n  153 |         page.getByText(\"No exam-ready bank\", { exact: true }),\n> 154 |       ).toBeVisible();\n      |         ^\n  155 |     } else {\n  156 |       await expect(\n  157 |         page\n    at D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts:154:9"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T10:35:59.909Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\Roadrules\\roadrule\\test-results\\admin-login-validation-rea-66226-available-states-and-logout-390px\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts",
+                    "column": 9,
+                    "line": 154
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-581c7e2c1922fbb07366",
+          "file": "admin.spec.ts",
+          "line": 86,
+          "column": 5
+        },
+        {
+          "title": "server expiration overrides an existing browser cookie",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "390px",
+              "projectName": "390px",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7947,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T10:36:12.940Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-eb0e8cea13892c0d7d81",
+          "file": "admin.spec.ts",
+          "line": 197,
+          "column": 5
+        },
+        {
+          "title": "private PDF upload, source-backed draft and duplicate recovery",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "390px",
+              "projectName": "390px",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 24719,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('No exam-ready bank', { exact: true })\nExpected: visible\nError: strict mode violation: getByText('No exam-ready bank', { exact: true }) resolved to 2 elements:\n    1) <p class=\"mt-3 font-semibold\">No exam-ready bank</p> aka getByRole('paragraph').filter({ hasText: 'No exam-ready bank' })\n    2) <p class=\"mt-3 font-semibold\">No exam-ready bank</p> aka getByText('No exam-ready bank').nth(1)\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('No exam-ready bank', { exact: true }) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText('No exam-ready bank', { exact: true })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('No exam-ready bank', { exact: true })\nExpected: visible\nError: strict mode violation: getByText('No exam-ready bank', { exact: true }) resolved to 2 elements:\n    1) <p class=\"mt-3 font-semibold\">No exam-ready bank</p> aka getByRole('paragraph').filter({ hasText: 'No exam-ready bank' })\n    2) <p class=\"mt-3 font-semibold\">No exam-ready bank</p> aka getByText('No exam-ready bank').nth(1)\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('No exam-ready bank', { exact: true }) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText('No exam-ready bank', { exact: true })\u001b[22m\n\n    at D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts:328:5",
+                    "location": {
+                      "file": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts",
+                      "column": 5,
+                      "line": 328
+                    },
+                    "snippet": "  326 |   await expect(\n  327 |     page.getByText(\"No exam-ready bank\", { exact: true }),\n> 328 |   ).toBeVisible();\n      |     ^\n  329 |   await screenshot(page, info.project.name, \"exam-bank\");\n  330 |   await context.clearCookies();\n  331 |   expect((await context.request.get(imagePath!)).status()).toBe(401);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts",
+                        "column": 5,
+                        "line": 328
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('No exam-ready bank', { exact: true })\nExpected: visible\nError: strict mode violation: getByText('No exam-ready bank', { exact: true }) resolved to 2 elements:\n    1) <p class=\"mt-3 font-semibold\">No exam-ready bank</p> aka getByRole('paragraph').filter({ hasText: 'No exam-ready bank' })\n    2) <p class=\"mt-3 font-semibold\">No exam-ready bank</p> aka getByText('No exam-ready bank').nth(1)\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('No exam-ready bank', { exact: true }) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText('No exam-ready bank', { exact: true })\u001b[22m\n\n\n  326 |   await expect(\n  327 |     page.getByText(\"No exam-ready bank\", { exact: true }),\n> 328 |   ).toBeVisible();\n      |     ^\n  329 |   await screenshot(page, info.project.name, \"exam-bank\");\n  330 |   await context.clearCookies();\n  331 |   expect((await context.request.get(imagePath!)).status()).toBe(401);\n    at D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts:328:5"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T10:36:21.798Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\Roadrules\\roadrule\\test-results\\admin-private-PDF-upload-s-11d0b-raft-and-duplicate-recovery-390px\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts",
+                    "column": 5,
+                    "line": 328
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-c523b8e664c2aec208a5",
+          "file": "admin.spec.ts",
+          "line": 213,
+          "column": 5
+        },
+        {
+          "title": "unauthorized, forged-role and forged-cookie routes fail closed",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "834px",
+              "projectName": "834px",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9918,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T10:36:48.831Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-34654495e96a46626c7b",
+          "file": "admin.spec.ts",
+          "line": 45,
+          "column": 5
+        },
+        {
+          "title": "login validation, real dashboard, all navigation, unavailable states and logout",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "834px",
+              "projectName": "834px",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5882,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('No exam-ready bank', { exact: true })\nExpected: visible\nError: strict mode violation: getByText('No exam-ready bank', { exact: true }) resolved to 2 elements:\n    1) <p class=\"mt-3 font-semibold\">No exam-ready bank</p> aka getByRole('paragraph').filter({ hasText: 'No exam-ready bank' })\n    2) <p class=\"mt-3 font-semibold\">No exam-ready bank</p> aka getByText('No exam-ready bank').nth(1)\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('No exam-ready bank', { exact: true }) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText('No exam-ready bank', { exact: true })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('No exam-ready bank', { exact: true })\nExpected: visible\nError: strict mode violation: getByText('No exam-ready bank', { exact: true }) resolved to 2 elements:\n    1) <p class=\"mt-3 font-semibold\">No exam-ready bank</p> aka getByRole('paragraph').filter({ hasText: 'No exam-ready bank' })\n    2) <p class=\"mt-3 font-semibold\">No exam-ready bank</p> aka getByText('No exam-ready bank').nth(1)\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('No exam-ready bank', { exact: true }) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText('No exam-ready bank', { exact: true })\u001b[22m\n\n    at D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts:154:9",
+                    "location": {
+                      "file": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts",
+                      "column": 9,
+                      "line": 154
+                    },
+                    "snippet": "  152 |       await expect(\n  153 |         page.getByText(\"No exam-ready bank\", { exact: true }),\n> 154 |       ).toBeVisible();\n      |         ^\n  155 |     } else {\n  156 |       await expect(\n  157 |         page"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts",
+                        "column": 9,
+                        "line": 154
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('No exam-ready bank', { exact: true })\nExpected: visible\nError: strict mode violation: getByText('No exam-ready bank', { exact: true }) resolved to 2 elements:\n    1) <p class=\"mt-3 font-semibold\">No exam-ready bank</p> aka getByRole('paragraph').filter({ hasText: 'No exam-ready bank' })\n    2) <p class=\"mt-3 font-semibold\">No exam-ready bank</p> aka getByText('No exam-ready bank').nth(1)\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('No exam-ready bank', { exact: true }) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText('No exam-ready bank', { exact: true })\u001b[22m\n\n\n  152 |       await expect(\n  153 |         page.getByText(\"No exam-ready bank\", { exact: true }),\n> 154 |       ).toBeVisible();\n      |         ^\n  155 |     } else {\n  156 |       await expect(\n  157 |         page\n    at D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts:154:9"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T10:36:59.733Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\Roadrules\\roadrule\\test-results\\admin-login-validation-rea-66226-available-states-and-logout-834px\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts",
+                    "column": 9,
+                    "line": 154
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-fad85d92b291295a7d72",
+          "file": "admin.spec.ts",
+          "line": 86,
+          "column": 5
+        },
+        {
+          "title": "server expiration overrides an existing browser cookie",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "834px",
+              "projectName": "834px",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8202,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T10:37:23.701Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-d126fc11fd5b5985b9ab",
+          "file": "admin.spec.ts",
+          "line": 197,
+          "column": 5
+        },
+        {
+          "title": "private PDF upload, source-backed draft and duplicate recovery",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "834px",
+              "projectName": "834px",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 23802,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('No exam-ready bank', { exact: true })\nExpected: visible\nError: strict mode violation: getByText('No exam-ready bank', { exact: true }) resolved to 2 elements:\n    1) <p class=\"mt-3 font-semibold\">No exam-ready bank</p> aka getByRole('paragraph').filter({ hasText: 'No exam-ready bank' })\n    2) <p class=\"mt-3 font-semibold\">No exam-ready bank</p> aka getByText('No exam-ready bank').nth(1)\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('No exam-ready bank', { exact: true }) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText('No exam-ready bank', { exact: true })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('No exam-ready bank', { exact: true })\nExpected: visible\nError: strict mode violation: getByText('No exam-ready bank', { exact: true }) resolved to 2 elements:\n    1) <p class=\"mt-3 font-semibold\">No exam-ready bank</p> aka getByRole('paragraph').filter({ hasText: 'No exam-ready bank' })\n    2) <p class=\"mt-3 font-semibold\">No exam-ready bank</p> aka getByText('No exam-ready bank').nth(1)\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('No exam-ready bank', { exact: true }) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText('No exam-ready bank', { exact: true })\u001b[22m\n\n    at D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts:328:5",
+                    "location": {
+                      "file": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts",
+                      "column": 5,
+                      "line": 328
+                    },
+                    "snippet": "  326 |   await expect(\n  327 |     page.getByText(\"No exam-ready bank\", { exact: true }).filter({ visible: true }),\n> 328 |   ).toBeVisible();\n      |     ^\n  329 |   await screenshot(page, info.project.name, \"exam-bank\");\n  330 |   await context.clearCookies();\n  331 |   expect((await context.request.get(imagePath!)).status()).toBe(401);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts",
+                        "column": 5,
+                        "line": 328
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('No exam-ready bank', { exact: true })\nExpected: visible\nError: strict mode violation: getByText('No exam-ready bank', { exact: true }) resolved to 2 elements:\n    1) <p class=\"mt-3 font-semibold\">No exam-ready bank</p> aka getByRole('paragraph').filter({ hasText: 'No exam-ready bank' })\n    2) <p class=\"mt-3 font-semibold\">No exam-ready bank</p> aka getByText('No exam-ready bank').nth(1)\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('No exam-ready bank', { exact: true }) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText('No exam-ready bank', { exact: true })\u001b[22m\n\n\n  326 |   await expect(\n  327 |     page.getByText(\"No exam-ready bank\", { exact: true }).filter({ visible: true }),\n> 328 |   ).toBeVisible();\n      |     ^\n  329 |   await screenshot(page, info.project.name, \"exam-bank\");\n  330 |   await context.clearCookies();\n  331 |   expect((await context.request.get(imagePath!)).status()).toBe(401);\n    at D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts:328:5"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T10:37:32.876Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\Roadrules\\roadrule\\test-results\\admin-private-PDF-upload-s-11d0b-raft-and-duplicate-recovery-834px\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts",
+                    "column": 5,
+                    "line": 328
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-182d3205ae0a7df86423",
+          "file": "admin.spec.ts",
+          "line": 213,
+          "column": 5
+        },
+        {
+          "title": "unauthorized, forged-role and forged-cookie routes fail closed",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "1440px",
+              "projectName": "1440px",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9105,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T10:38:00.328Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-496d8b5a98644a201f0f",
+          "file": "admin.spec.ts",
+          "line": 45,
+          "column": 5
+        },
+        {
+          "title": "login validation, real dashboard, all navigation, unavailable states and logout",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "1440px",
+              "projectName": "1440px",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 3898,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('No exam-ready bank', { exact: true })\nExpected: visible\nError: strict mode violation: getByText('No exam-ready bank', { exact: true }) resolved to 2 elements:\n    1) <p class=\"mt-3 font-semibold\">No exam-ready bank</p> aka getByRole('paragraph').filter({ hasText: 'No exam-ready bank' })\n    2) <p class=\"mt-3 font-semibold\">No exam-ready bank</p> aka getByText('No exam-ready bank').nth(1)\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('No exam-ready bank', { exact: true }) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText('No exam-ready bank', { exact: true })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('No exam-ready bank', { exact: true })\nExpected: visible\nError: strict mode violation: getByText('No exam-ready bank', { exact: true }) resolved to 2 elements:\n    1) <p class=\"mt-3 font-semibold\">No exam-ready bank</p> aka getByRole('paragraph').filter({ hasText: 'No exam-ready bank' })\n    2) <p class=\"mt-3 font-semibold\">No exam-ready bank</p> aka getByText('No exam-ready bank').nth(1)\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('No exam-ready bank', { exact: true }) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText('No exam-ready bank', { exact: true })\u001b[22m\n\n    at D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts:154:9",
+                    "location": {
+                      "file": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts",
+                      "column": 9,
+                      "line": 154
+                    },
+                    "snippet": "  152 |       await expect(\n  153 |         page.getByText(\"No exam-ready bank\", { exact: true }).filter({ visible: true }),\n> 154 |       ).toBeVisible();\n      |         ^\n  155 |     } else {\n  156 |       await expect(\n  157 |         page"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts",
+                        "column": 9,
+                        "line": 154
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('No exam-ready bank', { exact: true })\nExpected: visible\nError: strict mode violation: getByText('No exam-ready bank', { exact: true }) resolved to 2 elements:\n    1) <p class=\"mt-3 font-semibold\">No exam-ready bank</p> aka getByRole('paragraph').filter({ hasText: 'No exam-ready bank' })\n    2) <p class=\"mt-3 font-semibold\">No exam-ready bank</p> aka getByText('No exam-ready bank').nth(1)\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('No exam-ready bank', { exact: true }) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText('No exam-ready bank', { exact: true })\u001b[22m\n\n\n  152 |       await expect(\n  153 |         page.getByText(\"No exam-ready bank\", { exact: true }).filter({ visible: true }),\n> 154 |       ).toBeVisible();\n      |         ^\n  155 |     } else {\n  156 |       await expect(\n  157 |         page\n    at D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts:154:9"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T10:38:11.332Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\Roadrules\\roadrule\\test-results\\admin-login-validation-rea-66226-available-states-and-logout-1440px\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts",
+                    "column": 9,
+                    "line": 154
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-b4705843c326ae00ca29",
+          "file": "admin.spec.ts",
+          "line": 86,
+          "column": 5
+        },
+        {
+          "title": "server expiration overrides an existing browser cookie",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "1440px",
+              "projectName": "1440px",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8319,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T10:38:17.370Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-03616466883d242f6826",
+          "file": "admin.spec.ts",
+          "line": 197,
+          "column": 5
+        },
+        {
+          "title": "private PDF upload, source-backed draft and duplicate recovery",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "1440px",
+              "projectName": "1440px",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 18509,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('No exam-ready bank', { exact: true })\nExpected: visible\nError: strict mode violation: getByText('No exam-ready bank', { exact: true }) resolved to 2 elements:\n    1) <p class=\"mt-3 font-semibold\">No exam-ready bank</p> aka getByRole('paragraph').filter({ hasText: 'No exam-ready bank' })\n    2) <p class=\"mt-3 font-semibold\">No exam-ready bank</p> aka getByText('No exam-ready bank').nth(1)\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('No exam-ready bank', { exact: true }) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText('No exam-ready bank', { exact: true })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('No exam-ready bank', { exact: true })\nExpected: visible\nError: strict mode violation: getByText('No exam-ready bank', { exact: true }) resolved to 2 elements:\n    1) <p class=\"mt-3 font-semibold\">No exam-ready bank</p> aka getByRole('paragraph').filter({ hasText: 'No exam-ready bank' })\n    2) <p class=\"mt-3 font-semibold\">No exam-ready bank</p> aka getByText('No exam-ready bank').nth(1)\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('No exam-ready bank', { exact: true }) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText('No exam-ready bank', { exact: true })\u001b[22m\n\n    at D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts:328:5",
+                    "location": {
+                      "file": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts",
+                      "column": 5,
+                      "line": 328
+                    },
+                    "snippet": "  326 |   await expect(\n  327 |     page.getByText(\"No exam-ready bank\", { exact: true }).filter({ visible: true }),\n> 328 |   ).toBeVisible();\n      |     ^\n  329 |   await screenshot(page, info.project.name, \"exam-bank\");\n  330 |   await context.clearCookies();\n  331 |   expect((await context.request.get(imagePath!)).status()).toBe(401);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts",
+                        "column": 5,
+                        "line": 328
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('No exam-ready bank', { exact: true })\nExpected: visible\nError: strict mode violation: getByText('No exam-ready bank', { exact: true }) resolved to 2 elements:\n    1) <p class=\"mt-3 font-semibold\">No exam-ready bank</p> aka getByRole('paragraph').filter({ hasText: 'No exam-ready bank' })\n    2) <p class=\"mt-3 font-semibold\">No exam-ready bank</p> aka getByText('No exam-ready bank').nth(1)\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('No exam-ready bank', { exact: true }) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText('No exam-ready bank', { exact: true })\u001b[22m\n\n\n  326 |   await expect(\n  327 |     page.getByText(\"No exam-ready bank\", { exact: true }).filter({ visible: true }),\n> 328 |   ).toBeVisible();\n      |     ^\n  329 |   await screenshot(page, info.project.name, \"exam-bank\");\n  330 |   await context.clearCookies();\n  331 |   expect((await context.request.get(imagePath!)).status()).toBe(401);\n    at D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts:328:5"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T10:38:26.418Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\Roadrules\\roadrule\\test-results\\admin-private-PDF-upload-s-11d0b-raft-and-duplicate-recovery-1440px\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\Roadrules\\roadrule\\tests\\admin-browser\\admin.spec.ts",
+                    "column": 5,
+                    "line": 328
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "d4043a9dd1ab94463227-27aa544ec426bdcf2004",
+          "file": "admin.spec.ts",
+          "line": 213,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-05T10:35:34.945Z",
+    "duration": 196087.012,
+    "expected": 6,
+    "skipped": 0,
+    "unexpected": 6,
+    "flaky": 0
+  }
+}

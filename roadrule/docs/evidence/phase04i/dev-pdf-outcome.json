@@ -1,0 +1,34 @@
+{
+  "source": "Road rules.pdf",
+  "sha256": "4dd7f45e549937988eae74f8a15c0f832495c10074cde735828f309429eb61c2",
+  "pages": 149,
+  "workerElapsedMs": 47275,
+  "jobStatus": "COMPLETED_WITH_WARNINGS",
+  "processedPages": 149,
+  "extracted": 273,
+  "failedItems": 50,
+  "diagnostics": 50,
+  "diagnosticCode": "UNSUPPORTED_QUESTION_STRUCTURE",
+  "revisionStatus": "EXTRACTION_IMPROVEMENTS_REQUIRED",
+  "policy": "DIFFICULTY_QUOTAS",
+  "activeSource": false,
+  "eligible": 0,
+  "eligibilityCounts": {
+    "INELIGIBLE_INCOMPLETE_OPTIONS": 168,
+    "INELIGIBLE_MISSING_ANSWER": 55,
+    "INELIGIBLE_EXTRACTION_ERROR": 41,
+    "INELIGIBLE_IMAGE_ERROR": 9
+  },
+  "answerEvidence": {
+    "withEvidence": 273,
+    "withoutEvidence": 0
+  },
+  "imageAssociations": {
+    "questionsWithAssets": 127
+  },
+  "difficulty": {
+    "withDifficulty": 0
+  },
+  "roadSignQuestions": 0,
+  "note": "The one-shot worker completed and persisted a revision, but no question passed eligibility, so the revision was not activated. This is a content-extraction finding, not a worker crash."
+}

@@ -1,0 +1,20 @@
+{
+  "synthetic_vector": {
+    "insert_ms": 143.8,
+    "insert_statements": 85,
+    "image_storage_ms": 80.4,
+    "bank_finalize_ms": 100.2,
+    "worker_ms": 853.3,
+    "active": true,
+    "status": "READY"
+  },
+  "real_source": {
+    "insert_ms": 3609.5,
+    "insert_statements": 2373,
+    "image_storage_ms": 3287.4,
+    "bank_finalize_ms": 575.5,
+    "worker_ms": 26564.3,
+    "active": false,
+    "status": "EXTRACTION_IMPROVEMENTS_REQUIRED"
+  }
+}

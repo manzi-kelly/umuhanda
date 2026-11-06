@@ -1,0 +1,32 @@
+
+> roadrule@0.1.0 test:browser
+> playwright test
+
+[WebServer] 
+[WebServer] > roadrule@0.1.0 start
+[WebServer] > next start --hostname 127.0.0.1 --port 3100
+[WebServer] 
+[WebServer] (node:9744) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] ▲ Next.js 16.4.5
+[WebServer] - Local:         http://127.0.0.1:3100
+[WebServer] - Network:       http://127.0.0.1:3100
+[WebServer] ✓ Ready in 646ms
+[WebServer] ✓ Running next.config.ts took 214ms
+
+Running 6 tests using 1 worker
+
+(node:12052) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 [390px] › tests\browser\phase02.spec.ts:4:5 › student flow, navigation, responsive layout and locked exam (12.9s)
+  ok 2 [390px] › tests\browser\phase02.spec.ts:184:5 › direct exam entry stays locked without JavaScript (1.5s)
+(node:14532) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 3 [834px] › tests\browser\phase02.spec.ts:4:5 › student flow, navigation, responsive layout and locked exam (16.9s)
+  ok 4 [834px] › tests\browser\phase02.spec.ts:184:5 › direct exam entry stays locked without JavaScript (1.7s)
+(node:8116) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 5 [1440px] › tests\browser\phase02.spec.ts:4:5 › student flow, navigation, responsive layout and locked exam (18.3s)
+  ok 6 [1440px] › tests\browser\phase02.spec.ts:184:5 › direct exam entry stays locked without JavaScript (2.1s)
+
+  6 passed (1.5m)
