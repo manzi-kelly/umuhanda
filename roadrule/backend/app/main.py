@@ -64,7 +64,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         if h not in custom_allowed_hosts:
             custom_allowed_hosts.append(h)
 
-    app.add_middleware(TrustedHostMiddleware, allowed_hosts=custom_allowed_hosts)
+   # app.add_middleware(TrustedHostMiddleware, allowed_hosts=custom_allowed_hosts)
 
     @app.exception_handler(AccessError)
     async def access_error(_request: Request, error: AccessError):
