@@ -159,7 +159,7 @@ are excluded from settings repr and are not included in validation error text.
 ## Run and inspect the API
 
 ```powershell
-python -m uvicorn app.main:create_app --factory --host 127.0.0.1 --port 8000 --no-access-log --no-proxy-headers
+python -m uvicorn app.main:app --host 127.0.0.1 --port 8000 --no-access-log --no-proxy-headers
 ```
 
 `--no-access-log` avoids recording future sensitive query strings unnecessarily.
