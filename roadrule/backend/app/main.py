@@ -56,7 +56,15 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         openapi_url="/openapi.json" if settings.docs_enabled else None,
     )
     app.state.settings = settings
-    app.add_middleware(TrustedHostMiddleware, allowed_hosts=settings.allowed_hosts)
+
+    # --- KWONGERA DOMAIN YA VERCEL MURI TRUSTED HOSTS ---
+    # Twongereyeho "umuhanda.vercel.app" na "*.vercel.app" kugira ngo icyo kosa ry'invalid host rivaho burundu
+    custom_allowed_hosts = list(settings.allowed_hosts) if settings.allowed_hosts else []
+    for h in ["umuhanda.vercel.app", "*.umuhanda.vercel.app", "*.vercel.app", "localhost", "127.0.0.1"]:
+        if h not in custom_allowed_hosts:
+            custom_allowed_hosts.append(h)
+
+    app.add_middleware(TrustedHostMiddleware, allowed_hosts=custom_allowed_hosts)
 
     @app.exception_handler(AccessError)
     async def access_error(_request: Request, error: AccessError):
@@ -108,7 +116,6 @@ def create_app(settings: Settings | None = None) -> FastAPI:
 
     @app.exception_handler(RequestValidationError)
     async def validation_error(_request: Request, _error: RequestValidationError) -> JSONResponse:
-        # Do not reflect raw request values, secrets or internal validation context.
         return error_response(422, "VALIDATION_ERROR", "Request validation failed.")
 
     @app.exception_handler(HTTPException)
@@ -120,7 +127,6 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     @app.middleware("http")
     async def safe_errors(request: Request, call_next):
         started = perf_counter()
-        # Handle before ServerErrorMiddleware can re-raise into server traceback logs.
         is_session = (
             request.url.path.rstrip("/") == SESSION_PATH
             or request.url.path.startswith(SESSION_PATH + "/")
@@ -155,14 +161,21 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         return response
 
     app.include_router(router)
-    # Outermost user middleware also adds CORS to safe handled error responses.
+
+    # --- KWONGERA DOMAIN YA VERCEL MURI CORS ALLOWED ORIGINS ---
+    custom_cors_origins = list(settings.cors_allowed_origins) if settings.cors_allowed_origins else []
+    for origin in ["https://umuhanda.vercel.app", "http://localhost:3000", "http://localhost:5173"]:
+        if origin not in custom_cors_origins:
+            custom_cors_origins.append(origin)
+
     app.add_middleware(
         CORSMiddleware,
-        allow_origins=settings.cors_allowed_origins,
+        allow_origins=custom_cors_origins,
         allow_credentials=True,
         allow_methods=["GET", "POST", "PUT", "PATCH", "DELETE"],
         allow_headers=["Accept", "Content-Type", "X-CSRF-Protection", "X-PDF-Filename"],
     )
+
     original_openapi = app.openapi
 
     def session_openapi():
