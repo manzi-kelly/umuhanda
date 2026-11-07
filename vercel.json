@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/student-api/:path*",
+      "destination": "https://umuhanda-production.up.railway.app/:path*"
+    }
+  ]
+}
