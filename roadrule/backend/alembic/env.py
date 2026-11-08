@@ -19,13 +19,21 @@ def run_migrations_offline() -> None:
         context.run_migrations()
 
 
+def migrate(connection) -> None:
+    context.configure(connection=connection, target_metadata=target_metadata)
+    with context.begin_transaction():
+        context.run_migrations()
+
+
 def run_migrations_online() -> None:
+    supplied = config.attributes.get("connection")
+    if supplied is not None:
+        migrate(supplied)
+        return
     database = Database(get_settings())
     try:
         with database.engine.connect() as connection:
-            context.configure(connection=connection, target_metadata=target_metadata)
-            with context.begin_transaction():
-                context.run_migrations()
+            migrate(connection)
     finally:
         database.dispose()
 
