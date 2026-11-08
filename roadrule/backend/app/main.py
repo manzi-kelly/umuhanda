@@ -17,6 +17,7 @@ from app.core.admin_security import (
     clear_admin_cookie,
 )
 from app.core.config import Settings, get_settings
+from app.core.db_diagnostics import log_database_failure
 from app.core.session_security import (
     SESSION_PATH,
     InvalidGuestSession,
@@ -57,14 +58,9 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     )
     app.state.settings = settings
 
-    # --- KWONGERA DOMAIN YA VERCEL MURI TRUSTED HOSTS ---
-    # Twongereyeho "umuhanda.vercel.app" na "*.vercel.app" kugira ngo icyo kosa ry'invalid host rivaho burundu
-    custom_allowed_hosts = list(settings.allowed_hosts) if settings.allowed_hosts else []
-    for h in ["umuhanda.vercel.app", "*.umuhanda.vercel.app", "*.vercel.app", "localhost", "127.0.0.1"]:
-        if h not in custom_allowed_hosts:
-            custom_allowed_hosts.append(h)
-
-   # app.add_middleware(TrustedHostMiddleware, allowed_hosts=custom_allowed_hosts)
+    # Host allowlisting is configuration-only. Wildcards, deployment domains or
+    # localhost must never be injected here: production requires explicit hosts.
+    app.add_middleware(TrustedHostMiddleware, allowed_hosts=settings.allowed_hosts)
 
     @app.exception_handler(AccessError)
     async def access_error(_request: Request, error: AccessError):
@@ -111,7 +107,8 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         return response
 
     @app.exception_handler(SQLAlchemyError)
-    async def database_error(_request: Request, _error: SQLAlchemyError) -> JSONResponse:
+    async def database_error(_request: Request, error: SQLAlchemyError) -> JSONResponse:
+        log_database_failure(settings, error)
         return error_response(503, "DATABASE_UNAVAILABLE", "Database service is unavailable.")
 
     @app.exception_handler(RequestValidationError)
@@ -162,15 +159,11 @@ def create_app(settings: Settings | None = None) -> FastAPI:
 
     app.include_router(router)
 
-    # --- KWONGERA DOMAIN YA VERCEL MURI CORS ALLOWED ORIGINS ---
-    custom_cors_origins = list(settings.cors_allowed_origins) if settings.cors_allowed_origins else []
-    for origin in ["https://umuhanda.vercel.app", "http://localhost:3000", "http://localhost:5173"]:
-        if origin not in custom_cors_origins:
-            custom_cors_origins.append(origin)
-
+    # Origins are configuration-only. Do not add deployment or localhost origins
+    # in code; production validation requires explicit non-local HTTPS origins.
     app.add_middleware(
         CORSMiddleware,
-        allow_origins=custom_cors_origins,
+        allow_origins=settings.cors_allowed_origins,
         allow_credentials=True,
         allow_methods=["GET", "POST", "PUT", "PATCH", "DELETE"],
         allow_headers=["Accept", "Content-Type", "X-CSRF-Protection", "X-PDF-Filename"],

@@ -10,11 +10,17 @@ from uuid import UUID
 from sqlalchemy import and_, or_, select, text
 from sqlalchemy.dialects.postgresql import insert
 
-from app.core.config import Settings
-from app.db.session import Database
-from app.models.exam_bank import BankRevision
-from app.models.pdf_import import PdfDocument, PdfImportJob
-from app.services.pdf.jobs import fail_job, process_job, try_lock, unlock
+# Allow `python scripts/pdf_worker.py` from the backend directory. Python puts
+# the script directory on sys.path, not the backend root.
+BACKEND_ROOT = Path(__file__).resolve().parents[1]
+if str(BACKEND_ROOT) not in sys.path:
+    sys.path.insert(0, str(BACKEND_ROOT))
+
+from app.core.config import Settings  # noqa: E402
+from app.db.session import Database  # noqa: E402
+from app.models.exam_bank import BankRevision  # noqa: E402
+from app.models.pdf_import import PdfDocument, PdfImportJob  # noqa: E402
+from app.services.pdf.jobs import fail_job, process_job, try_lock, unlock  # noqa: E402
 
 
 def main():

@@ -1,3 +1,4 @@
+import logging
 from unittest.mock import Mock
 
 from fastapi.testclient import TestClient
@@ -27,6 +28,24 @@ def test_database_errors_are_safe_and_cors_applies(client):
     }
     assert "secret" not in response.text
     assert response.headers["access-control-allow-origin"] == "http://localhost:3000"
+
+
+def test_database_failure_logging_is_sanitized(client, caplog):
+    session = Mock()
+    session.execute.side_effect = OperationalError(
+        "postgresql://roadrules_dev_app:unit-only@127.0.0.1:1/roadrules_dev",
+        {},
+        Exception("secret-password"),
+    )
+    client.app.dependency_overrides[get_session] = lambda: session
+    with caplog.at_level(logging.WARNING, logger="roadrules.api"):
+        response = client.get("/api/v1/health/ready")
+    assert response.status_code == 503
+    assert "database_unavailable" in caplog.text
+    assert "target=127.0.0.1:1/roadrules_dev" in caplog.text
+    assert "sqlstate=unknown" in caplog.text
+    assert "unit-only" not in caplog.text
+    assert "secret-password" not in caplog.text
 
 
 def test_cors_explicit_allowlist(client):
@@ -132,7 +151,24 @@ def test_validation_and_unexpected_errors_do_not_reflect_inputs(settings):
 
 
 def test_trusted_hosts(client):
+    assert client.get("/api/v1/health", headers={"Host": "testserver"}).status_code == 200
     assert client.get("/api/v1/health", headers={"Host": "untrusted.example"}).status_code == 400
+    # Deployment/public hosts are only trusted when explicitly configured.
+    assert (
+        client.get("/api/v1/health", headers={"Host": "umuhanda.vercel.app"}).status_code == 400
+    )
+
+
+def test_unconfigured_deployment_origins_are_not_trusted(client):
+    response = client.options(
+        "/api/v1/health",
+        headers={
+            "Origin": "https://umuhanda.vercel.app",
+            "Access-Control-Request-Method": "GET",
+        },
+    )
+    assert response.status_code == 400
+    assert "access-control-allow-origin" not in response.headers
 
 
 def test_shutdown_disposes_pool(settings, monkeypatch):

@@ -156,6 +156,24 @@ It never inherits a permissive localhost CORS allowlist or debug mode. Configure
 trusted PostgreSQL CA via `sslrootcert` where needed. Database secrets use SecretStr,
 are excluded from settings repr and are not included in validation error text.
 
+Trusted hosts and CORS origins are configuration-only. `app/main.py` must not add
+wildcards, deployment domains or localhost entries, and `core/session_security.py`
+must not hardcode an origin. Production `ALLOWED_HOSTS` must include every public
+backend host plus `healthcheck.railway.app` (Railway sends that Host header during
+deployment health checks). Wildcards and localhost are rejected.
+
+For Railway, run Uvicorn with `--proxy-headers --forwarded-allow-ips="*"` because
+TLS terminates at the Railway edge; without trusted proxy headers, production
+session/admin requests are rejected as non-HTTPS. Use `/api/v1/health` as the
+health check path so deploys never depend on PostgreSQL availability. See
+[Railway production recovery](../docs/railway-production-recovery.md) for exact
+variables, CA/`verify-full` setup, safe migration commands and verification.
+
+Database failures now log one sanitized warning with error class, SQLSTATE,
+category, `host:port/database` and SSL mode. Raw exception text, DSNs, usernames
+and passwords are never logged. Run the read-only diagnostic inside a deployment
+shell with `python scripts/diagnose_database.py`.
+
 ## Run and inspect the API
 
 ```powershell
