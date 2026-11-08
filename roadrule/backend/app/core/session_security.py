@@ -68,13 +68,28 @@ def clear_guest_cookie(response: Response, settings: Settings) -> None:
 
 
 def session_request_allowed(request: Request, settings: Settings) -> bool:
+    """
+    Validate session request security.
+    Only permit requests originating exclusively from the production Vercel domain 
+    (https://umuhanda.vercel.app) or configured cors allowed origins, rejecting unauthorized cross-site requests.
+    """
     if settings.guest_cookie_secure and request.url.scheme != "https":
         return False
+
     origins = request.headers.getlist("origin")
-    if len(origins) > 1 or (origins and origins[0] not in settings.cors_allowed_origins):
+    
+    # Explicitly enforce permission for https://umuhanda.vercel.app and cors_allowed_origins
+    allowed_domains = {"https://umuhanda.vercel.app"}
+    if settings.cors_allowed_origins:
+        allowed_domains.update(settings.cors_allowed_origins)
+
+    if len(origins) > 1 or (origins and origins[0] not in allowed_domains):
         return False
+
     if request.headers.get("sec-fetch-site") == "cross-site":
         return False
+
     if request.method not in {"GET", "HEAD", "OPTIONS"}:
         return bool(origins) and request.headers.getlist("x-csrf-protection") == ["1"]
+
     return True
