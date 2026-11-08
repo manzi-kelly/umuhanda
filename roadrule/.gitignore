@@ -25,6 +25,8 @@
 # misc
 .DS_Store
 *.pem
+*.pem
+!backend/certs/postgres-root-ca.pem
 
 # debug
 npm-debug.log*
