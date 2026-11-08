@@ -89,7 +89,10 @@ export async function accessRequest<T>(
   try {
     response = await fetch("/student-api/" + path, {
       method: method ?? (body ? "POST" : "GET"),
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        "X-CSRF-Protection": "1",
+      },
       body: body ? JSON.stringify(body) : undefined,
       cache: "no-store",
       signal: controller.signal,
