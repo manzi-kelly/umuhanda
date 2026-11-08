@@ -2,6 +2,7 @@
 
 import ipaddress
 import json
+import ssl
 from pathlib import Path
 from typing import Annotated, Literal
 from urllib.parse import urlsplit
@@ -24,6 +25,7 @@ def parse_database_url(secret: SecretStr) -> URL:
             or not url.username
             or not url.password
             or url.username.lower() in {"postgres", "root"}
+            or any(not isinstance(value, str) or not value for value in url.query.values())
             or set(url.query) - {"sslmode", "sslrootcert", "sslcert", "sslkey", "sslcrl"}
         ):
             raise ValueError
@@ -166,6 +168,19 @@ class Settings(BaseSettings):
                 raise ValueError("Production cannot use development or test databases.")
             if url.query.get("sslmode") != "verify-full":
                 raise ValueError("Production requires PostgreSQL sslmode=verify-full.")
+            if any(character in url.host for character in "/\\,"):
+                raise ValueError("Production requires one TCP database host.")
+            ca = url.query.get("sslrootcert")
+            if ca and ca != "system":
+                try:
+                    path = Path(ca)
+                    if not path.is_absolute() or not path.is_file():
+                        raise ValueError
+                    ssl.create_default_context(cafile=str(path))
+                except (OSError, ValueError):
+                    raise ValueError(
+                        "Production sslrootcert must point to an absolute, readable PEM CA file."
+                    ) from None
             if "allowed_hosts" not in self.model_fields_set:
                 raise ValueError("Production requires explicit ALLOWED_HOSTS.")
             if any(host in {"localhost", "127.0.0.1", "testserver"} for host in self.allowed_hosts):

@@ -1,7 +1,10 @@
 import pytest
 from pydantic import ValidationError
+from sqlalchemy import event
+from sqlalchemy.engine import make_url
 
 from app.core.config import Settings
+from app.db.session import Database
 
 DEV = "postgresql+psycopg://roadrules_dev_app:unit-only@127.0.0.1:1/roadrules_dev"
 TEST = "postgresql+psycopg://roadrules_test_app:unit-only@127.0.0.1:1/roadrules_test"
@@ -105,3 +108,60 @@ def test_production_requires_explicit_safe_configuration(settings):
 def test_invalid_configuration_fails_closed(settings, kwargs):
     with pytest.raises(ValidationError):
         Settings(_env_file=None, database_url=DEV, **kwargs)
+
+
+@pytest.mark.parametrize("kind", ["relative", "missing", "invalid_pem"])
+def test_production_rejects_unusable_explicit_ca(settings, tmp_path, kind):
+    ca = tmp_path / "invalid.pem"
+    if kind == "invalid_pem":
+        ca.write_text("invalid certificate", encoding="utf-8")
+    url = make_url("postgresql+psycopg://runtime:fixture@db.railway.internal/app")
+    url = url.update_query_dict(
+        {
+            "sslmode": "verify-full",
+            "sslrootcert": "relative.pem" if kind == "relative" else str(ca),
+        }
+    )
+    with pytest.raises(ValidationError, match="readable PEM CA") as error:
+        Settings(
+            _env_file=None,
+            app_env="production",
+            database_url=url.render_as_string(hide_password=False),
+            allowed_hosts=["api.example.com"],
+        )
+    assert "fixture" not in str(error.value)
+    assert str(ca) not in str(error.value)
+
+
+def test_production_private_url_preserves_encoded_password(settings):
+    config = Settings(
+        _env_file=None,
+        app_env="production",
+        database_url=(
+            "postgresql+psycopg://runtime:fixture%40%2F%25@"
+            "db.railway.internal:5432/app?sslmode=verify-full"
+        ),
+        allowed_hosts=["api.example.com", "healthcheck.railway.app"],
+        cors_allowed_origins=["https://frontend.example.com"],
+    )
+    assert config.connection_url.password == "fixture@/%"
+    assert config.guest_cookie_name == "__Secure-roadrules_guest"
+    assert config.admin_cookie_name == "__Secure-roadrules_admin"
+    assert not config.docs_enabled
+    database = Database(config)
+
+    class ConnectionInspected(Exception):
+        pass
+
+    @event.listens_for(database.engine, "do_connect")
+    def inspect_parameters(_dialect, _record, _args, parameters):
+        assert parameters["sslmode"] == "verify-full"
+        assert parameters["gssencmode"] == "disable"
+        assert parameters["host"] == "db.railway.internal"
+        raise ConnectionInspected
+
+    try:
+        with pytest.raises(ConnectionInspected):
+            database.engine.connect()
+    finally:
+        database.dispose()

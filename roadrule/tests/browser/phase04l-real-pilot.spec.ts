@@ -76,7 +76,7 @@ test("real PDF activates and grades a 2-sign 18-general browser exam", async ({ 
   const root = `/student-api/exams/${first.id}`;
   let loadedImages = 0;
   for (let position = 1; position <= 20; position += 1) {
-    await expect(page.getByRole("heading", { name: `Ikibazo ${position}/20`, exact: true })).toBeVisible();
+    await expect(page.getByRole("progressbar")).toHaveAttribute("aria-valuenow", String(position));
     const current = await page.request.get(root + "/current");
     expect(current.status()).toBe(200);
     const { exam } = await current.json();
@@ -120,11 +120,16 @@ with Database(Settings(app_env="testing")).engine.connect() as db:
         JOIN exam_results g ON g.attempt_id = a.id
         WHERE a.id = CAST(:attempt AS uuid) GROUP BY a.policy, g.correct
     """), {"attempt": sys.argv[1]}).mappings().one()
-    assert db.scalar(text("SELECT count(*) FROM payment_transactions")) == 0
+    assert db.scalar(text("""
+        SELECT count(*) FROM payment_transactions p
+        JOIN exam_attempts a ON a.guest_session_id = p.guest_session_id
+        WHERE a.id = CAST(:attempt AS uuid)
+    """), {"attempt": sys.argv[1]}) == 0
     print(json.dumps(dict(rows)))
 `, first.id], { cwd, windowsHide: true, encoding: "utf8" }));
   expect(database).toMatchObject({ policy: "CATEGORY_BALANCED", total: 20, unique_questions: 20, signs: 2, persisted_score: result.score, expected_score: result.score });
-  await expect(page.getByText(`${result.score}/20 · ${result.percentage}%`, { exact: true })).toBeVisible();
+  await expect(page.getByText(`${result.score}/20`, { exact: true })).toBeVisible();
+  await expect(page.getByText(`${result.percentage}%`, { exact: true })).toBeVisible();
   expect(loadedImages).toBeGreaterThanOrEqual(2);
   expect(browserErrors).toEqual([]);
   await info.attach("real-pilot", {

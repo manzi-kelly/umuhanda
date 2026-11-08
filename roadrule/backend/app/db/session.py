@@ -23,6 +23,8 @@ class Database:
             connect_args={
                 "connect_timeout": settings.db_connect_timeout,
                 "application_name": "roadrules_api",
+                # libpq can prefer GSS encryption over TLS even with verify-full.
+                **({"gssencmode": "disable"} if settings.app_env == "production" else {}),
                 "options": (
                     f"-c statement_timeout={settings.db_statement_timeout_ms} -c timezone=UTC"
                 ),

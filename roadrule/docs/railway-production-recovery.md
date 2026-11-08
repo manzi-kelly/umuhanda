@@ -1,5 +1,7 @@
 # Railway production recovery runbook
 
+> Historical runbook. Use the [Phase 1 handoff](railway-phase1-handoff.md) for current instructions. Its existing-database and explicit-approval rules supersede the earlier provisioning examples below.
+
 Status: **diagnosis and repository fixes only. Live recovery is not verified.**
 The production API will stay unhealthy until the configuration changes below are
 applied and the fixed code is deployed. Do not claim recovery from a local test.

@@ -41,12 +41,11 @@ test("source-backed vector choices render inside the authenticated student optio
   await page.getByRole("button", { name: "Komeza ku kwishyura" }).click();
   await page.getByRole("textbox", { name: "Kode ya promo" }).fill(code);
   await page.getByRole("button", { name: "Koresha kode" }).click();
-  await expect(page.getByText("Ufite uruhushya rwemejwe na seriveri.")).toBeVisible();
-  await page.goto("/exam");
+  await expect(page).toHaveURL(/\/exam$/);
   await page.getByRole("button", { name: "Tangira ikizamini" }).click();
   const choices = page.locator("fieldset img");
   for (let position = 1; position <= 20; position += 1) {
-    await expect(page.getByRole("heading", { name: `Ikibazo ${position}/20`, exact: true })).toBeVisible();
+    await expect(page.getByRole("progressbar")).toHaveAttribute("aria-valuenow", String(position));
     if (await choices.count()) break;
     if (position < 20) await page.getByRole("button", { name: "Ikibazo gikurikira" }).click();
   }

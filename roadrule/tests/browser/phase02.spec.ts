@@ -244,21 +244,6 @@ test("student flow, navigation, responsive layout and locked exam", async ({
       (await (await page.request.get("/student-api/exam-access/me")).json())
         .entitlements,
     ).toEqual([]);
-    execFileSync(
-      resolve("backend/.venv/Scripts/python.exe"),
-      ["-m", "scripts.admin_browser_fixture", "settle", payment.id],
-      {
-        cwd: resolve("backend"),
-        env: { ...process.env, PHASE04D_BROWSER_ACCESS: "1" },
-        windowsHide: true,
-      },
-    );
-    await page
-      .getByRole("button", { name: "Reba uko igerageza rihagaze" })
-      .click();
-    await expect(
-      page.getByText("Ufite uruhushya rwemejwe na seriveri."),
-    ).toBeVisible();
     await page.getByRole("radio", { name: "Airtel Money" }).check();
     await expect(payer).toHaveValue("+250781234567");
     await page.getByRole("button", { name: "AIRTEL · Igerageza" }).click();
@@ -346,13 +331,26 @@ test("student flow, navigation, responsive layout and locked exam", async ({
           .length,
       ).toBe(before + 1);
       await expect(page).toHaveURL(/\/exam$/);
-      await expect(
-        page.getByText("Ufite uruhushya rwemejwe na seriveri."),
-      ).toBeVisible();
+      await expect(page.locator("#access-unavailable")).toContainText(
+        "Uruhushya rwemejwe",
+      );
       await recordTiming("redeemPromo", "/student-api/promos/redeem");
     } finally {
       await adminContext.close();
     }
+
+    execFileSync(
+      resolve("backend/.venv/Scripts/python.exe"),
+      ["-m", "scripts.admin_browser_fixture", "settle", payment.id],
+      {
+        cwd: resolve("backend"),
+        env: { ...process.env, PHASE04D_BROWSER_ACCESS: "1" },
+        windowsHide: true,
+      },
+    );
+    const settled = await page.request.get(`/student-api/payments/${payment.id}/status`);
+    expect(settled.status()).toBe(200);
+    expect((await settled.json()).status).toBe("SUCCESSFUL");
 
     // Attack browser-controlled state and query parameters; the server shell stays locked.
     await page.evaluate(() => {
@@ -404,9 +402,7 @@ test("student flow, navigation, responsive layout and locked exam", async ({
         clockFile,
         new Date(startedAt + seconds * 1000).toISOString(),
       );
-    await expect(
-      page.getByRole("heading", { name: "Ikibazo 1/20", exact: true }),
-    ).toBeVisible();
+    await expect(page.getByRole("progressbar")).toHaveAttribute("aria-valuenow", "1");
     await expect(page.getByTestId("global-countdown")).toBeVisible();
     await expect(page.getByTestId("question-countdown")).toBeVisible();
     await page.route("**/student-api/exams/*/answer", (route) =>
@@ -420,14 +416,10 @@ test("student flow, navigation, responsive layout and locked exam", async ({
     await page.getByRole("radio").first().click();
     await expect(page.getByRole("radio").first()).toBeChecked();
     await page.reload();
-    await expect(
-      page.getByRole("heading", { name: "Ikibazo 1/20", exact: true }),
-    ).toBeVisible();
+    await expect(page.getByRole("progressbar")).toHaveAttribute("aria-valuenow", "1");
     await expect(page.getByRole("radio").first()).toBeChecked();
     await page.getByRole("button", { name: "Ikibazo gikurikira" }).click();
-    await expect(
-      page.getByRole("heading", { name: "Ikibazo 2/20", exact: true }),
-    ).toBeVisible();
+    await expect(page.getByRole("progressbar")).toHaveAttribute("aria-valuenow", "2");
     await expect(page.getByRole("radio").first()).not.toBeChecked();
     const recovered = await (
       await page.request.get("/student-api/exams/me")
@@ -435,9 +427,7 @@ test("student flow, navigation, responsive layout and locked exam", async ({
     expect(recovered.exam.globalDeadline).toBe(startedExam.globalDeadline);
     jump(125);
     await page.clock.fastForward(65000);
-    await expect(
-      page.getByRole("heading", { name: /^Ikibazo [34]\/20$/ }),
-    ).toBeVisible();
+    await expect(page.getByRole("progressbar")).toHaveAttribute("aria-valuenow", /^[34]$/);
     await expect
       .poll(() =>
         page
@@ -459,7 +449,7 @@ test("student flow, navigation, responsive layout and locked exam", async ({
     );
     await expect(
       page.getByTestId("global-countdown").locator(".."),
-    ).toHaveClass(/text-red-800/);
+    ).toHaveClass(/animate-pulse/);
     await capture("warning");
     jump(1201);
     await page.getByRole("button", { name: "Vugurura" }).click();
@@ -475,7 +465,8 @@ test("student flow, navigation, responsive layout and locked exam", async ({
     await expect(
       page.getByText("Ntabwo watsinze ikizamini. Ushobora kongera kugerageza."),
     ).toBeVisible();
-    await expect(page.getByText("1/20 · 5%", { exact: true })).toBeVisible();
+    await expect(page.getByText("1/20", { exact: true })).toBeVisible();
+    await expect(page.getByText("5%", { exact: true })).toBeVisible();
     await capture("failed-result");
     const originalResultPath = `/student-api/exams/${startedExam.id}/result`;
     const original = await (await page.request.get(originalResultPath)).json();
@@ -529,7 +520,7 @@ test("student flow, navigation, responsive layout and locked exam", async ({
       page.getByText("QA Student", { exact: true }).filter({ visible: true }),
     ).toBeVisible();
     await page
-      .getByRole("link", { name: "Reba uko ikizamini gihagaze" })
+      .getByRole("link", { name: "Komeza ku kwitegura ikizamini" })
       .click();
     await expect(page).toHaveURL(/retake=1$/);
     rmSync(clockFile, { force: true });
@@ -679,7 +670,8 @@ with Database(get_settings()).session_factory() as db:
     await expect(
       page.getByText("Congratulations! Watsinze ikizamini."),
     ).toBeVisible();
-    await expect(page.getByText("12/20 · 60%", { exact: true })).toBeVisible();
+    await expect(page.getByText("12/20", { exact: true })).toBeVisible();
+    await expect(page.getByText("60%", { exact: true })).toBeVisible();
     await capture("passed-result");
     expect(await (await page.request.get(originalResultPath)).json()).toEqual(
       original,

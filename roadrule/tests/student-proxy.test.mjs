@@ -186,16 +186,12 @@ test("request policy keeps the existing student API allowlist", () => {
 });
 
 test("no Vercel edge rewrite shadows the secure student bridge", () => {
+  assert.equal(load("../next.config.ts").default.rewrites, undefined);
   const vercel = new URL("../vercel.json", import.meta.url);
   if (fs.existsSync(vercel)) {
     const config = JSON.parse(fs.readFileSync(vercel, "utf8"));
-    assert.equal(
-      (config.rewrites ?? []).some((rewrite) =>
-        String(rewrite.source).startsWith("/student-api"),
-      ),
-      false,
-      "Remove the duplicate /student-api rewrite; the Next.js route handler is the proxy.",
-    );
+    assert.equal(config.rewrites?.length ?? 0, 0);
+    assert.equal(config.routes?.length ?? 0, 0);
   }
 
   const route = fs.readFileSync(
