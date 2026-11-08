@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
-    "test": "node --test tests/phase02.test.mjs",
+    "test": "node --test tests/phase02.test.mjs tests/student-proxy.test.mjs",
     "test:browser": "playwright test",
     "test:browser:admin": "playwright test --config playwright.admin.config.ts"
   },

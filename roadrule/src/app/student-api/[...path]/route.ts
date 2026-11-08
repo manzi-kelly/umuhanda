@@ -1,16 +1,9 @@
 import { NextResponse } from "next/server";
-import { adminConfig } from "@/features/admin/server";
-
-const uuid = "[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}";
-const reads = new RegExp(
-  `^(exam-access/me|payments/${uuid}/status|exams/me|students/exams/history|exams/${uuid}/result|exams/${uuid}/current|exams/${uuid}/media/[0-9]{1,2}/[0-9]{1,2})$`,
-);
-const writes = new Set([
-  "students/sessions",
-  "payments/mock/initiate",
-  "promos/redeem",
-  "exams/start",
-]);
+import {
+  studentProxyConfig,
+  studentRequestAllowed,
+  studentUpstreamUrl,
+} from "@/features/onboarding/proxy";
 
 function error(status: number, code: string) {
   return Response.json(
@@ -31,14 +24,10 @@ async function bridge(
   const path = (await context.params).path.join("/");
   const post = request.method === "POST";
   const put = request.method === "PUT";
-  const allowed = post
-    ? writes.has(path) || new RegExp(`^exams/${uuid}/next$`).test(path)
-    : put
-      ? new RegExp(`^exams/${uuid}/answer$`).test(path)
-      : reads.test(path);
-  if (!allowed) return new Response(null, { status: 404 });
+  if (!studentRequestAllowed(request.method, path))
+    return new Response(null, { status: 404 });
   try {
-    const config = adminConfig();
+    const config = studentProxyConfig();
     if ((post || put) && request.headers.get("origin") !== config.frontend)
       return error(403, "ORIGIN_REJECTED");
     if (
@@ -50,12 +39,7 @@ async function bridge(
         .toLowerCase() !== "application/json"
     )
       return error(415, "VALIDATION_ERROR");
-    const backendCookie = config.secure
-      ? "__Secure-roadrules_guest"
-      : "roadrules_guest";
-    const browserCookie = config.secure
-      ? "__Secure-roadrules_student_ui"
-      : "roadrules_student_ui";
+    const { backendCookie, browserCookie } = config;
     const tokens = (request.headers.get("cookie") ?? "")
       .split(";")
       .map((part) => part.trim())
@@ -96,8 +80,7 @@ async function bridge(
         if (value !== null) query.set(key, value);
       }
     }
-    const target = new URL(config.api + "/api/v1/" + path);
-    target.search = query.toString();
+    const target = studentUpstreamUrl(config.api, path, query);
     const forwarding = performance.now();
     const upstream = await fetch(target, {
       method: request.method,
