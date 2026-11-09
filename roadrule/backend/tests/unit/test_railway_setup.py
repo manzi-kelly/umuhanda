@@ -6,11 +6,11 @@ import pytest
 from scripts import setup_railway_production as setup
 
 
-def connection_with(relations, identity=("railway", "postgres", "180001"), tls=True):
+def connection_with(relations, identity=("railway", "postgres", "180001"), tls_status=(True,)):
     connection = Mock()
-    connection.info.ssl_in_use = tls
     connection.execute.side_effect = [
         SimpleNamespace(fetchone=lambda: identity),
+        SimpleNamespace(fetchone=lambda: tls_status),
         SimpleNamespace(fetchall=lambda: relations),
     ]
     return connection
@@ -22,17 +22,26 @@ def test_inspect_empty_database_is_read_only():
     assert all(call.args[0].startswith("SELECT ") for call in connection.execute.call_args_list)
 
 
-@pytest.mark.parametrize(
-    "relations,identity,tls",
-    [
-        ([("legacy_table", "postgres", "r")], ("railway", "postgres", "180001"), True),
-        ([], ("other", "postgres", "180001"), True),
-        ([], ("railway", "postgres", "180001"), False),
-    ],
-)
-def test_inspect_refuses_unknown_existing_data_or_wrong_target(relations, identity, tls):
-    with pytest.raises(setup.SetupError):
-        setup.inspect(connection_with(relations, identity, tls), Mock(), "migration_role")
+@pytest.mark.parametrize("tls_status", [None, (False,), (None,)])
+def test_inspect_requires_tls_before_reading_schema(tls_status):
+    connection = connection_with([], tls_status=tls_status)
+    with pytest.raises(setup.SetupError, match="Verified TLS is required"):
+        setup.inspect(connection, Mock(), "migration_role")
+    assert connection.execute.call_count == 2
+    assert "pg_catalog.pg_stat_ssl" in connection.execute.call_args.args[0]
+
+
+def test_inspect_refuses_wrong_target_before_querying_tls():
+    connection = connection_with([], identity=("other", "postgres", "180001"))
+    with pytest.raises(setup.SetupError, match="identity or version"):
+        setup.inspect(connection, Mock(), "migration_role")
+    assert connection.execute.call_count == 1
+
+
+def test_inspect_refuses_untracked_schema():
+    connection = connection_with([("legacy_table", "postgres", "r")])
+    with pytest.raises(setup.SetupError, match="without Alembic history"):
+        setup.inspect(connection, Mock(), "migration_role")
 
 
 def test_existing_managed_role_is_never_rotated(monkeypatch):
@@ -103,3 +112,15 @@ def test_operator_connection_requires_verified_hostname(monkeypatch, tmp_path):
     assert arguments["sslmode"] == "verify-full"
     assert arguments["sslrootcert"] == str(ca)
     assert arguments["gssencmode"] == "disable"
+
+
+def test_password_prompt_refuses_echo_fallback(monkeypatch):
+    import warnings
+
+    def fallback(_prompt):
+        warnings.warn("unavailable", setup.GetPassWarning, stacklevel=2)
+        pytest.fail("Password input must stop before reading unmasked input")
+
+    monkeypatch.setattr(setup, "getpass", fallback)
+    with pytest.raises(setup.SetupError, match="masked password"):
+        setup.read_password("Password: ")

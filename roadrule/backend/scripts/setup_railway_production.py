@@ -4,7 +4,8 @@ import argparse
 import os
 import ssl
 import sys
-from getpass import getpass
+import warnings
+from getpass import GetPassWarning, getpass
 from pathlib import Path
 
 import psycopg
@@ -15,11 +16,11 @@ from sqlalchemy import text
 from sqlalchemy.engine import URL
 
 from alembic import command
+from app.core.config import MIGRATION_LOCK
 
 HOST = "postgres.railway.internal"
 DATABASE = "railway"
 MARKER = "roadrules-production-setup-v1"
-LOCK = 819913428
 ROOT = Path(__file__).resolve().parents[1]
 DELETE_TABLES = {"question_draft_answers", "question_drafts"}
 UPDATE_TABLES = {
@@ -86,6 +87,15 @@ class SetupError(Exception):
     """Safe operator-facing failure."""
 
 
+def read_password(prompt):
+    with warnings.catch_warnings():
+        warnings.simplefilter("error", GetPassWarning)
+        try:
+            return getpass(prompt)
+        except GetPassWarning:
+            raise SetupError("A terminal with masked password input is required.") from None
+
+
 def connect(role, password, ca):
     return psycopg.connect(
         host=HOST,
@@ -100,14 +110,21 @@ def connect(role, password, ca):
     )
 
 
+def require_tls(connection):
+    tls_status = connection.execute(
+        "SELECT ssl FROM pg_catalog.pg_stat_ssl WHERE pid = pg_backend_pid()"
+    ).fetchone()
+    if tls_status is None or tls_status[0] is not True:
+        raise SetupError("Verified TLS is required.")
+
+
 def inspect(connection, scripts, migrator):
     database, user, version = connection.execute(
         "SELECT current_database(), current_user, current_setting('server_version_num')"
     ).fetchone()
     if (database, user) != (DATABASE, "postgres") or not 180000 <= int(version) < 190000:
         raise SetupError("Unexpected PostgreSQL identity or version.")
-    if not connection.info.ssl_in_use:
-        raise SetupError("Verified TLS is required.")
+    require_tls(connection)
     objects = connection.execute(
         """SELECT c.relname, pg_get_userbyid(c.relowner), c.relkind
            FROM pg_class c JOIN pg_namespace n ON n.oid=c.relnamespace
@@ -233,6 +250,7 @@ def provision_schema(config, settings, runtime, migrator, head):
                         {"role": runtime, "relation": relation, "privilege": privilege},
                     )
                     if privilege not in privileges and privilege in {
+                        "SELECT",
                         "INSERT",
                         "UPDATE",
                         "REFERENCES",
@@ -241,6 +259,21 @@ def provision_schema(config, settings, runtime, migrator, head):
                             text("SELECT has_any_column_privilege(:role, :relation, :privilege)"),
                             {"role": runtime, "relation": relation, "privilege": privilege},
                         )
+                    if privilege in privileges and connection.scalar(
+                        text("""
+                            SELECT has_table_privilege(:role, :relation, :grant_option)
+                            OR CASE WHEN :column_privilege THEN
+                                has_any_column_privilege(:role, :relation, :grant_option)
+                                ELSE false END
+                        """),
+                        {
+                            "role": runtime,
+                            "relation": relation,
+                            "grant_option": f"{privilege} WITH GRANT OPTION",
+                            "column_privilege": privilege in {"SELECT", "INSERT", "UPDATE"},
+                        },
+                    ):
+                        raise SetupError("Runtime can delegate application table privileges.")
                     if allowed != (privilege in privileges):
                         raise SetupError("Runtime table grants differ from the audited policy.")
             if connection.scalar(
@@ -310,7 +343,7 @@ def main():
     os.chdir(ROOT)
     config = Config(str(ROOT / "alembic.ini"))
     scripts = ScriptDirectory.from_config(config)
-    with connect("postgres", getpass("Postgres operator password: "), args.ca) as admin:
+    with connect("postgres", read_password("Postgres operator password: "), args.ca) as admin:
         inspect(admin, scripts, args.migrator)
         for label, role in zip(("Runtime", "Migration"), roles, strict=True):
             print(f"{label} role {'exists' if role_state(admin, role) else 'is absent'}")
@@ -336,7 +369,7 @@ def main():
             != "REVOKE PUBLIC LARGE OBJECT railway"
         ):
             raise SetupError("The PUBLIC large-object change was not approved.")
-        passwords = {role: getpass(f"Password for {role}: ") for role in roles}
+        passwords = {role: read_password(f"Password for {role}: ") for role in roles}
         if (
             any(len(password) < 20 for password in passwords.values())
             or len(set(passwords.values())) != 2
@@ -357,7 +390,7 @@ def main():
         from app.core.config import Settings
 
         settings = Settings()
-        if not admin.execute("SELECT pg_try_advisory_lock(%s)", (LOCK,)).fetchone()[0]:
+        if not admin.execute("SELECT pg_try_advisory_lock(%s)", (MIGRATION_LOCK,)).fetchone()[0]:
             raise SetupError("Another production setup is running.")
         inspect(admin, scripts, args.migrator)
         with admin.transaction():
@@ -390,11 +423,9 @@ def main():
                 lambda statement, params: admin_query(admin, statement, params), args.runtime
             )
         with connect(args.runtime, passwords[args.runtime], args.ca) as runtime:
-            if not runtime.info.ssl_in_use:
-                raise SetupError("Runtime TLS verification failed.")
+            require_tls(runtime)
         with connect(args.migrator, passwords[args.migrator], args.ca) as migration:
-            if not migration.info.ssl_in_use:
-                raise SetupError("Migrator TLS verification failed.")
+            require_tls(migration)
         print("Role checkpoint committed. Starting transactional schema and ACL checkpoint.")
         try:
             provision_schema(

@@ -161,3 +161,39 @@ railway ssh --project $setup.ProjectId --environment $setup.Environment --servic
 
 The first command is read-only. Use the PowerShell Apply and Stage phases for
 changes so the confirmation gates remain in place.
+
+## Local pre-production audit
+
+The ten revisions through `20261106_0010` were reviewed without executing
+them. The baseline is empty. Upgrades 0002 and 0003 add student and admin
+objects. Upgrade 0004 replaces the admin audit constraint and adds PDF tables.
+Upgrades 0005 through 0008 add exam, access, timing and grading objects and
+their enforcement triggers. Upgrade 0009 adds reporting indexes and the
+reserved refund table. Upgrade 0010 backfills promo timestamps and replaces
+promo constraints and indexes. The current upgrades contain no explicit
+transaction commits, autocommit blocks, or concurrent index builds. Standard
+DDL and the promo backfill can still block traffic on a populated database.
+
+Downgrades are destructive recovery tools. They remove tables, indexes,
+functions or promo columns. Existing guards can reject certain populated
+states. In 0010, duplicate verifiers involving soft-deleted records can
+also cause the old global uniqueness constraint to reject a downgrade.
+Recover from an interrupted upgrade by inspecting the persisted revision and
+grants and retrying the reviewed upgrade after fixing the cause. Use the
+verified backup and a DBA-approved restore plan if repair requires recovery
+of data. Never use stamping or a downgrade as an automatic retry step.
+
+Standalone online Alembic and setup share a PostgreSQL advisory lock. Setup
+keeps its session lock on the admin connection across both checkpoints.
+Standalone Alembic takes a transaction-scoped lock, and Alembic rejects an
+injected connection without an active caller-owned transaction. An
+advisory lock only coordinates callers that take the same key. It cannot
+prevent manual SQL or an older release from bypassing it.
+
+Before Apply, independently confirm a restorable backup, the database and
+roles it covers, the restore point and procedure, and recovery responsibilities.
+The approval prompt records operator intent only. Also confirm the deployed
+script revision, CA chain and private hostname match, effective database ACLs,
+role ownership, and an approved maintenance window. Review statement and
+audit logging because PostgreSQL role creation receives a sensitive SCRAM
+verifier. No live migration or restore rehearsal was executed in this audit.

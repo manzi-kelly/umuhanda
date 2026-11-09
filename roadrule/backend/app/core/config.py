@@ -13,6 +13,7 @@ from sqlalchemy.engine import URL, make_url
 
 BACKEND_ROOT = Path(__file__).resolve().parents[2]
 StringList = Annotated[list[str], NoDecode]
+MIGRATION_LOCK = 819913428
 
 
 def parse_database_url(secret: SecretStr) -> URL:
